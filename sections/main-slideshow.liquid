@@ -1,0 +1,384 @@
+<div class="main-slider-section">
+  <div class="container">
+    <div class="main-slider-inner hide-mobile">
+      <div class="main-slider-left">
+        <div class="banner-slideshow">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'image' %} 
+                {%- assign block_image = block.settings.image -%}
+                {%- assign block_image_mob = block.settings.imagemob -%}
+                <div class="banner-slides fade">
+                  <div class="new-desk  {% if block.settings.desktop_hide != blank %}hide-desk {% endif %}">
+                    <a href="{{ block.settings.button_link }}" aria-label="Desktop Image">
+                      <img srcset="
+                        {%- if block_image.width >= 165 -%}
+                          {{ block_image | image_url: width: 165 }} 165w,{%- endif -%}
+                        {%- if block_image.width >= 360 -%}
+                          {{ block_image | image_url: width: 360 }} 360w,{%- endif -%}
+                        {%- if block_image.width >= 533 -%}
+                          {{ block_image | image_url: width: 533 }} 533w,{%- endif -%}
+                        {%- if block_image.width >= 720 -%}
+                          {{ block_image | image_url: width: 720 }} 720w,{%- endif -%}
+                        {%- if block_image.width >= 940 -%}
+                          {{ block_image | image_url: width: 940 }} 940w,{%- endif -%}
+                        {%- if block_image.width >= 1066 -%}
+                          {{ block_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                        {{ block_image | image_url }} {{ block_image.width }}w "
+                        src="{{ block_image | img_url: "master" }}"
+                        width="1017"
+                        height="400"
+                        sizes="1017px"
+                        alt="banner"
+                        class="desk-top-image {% if block.settings.desktop_hide != blank %}hide-desk {% endif %} lazyload"
+                        loading="lazy"
+                      >
+                    </a>
+                  </div> 
+                </div>
+            {% endcase %} 
+          {% endfor %}
+        </div>
+      </div>
+      <div class="main-slider-right">
+        {% if section.settings.desk_img1 != blank %}
+          <div class="right-banner">
+            <a href="https://tools4trade.co.uk/collections/tool-kits-cordless?pf_v_brand=Milwaukee&pf_st_stock_filter=true" aria-label="Read more">
+              <img srcset="
+                  {%- if section.settings.desk_img1.width >= 165 -%}
+                    {{ section.settings.desk_img1 | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if section.settings.desk_img1.width >= 360 -%}
+                    {{ section.settings.desk_img1 | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if section.settings.desk_img1.width >= 533 -%}
+                    {{ section.settings.desk_img1 | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if section.settings.desk_img1.width >= 720 -%}
+                    {{ section.settings.desk_img1 | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if section.settings.desk_img1.width >= 940 -%}
+                    {{ section.settings.desk_img1 | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if section.settings.desk_img1.width >= 1066 -%}
+                    {{ section.settings.desk_img1 | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ section.settings.desk_img1 | image_url }} {{ section.settings.desk_img1.width }}w "
+                class="lazyload"
+                height="200"
+                width="500"
+                sizes="500px"
+                src="{{ section.settings.desk_img1 | img_url: 'master' }}"
+                alt="image-1" loding="lazy"
+              >
+            </a>            
+          </div>
+        {% endif %}
+        {% if section.settings.desk_img2 != blank %}
+          <div class="right-banner">
+            <a href="https://tools4trade.co.uk/collections/body-only-tools?pf_st_stock_filter=true" aria-label="Read more">
+              <img srcset="
+                  {%- if section.settings.desk_img2.width >= 165 -%}
+                    {{ section.settings.desk_img2 | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if section.settings.desk_img2.width >= 360 -%}
+                    {{ section.settings.desk_img2 | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if section.settings.desk_img2.width >= 533 -%}
+                    {{ section.settings.desk_img2 | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if section.settings.desk_img2.width >= 720 -%}
+                    {{ section.settings.desk_img2 | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if section.settings.desk_img2.width >= 940 -%}
+                    {{ section.settings.desk_img2 | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if section.settings.desk_img2.width >= 1066 -%}
+                    {{ section.settings.desk_img2 | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ section.settings.desk_img2 | image_url }} {{ section.settings.desk_img2.width }}w "
+                class="lazyload"
+                height="200"
+                sizes="500px"
+                width="500"
+                src="{{ section.settings.desk_img2 | img_url: 'master' }}"
+                alt="image-2" loding="lazy"
+              >
+            </a>
+          </div>
+        {% endif %} 
+      </div>    
+    </div>
+    <div class="main-slider-inner mobile-slider hide-desk">
+      <div class="main-slider-left">
+        <div class="banner-slideshow">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'image_mob' %} 
+                {%- assign block_image = block.settings.image -%}
+                {%- assign block_image_mob = block.settings.imagemob -%}
+                <div class="banner-slides fade">
+                  <div class="new-mob">
+                    <a href="{{ block.settings.button_link2 }}" aria-label="Mobile Image">
+                      <img srcset="
+                        {%- if block_image_mob.width >= 165 -%}
+                          {{ block_image_mob | image_url: width: 165 }} 165w,{%- endif -%}
+                        {%- if block_image_mob.width >= 360 -%}
+                          {{ block_image_mob | image_url: width: 360 }} 360w,{%- endif -%}
+                        {%- if block_image_mob.width >= 533 -%}
+                          {{ block_image_mob | image_url: width: 533 }} 533w,{%- endif -%}
+                        {%- if block_image_mob.width >= 720 -%}
+                          {{ block_image_mob | image_url: width: 720 }} 720w,{%- endif -%}
+                        {%- if block_image_mob.width >= 940 -%}
+                          {{ block_image_mob | image_url: width: 940 }} 940w,{%- endif -%}
+                        {%- if block_image_mob.width >= 1066 -%}
+                          {{ block_image_mob | image_url: width: 1066 }} 1066w,{%- endif -%}
+                        {{ block_image_mob | image_url }} {{ block_image_mob.width }}w "
+                        src="{{ block_image_mob | img_url: "master" }}"
+                        width="767"
+                        height="680"
+                        sizes="767"
+                        alt="banner"
+                        class="mobile-top-image lazyload"
+                        loading="lazy"
+                      >
+                    </a>
+                  </div>
+                </div>
+            {% endcase %} 
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  @media only screen and (min-width: 768px) {
+      .main-slider-inner.mobile-slider.hide-desk {
+          display: none;
+      }
+  }
+  @media only screen and (max-width: 767px) {
+      .main-slider-inner.hide-mobile {
+          display: none;
+      }
+  }
+</style>
+<script>
+  $('.banner-slideshow').slick({
+    dots: true,
+    arrows:false,
+    infinite: false,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+</script>
+{% schema %}
+{
+  "name": "Main Slideshow",
+  "class": "index-section index-section--flush index-section--slideshow slideshow-dynamic",
+  "settings": [
+    {
+         "type":"image_picker",
+         "id":"desk_img1",
+         "label":"Select Image"
+    },
+    {
+       "type":"textarea",
+       "id":"desk_head1",
+       "label":"Desktop Heading Text",
+       "default":"5% Off<br>Sale All<br>Contractor Tools"
+    },
+    {
+         "type":"image_picker",
+         "id":"desk_img2",
+         "label":"Select Image"
+    },
+    {
+       "type":"textarea",
+       "id":"desk_head2",
+       "label":"Desktop Heading Text",
+       "default":"5% Off<br>Sale All<br>Contractor Tools"
+    },
+    {
+      "type": "checkbox",
+      "id": "autorotate",
+      "label": "Auto-rotate slides",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autorotate_speed",
+      "label": "Change slides every",
+      "max": 9,
+      "min": 3,
+      "step": 2,
+      "unit": " s",
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Desktop Image Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Desktop Image"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Image position",
+          "default": "center center",
+          "options": [
+            {
+              "label": "Top left",
+              "value": "left top"
+            },
+            {
+              "label": "Top center",
+              "value": "center top"
+            },
+            {
+              "label": "Top right",
+              "value": "right top"
+            },
+            {
+              "label": "Middle left",
+              "value": "left center"
+            },
+            {
+              "label": "Middle center",
+              "value": "center center"
+            },
+            {
+              "label": "Middle right",
+              "value": "right center"
+            },
+            {
+              "label":"Bottom left",
+              "value": "left bottom"
+            },
+            {
+              "label": "Bottom center",
+              "value": "center bottom"
+            },
+            {
+              "label": "Bottom right",
+              "value": "right bottom"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "slide_title",
+          "label": "Heading",
+          "default": "Image slide"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label":"Subheading",
+          "default": "Tell your brand's story through images"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "image_mob",
+      "name": " Mobile Image Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "imagemob",
+          "label": "Select Mobile Image"
+        },
+        {
+          "type": "select",
+          "id": "alignment2",
+          "label": "Image position",
+          "default": "center center",
+          "options": [
+            {
+              "label": "Top left",
+              "value": "left top"
+            },
+            {
+              "label": "Top center",
+              "value": "center top"
+            },
+            {
+              "label": "Top right",
+              "value": "right top"
+            },
+            {
+              "label": "Middle left",
+              "value": "left center"
+            },
+            {
+              "label": "Middle center",
+              "value": "center center"
+            },
+            {
+              "label": "Middle right",
+              "value": "right center"
+            },
+            {
+              "label":"Bottom left",
+              "value": "left bottom"
+            },
+            {
+              "label": "Bottom center",
+              "value": "center bottom"
+            },
+            {
+              "label": "Bottom right",
+              "value": "right bottom"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "slide_title2",
+          "label": "Heading",
+          "default": "Image slide"
+        },
+        {
+          "type": "text",
+          "id": "subheading2",
+          "label":"Subheading",
+          "default": "Tell your brand's story through images"
+        },
+        {
+          "type": "text",
+          "id": "button_label2",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link2",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Slideshow",
+      "category": "Image",
+      "settings": {
+        "autorotate": false,
+        "autorotate_speed": 5
+      },
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image_mob"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

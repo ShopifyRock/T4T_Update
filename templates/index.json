@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "63039a88-b01c-4faa-9e82-740f7550b233": {
+      "type": "main-slideshow",
+      "blocks": {
+        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image-1": {
+          "type": "image",
+          "settings": {
+            "alignment": "center center",
+            "slide_title": "Image slide",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image_mob-1": {
+          "type": "image_mob",
+          "settings": {
+            "alignment2": "center center",
+            "slide_title2": "Image slide",
+            "subheading2": "Tell your brand's story through images",
+            "button_label2": "",
+            "button_link2": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image-1",
+        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image_mob-1"
+      ],
+      "settings": {
+        "desk_head1": "5% Off<br>Sale All<br>Contractor Tools",
+        "desk_head2": "5% Off<br>Sale All<br>Contractor Tools",
+        "autorotate": false,
+        "autorotate_speed": 5
+      }
+    },
+    "9abfbde7-b753-4d3b-92c9-dc0eccf13872": {
+      "type": "index-categories",
+      "settings": {
+        "col_main_ttl": "Featured Categories"
+      }
+    },
+    "122103dc-8a52-4b69-9fa7-06e54de3a31c": {
+      "type": "index-top-deals",
+      "settings": {
+        "col_main_ttl": "Top deals of the day",
+        "button_text": "Order Now",
+        "enable_timer": true,
+        "timer_heading": "Hurry Up! Offer ends in:",
+        "timer_date": "July 31, 2023 23:59:00",
+        "timer_expired": "Offer Expired!"
+      }
+    }
+  },
+  "order": [
+    "63039a88-b01c-4faa-9e82-740f7550b233",
+    "9abfbde7-b753-4d3b-92c9-dc0eccf13872",
+    "122103dc-8a52-4b69-9fa7-06e54de3a31c"
+  ]
+}
