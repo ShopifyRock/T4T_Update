@@ -1,0 +1,248 @@
+<!-- Top Deals of the day start -->
+<section class="top-deals-section">
+  <div class="container">
+    {% if section.settings.col_main_ttl != blank %}
+      <div class="section-heading">
+        <h2 class="section-title">
+          <span>{{ section.settings.col_main_ttl }}</span>
+        </h2>
+        {% if section.settings.enable_timer %}
+          <div class="section-timer">
+            <div id="timer">
+              <label>{{ section.settings.timer_heading }}</label>
+              <div class="timeSection">
+                <div class="time" id="days"></div>
+                <div class="time" id="hours"></div>
+                <div class="time" id="minutes"></div>
+                <div class="time" id="seconds"></div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="top-deals-carousel products-carousel products-items-grid">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        {% if block.settings.product != blank %}
+          <div class="product-item">
+            <div class="item">
+              <div class="product-label-and-sku-wrapper">
+                {% assign date_created = product.created_at | date: '%s' %}
+                {% assign date_now = 'now' | date: '%s' %}
+                {% assign difference = date_now | minus: date_created %}
+                {% if difference < 604800 %}
+                  <div class="product-label">New</div>
+                {% else %}
+                  <div></div>
+                {% endif %}
+                {% if product.selected_or_first_available_variant.sku != blank %}
+                  <div class="product-sku">
+                    <div class="sku-label">sku:</div>
+                    <span>{{ product.selected_or_first_available_variant.sku }}</span>
+                  </div>
+                {% endif %}
+              </div>
+              <div class="product-info">
+                <div class="product-image">
+                  <a href="{{product.url}}">
+                    <img srcset="
+                      {%- if product.featured_image.width >= 165 -%}{{ product.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                      {%- if product.featured_image.width >= 360 -%}{{ product.featured_image | image_url: width: 360 }} 360w,{%- endif -%}
+                      {%- if product.featured_image.width >= 533 -%}{{ product.featured_image | image_url: width: 533 }} 533w,{%- endif -%}
+                      {%- if product.featured_image.width >= 720 -%}{{ product.featured_image | image_url: width: 720 }} 720w,{%- endif -%}
+                      {%- if product.featured_image.width >= 940 -%}{{ product.featured_image | image_url: width: 940 }} 940w,{%- endif -%}
+                      {%- if product.featured_image.width >= 1066 -%}{{ product.featured_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                      {{ product.featured_image | image_url }} {{ product.featured_image.width }}w " 
+                      sizes="(min-width: 768px) 160px, (max-width: 767px) 190px"
+                      src="{{ product.featured_image | img_url: "master" }}" width="190" height="190"
+                      alt="{{ product.featured_image.alt | escape }}"
+                      class="lazyload" loading="lazy"
+                    >
+                  </a>
+                </div>
+                <div class="product-details">
+                  <h3>
+                    <a href="{{product.url}}" title="{{ product.title }}">{{ product.title }}</a>
+                  </h3>
+                  <div class="price-wrapper">
+                    <div class="normal-price">
+                      {{ product.selected_or_first_available_variant.price | money }}
+                      <strong>
+                        {{ product.selected_or_first_available_variant.price | times:5 | divided_by: 6 | round: 2 |  money }} Ex.VAT
+                      </strong>
+                    </div>
+                  </div>
+                  <div class="bottom-details">
+                    {% if product.available %}
+                      {% if section.settings.button_text != blank %}
+                        <div class="add-to-cart">
+                          <a href="{{product.url}}" data-var-id="{{ product.variants.first.id }}" data-qty="1" class="cart-btn custom_atc_btn"{% if product.available %} {% else %} style="pointer-events: none;" {% endif %}>
+                            {{- section.settings.button_text -}}
+                          </a>
+                        </div>
+                      {% endif %}
+                    {% else %}
+                      <div class="sold-out-button">
+                        <a href="#" data-var-id="{{ product.variants.first.id }}" data-qty="1"  class="sold-out custom_sold__out_btn" >
+                          Sold Out
+                        </a>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- Top Deals of the day end -->
+{% if section.settings.enable_timer %}
+  <script>
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var currentFullDate = new Date();
+    var currentDate = currentFullDate.getDate();
+    var currentMonth = monthNames[currentFullDate.getMonth()];
+    var currentYear = currentFullDate .getFullYear();
+    var lastDateOfMonth = new Date(currentYear, currentFullDate.getMonth() +1, 0).getDate();
+    var final_date = `${currentMonth} ${lastDateOfMonth}, ${currentYear} 23:59:00`;
+    var countDownDate = new Date(final_date).getTime();
+    var countDownDate = new Date(final_date).getTime();
+    var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    if (hours < "10") { 
+      hours = "0" + hours; 
+    }
+    if (minutes < "10") { 
+      minutes = "0" + minutes; 
+    }
+    if (seconds < "10") { 
+      seconds = "0" + seconds; 
+    }
+
+    $("#days").html(days + "<span>Days</span>");
+    $("#hours").html(hours + "<span>Hrs</span>");
+    $("#minutes").html(minutes + "<span>Mins</span>");
+    $("#seconds").html(seconds + "<span>Secs</span>");
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "{{ section.settings.timer_expired }}";
+      }
+    }, 1000);
+  </script>
+{% endif %}
+<script>
+  $('.top-deals-carousel').slick({
+    dots: true,
+    arrows:false,
+    infinite: false,
+    speed: 2000,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          speed: 800   
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          speed: 800
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          speed: 800
+        }
+      }		    
+    ]
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Top Deals Of The Day",
+  "settings": [
+    {
+       "type":"text",
+       "id":"col_main_ttl",
+       "label":"Heading",
+       "default":"Top deals of the day"
+    },
+    {
+       "type":"text",
+       "id":"button_text",
+       "label":"Button Text",
+       "default":"Order Now"
+    },
+    {
+       "type":"checkbox",
+       "id":"enable_timer",
+       "label": "Hide Show Timer Counter"
+    },
+    {
+       "type":"textarea",
+       "id":"timer_heading",
+       "label":"Timer Heading",
+       "default":"Hurry Up! Offer ends in:"
+    },
+    {
+       "type":"textarea",
+       "id":"timer_date",
+       "label":"Timer Date",
+       "default":"Aug 1, 2023 15:00:00",
+       "info": "Add Timer Date In This Formate: Feb 5, 2023 15:37:25"
+    },
+    {
+       "type":"textarea",
+       "id":"timer_expired",
+       "label":"Timer Expired Text",
+       "default":"Offer Expired!"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"select",
+      "name":"Select Product",
+      "settings":[
+        {
+            "type":"product",
+            "id":"product",
+            "label":"Select Product"
+        }
+      ]
+    }
+ ],
+    "presets": [
+    {
+      "name": "Top Deals Of The Day",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
