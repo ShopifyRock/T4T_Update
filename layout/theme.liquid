@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     
     {{ content_for_header }}
-    
-  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {{ page_title -}}        
+    </title>
 
-  <body>
+    {% if page_description %}
+        <meta name="description" content="{{ page_description | escape }}" />
+    {% endif %}
+    
+    <link rel="canonical" href="{{ canonical_url }}" />
+
+    {% comment %} CSS LIBRARIES START {% endcomment %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    {{ 'theme.css' | asset_url | | stylesheet_tag: preload: true }}
+
+    {% comment %} CSS LIBRARIES END {% endcomment %}
+
+    {% comment %} JS LIBRARIES START {% endcomment %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    {% comment %} JS LIBRARIES END {% endcomment %}
+
+
+</head>
+<body>
+
     {% section 'header.liquid' %}
-    {{ content_for_layout }}
-  </body>
- </html>
+    {{ content_for_layout }}    
+
+</body>
+</html>
