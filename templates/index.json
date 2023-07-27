@@ -6,43 +6,259 @@
         "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image-1": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/desk-banner-final.png",
             "alignment": "center center",
-            "slide_title": "Image slide",
-            "subheading": "Tell your brand's story through images",
+            "slide_title": "",
+            "subheading": "",
             "button_label": "",
-            "button_link": ""
+            "button_link": "shopify:\/\/collections\/dewalt"
           }
         },
         "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image_mob-1": {
           "type": "image_mob",
           "settings": {
+            "imagemob": "shopify:\/\/shop_images\/Image20230707160134.jpg",
             "alignment2": "center center",
-            "slide_title2": "Image slide",
-            "subheading2": "Tell your brand's story through images",
+            "slide_title2": "",
+            "subheading2": "",
             "button_label2": "",
-            "button_link2": ""
+            "button_link2": "shopify:\/\/collections\/dewalt"
+          }
+        },
+        "2603ebaf-c857-44f2-8134-757690b3aace": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/final-2.jpg",
+            "alignment": "center center",
+            "slide_title": "",
+            "subheading": "",
+            "button_label": "",
+            "button_link": "shopify:\/\/collections\/buy-2-get-1-free"
+          }
+        },
+        "db2cee0c-7086-49d1-ad97-1b233647dd33": {
+          "type": "image_mob",
+          "settings": {
+            "imagemob": "shopify:\/\/shop_images\/final-1.jpg",
+            "alignment2": "center center",
+            "slide_title2": "",
+            "subheading2": "",
+            "button_label2": "",
+            "button_link2": "shopify:\/\/collections\/buy-2-get-1-free"
+          }
+        },
+        "727fa0ad-2197-4e9d-8171-dcf41193b3fb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desktop_1464_x_576_5dab2b11-82ee-4ac8-8b25-35ee6fff2538.jpg",
+            "alignment": "center center",
+            "slide_title": "",
+            "subheading": "",
+            "button_label": "",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/extended-range-products"
+          }
+        },
+        "17cbf062-d610-48fd-be04-c65a606bdf02": {
+          "type": "image_mob",
+          "settings": {
+            "imagemob": "shopify:\/\/shop_images\/Banner_800_x_710_cadc2a04-6c74-4dc8-844a-ebea35d6050b.jpg",
+            "alignment2": "center center",
+            "slide_title2": "",
+            "subheading2": "",
+            "button_label2": "",
+            "button_link2": "https:\/\/tools4trade.co.uk\/collections\/extended-range-products"
           }
         }
       },
       "block_order": [
         "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image-1",
-        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image_mob-1"
+        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image_mob-1",
+        "2603ebaf-c857-44f2-8134-757690b3aace",
+        "db2cee0c-7086-49d1-ad97-1b233647dd33",
+        "727fa0ad-2197-4e9d-8171-dcf41193b3fb",
+        "17cbf062-d610-48fd-be04-c65a606bdf02"
       ],
       "settings": {
-        "desk_head1": "5% Off<br>Sale All<br>Contractor Tools",
-        "desk_head2": "5% Off<br>Sale All<br>Contractor Tools",
+        "desk_img1": "shopify:\/\/shop_images\/Desktop_1464_x_576_Milwaukee_Kit.jpg",
+        "desk_head1": "",
+        "desk_img2": "shopify:\/\/shop_images\/500X200-1.jpg",
+        "desk_head2": "",
         "autorotate": false,
         "autorotate_speed": 5
       }
     },
     "9abfbde7-b753-4d3b-92c9-dc0eccf13872": {
       "type": "index-categories",
+      "blocks": {
+        "16515ef2-b908-42b0-8426-63a3a0ae95a7": {
+          "type": "select",
+          "settings": {
+            "collection": "tool-kits-cordless",
+            "col_img": "shopify:\/\/shop_images\/Cordless_Kits_e446e1eb-642c-4ca3-9b1b-fcd32475c8bc.png",
+            "col_title": "Cordless Kits"
+          }
+        },
+        "575356fd-4473-4456-9e6c-dba4d84e1a0e": {
+          "type": "select",
+          "settings": {
+            "collection": "twin-packs-cordless",
+            "col_img": "shopify:\/\/shop_images\/Twin_Packs_abaad0a3-66e8-48af-8da3-fbe92200976a.png",
+            "col_title": "Twin Packs"
+          }
+        },
+        "460d2328-50cc-44db-9be3-aed139c88be5": {
+          "type": "select",
+          "settings": {
+            "collection": "body-only-tools",
+            "col_img": "shopify:\/\/shop_images\/Body_Only_33bf6637-158b-423e-b2d3-7185b6c74464.png",
+            "col_title": "Body Only"
+          }
+        },
+        "ca547bf4-537d-426c-ad0c-eac7200c154b": {
+          "type": "select",
+          "settings": {
+            "collection": "combi-drills-cordless",
+            "col_img": "shopify:\/\/shop_images\/Combi_Drill_d44d6440-1dc7-4359-8dbb-032769bff862.png",
+            "col_title": "Combi Drills"
+          }
+        },
+        "21b8b57d-77ce-4935-9806-0b9e94b05209": {
+          "type": "select",
+          "settings": {
+            "collection": "plunge-saw-cordless",
+            "col_img": "shopify:\/\/shop_images\/Plunge_Saw_4872e3cb-3b2d-41ac-b893-ae81ec61dc7d.png",
+            "col_title": "Plunge Saws"
+          }
+        },
+        "186e3cf0-b84a-4682-8297-0a7daeb6bc53": {
+          "type": "select",
+          "settings": {
+            "collection": "mitre-saws-corded",
+            "col_img": "shopify:\/\/shop_images\/Mitre_Saw_931baea2-c2b4-4985-abff-50941f2bbbca.png",
+            "col_title": "Mitre Saws"
+          }
+        },
+        "b79e9e9d-d0c5-4d99-aa4a-2047ae793588": {
+          "type": "select",
+          "settings": {
+            "collection": "ladders",
+            "col_img": "shopify:\/\/shop_images\/Ladders_2baff847-8d1f-4ba7-b598-51561e4375ad.png",
+            "col_title": "Ladders"
+          }
+        },
+        "ac5bb5a2-736e-4b89-b9f7-a3d644c36887": {
+          "type": "select",
+          "settings": {
+            "collection": "tool-storage",
+            "col_img": "shopify:\/\/shop_images\/Tools_Storage_15da519f-2d10-4b31-a8fd-46a371935996.png",
+            "col_title": "Tool Storage"
+          }
+        }
+      },
+      "block_order": [
+        "16515ef2-b908-42b0-8426-63a3a0ae95a7",
+        "575356fd-4473-4456-9e6c-dba4d84e1a0e",
+        "460d2328-50cc-44db-9be3-aed139c88be5",
+        "ca547bf4-537d-426c-ad0c-eac7200c154b",
+        "21b8b57d-77ce-4935-9806-0b9e94b05209",
+        "186e3cf0-b84a-4682-8297-0a7daeb6bc53",
+        "b79e9e9d-d0c5-4d99-aa4a-2047ae793588",
+        "ac5bb5a2-736e-4b89-b9f7-a3d644c36887"
+      ],
       "settings": {
         "col_main_ttl": "Featured Categories"
       }
     },
     "122103dc-8a52-4b69-9fa7-06e54de3a31c": {
       "type": "index-top-deals",
+      "blocks": {
+        "0e1b9418-0ba8-4187-a1c8-56fbce09644f": {
+          "type": "select",
+          "settings": {
+            "product": "dewalt-dck665p3t-18v-6-piece-power-tool-kit-with-3-x-5-0ah-battery-charger-2-x-tstak-box"
+          }
+        },
+        "35750e5e-048e-4a27-ae1a-592533841c81": {
+          "type": "select",
+          "settings": {
+            "product": "excel-600-x-600mm-heavy-duty-multi-purpose-platform-work-bench-folding-hop-up-pack-of-2"
+          }
+        },
+        "6fca0ff5-817b-44aa-b6d8-1196398e04c0": {
+          "type": "select",
+          "settings": {
+            "product": "makita-dhp458z-18v-lxt-cordless-2-speed-combi-drill-body-only"
+          }
+        },
+        "3730a0bc-c3dd-48fb-85a4-be2cf7237cb0": {
+          "type": "select",
+          "settings": {
+            "product": "milwaukee-m18-fn16ga-0-18v-brushless-finishing-angled-nail-gun-16ga-with-2-x-2-0ah-batteries-charger"
+          }
+        },
+        "22dc73c6-6d0d-401a-9beb-f614614f57dd": {
+          "type": "select",
+          "settings": {
+            "product": "dewalt-dcs356p1-18v-xr-brushless-oscillating-multi-tool-with-1-x-5-0ah-battery-charger-case"
+          }
+        },
+        "bd0e2a1f-5c6d-4961-a847-4c043eefbe61": {
+          "type": "select",
+          "settings": {
+            "product": "hikoki-230v-1-2-variable-speed-router-2000w-with-carry-case-m12ve"
+          }
+        },
+        "fbfc42ee-7b87-4be8-b0b4-f8778a9d8179": {
+          "type": "select",
+          "settings": {
+            "product": "excel-180l-cement-mixer-500w-240v-with-wheels"
+          }
+        },
+        "4f659940-a2d4-43a0-8cac-a9f0a5a7b43f": {
+          "type": "select",
+          "settings": {
+            "product": "makita-dtm51z-18v-li-ion-oscillating-multitool-cutter-with-39-piece-accessories-set"
+          }
+        },
+        "ee8f9f26-d163-432f-9324-6f0753eb4d82": {
+          "type": "select",
+          "settings": {
+            "product": "stabila-70-2-1200mm-48-double-plumb-box-section-level-stb70248"
+          }
+        },
+        "c9827d05-cb3b-4507-8bea-6e2bdd082333": {
+          "type": "select",
+          "settings": {
+            "product": "makita-dhr242z-18v-sds-brushless-24mm-rotary-hammer-drill-body-with-dust-extraction-system"
+          }
+        },
+        "0aa98bb6-6a56-4ed2-9778-01b4e2ccb6af": {
+          "type": "select",
+          "settings": {
+            "product": "dewalt-d26411-240v-heat-gun-1800w-with-dual-air-flow"
+          }
+        },
+        "9d7298f1-7b53-4c74-83be-dc3601dc854c": {
+          "type": "select",
+          "settings": {
+            "product": "ecomotive-professional-turbo-cleaner-restore-250ml-aerosol"
+          }
+        }
+      },
+      "block_order": [
+        "0e1b9418-0ba8-4187-a1c8-56fbce09644f",
+        "35750e5e-048e-4a27-ae1a-592533841c81",
+        "6fca0ff5-817b-44aa-b6d8-1196398e04c0",
+        "3730a0bc-c3dd-48fb-85a4-be2cf7237cb0",
+        "22dc73c6-6d0d-401a-9beb-f614614f57dd",
+        "bd0e2a1f-5c6d-4961-a847-4c043eefbe61",
+        "fbfc42ee-7b87-4be8-b0b4-f8778a9d8179",
+        "4f659940-a2d4-43a0-8cac-a9f0a5a7b43f",
+        "ee8f9f26-d163-432f-9324-6f0753eb4d82",
+        "c9827d05-cb3b-4507-8bea-6e2bdd082333",
+        "0aa98bb6-6a56-4ed2-9778-01b4e2ccb6af",
+        "9d7298f1-7b53-4c74-83be-dc3601dc854c"
+      ],
       "settings": {
         "col_main_ttl": "Top deals of the day",
         "button_text": "Order Now",
@@ -51,11 +267,205 @@
         "timer_date": "July 31, 2023 23:59:00",
         "timer_expired": "Offer Expired!"
       }
+    },
+    "b2e4f86a-de14-4cd1-a6ce-1860b30d0071": {
+      "type": "best-selling-products",
+      "settings": {
+        "col_main_ttl": "Best Selling Products",
+        "collection": "best-selling-products",
+        "prod_limit": 24,
+        "button_text": "Order Now"
+      }
+    },
+    "263e2ee9-dfc0-43e8-9642-2ec573b0c1cc": {
+      "type": "index-offers",
+      "settings": {
+        "offer_img1": "shopify:\/\/shop_images\/Image20230517111836.jpg",
+        "content1": "Big Sale <span>Up To -30%<\/span><strong>Contractor Tools<\/strong>",
+        "offer_img1_link1": "https:\/\/tools4trade.co.uk\/collections\/excel-18v-cordless-power-tools?pf_st_stock_filter=true",
+        "offer_img2": "shopify:\/\/shop_images\/offer-banner-2.jpg",
+        "content2": "Big Sale <span>Up To -30%<\/span><strong>Drilling Machin<\/strong>",
+        "offer_img1_link2": "https:\/\/tools4trade.co.uk\/collections\/ladders?pf_st_stock_filter=true"
+      }
+    },
+    "6cefe5a0-0938-4666-9468-a17c71f53790": {
+      "type": "top-best-sellers",
+      "blocks": {
+        "084ee239-ce64-47c5-b7c0-e5790e989060": {
+          "type": "tab-1",
+          "settings": {
+            "tab1_product": "new-arrivals"
+          }
+        },
+        "839cd138-96d7-4b6b-927d-2d3486ce6758": {
+          "type": "tab-2",
+          "settings": {
+            "tab2_product": "new-arrivals"
+          }
+        },
+        "ad142e12-bbeb-4629-9d77-01749ce9a608": {
+          "type": "tab-3",
+          "settings": {
+            "tab3_product": "new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "084ee239-ce64-47c5-b7c0-e5790e989060",
+        "839cd138-96d7-4b6b-927d-2d3486ce6758",
+        "ad142e12-bbeb-4629-9d77-01749ce9a608"
+      ],
+      "settings": {
+        "main_heading": "New Arrivals:",
+        "tab_title_1": "Power Tools",
+        "tab_title_2": "Hand tools",
+        "tab_title_3": "Accessories",
+        "tab_title_4": "",
+        "button_text": "Order Now"
+      }
+    },
+    "61fb3b98-1ecf-49f0-a681-8a51ec0db160": {
+      "type": "brand-logo",
+      "blocks": {
+        "ae84f5de-0f66-4b2b-a253-28d334d77edd": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/makita",
+            "col_img": "shopify:\/\/shop_images\/Makita_9fa5640d-393d-4545-bb02-caf37ab2e30c.jpg",
+            "col_title": "Makita"
+          }
+        },
+        "a9a91366-a7e6-4702-9357-87842b54ca6b": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/dewalt",
+            "col_img": "shopify:\/\/shop_images\/Dewalt.jpg",
+            "col_title": "Dewalt"
+          }
+        },
+        "fd412d84-65f6-428c-a8f3-fcea45bf45d6": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/milwaukee",
+            "col_img": "shopify:\/\/shop_images\/Milwaukee.jpg",
+            "col_title": "Milwaukee"
+          }
+        },
+        "e0cb1e24-403d-4146-822d-22669aad092d": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/excel",
+            "col_img": "shopify:\/\/shop_images\/Excel.jpg",
+            "col_title": "Excel"
+          }
+        },
+        "2cc01562-ba7b-44cd-985e-31bb60de4a61": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/bosch",
+            "col_img": "shopify:\/\/shop_images\/Bosch.jpg",
+            "col_title": "Bosch"
+          }
+        },
+        "9bf92b07-205e-4ac2-b50c-41ab7eb86092": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/hikoki",
+            "col_img": "shopify:\/\/shop_images\/Hikoki_95b88dc6-ac38-434f-a740-ca78d07a3c02.jpg",
+            "col_title": "Hikoki"
+          }
+        },
+        "da0f7e78-7cea-4b3b-bf8f-fbf8be00bf79": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/festool",
+            "col_img": "shopify:\/\/shop_images\/Festool_dee864ed-38e4-4241-95b1-080a344f75d0.jpg",
+            "col_title": "Festool"
+          }
+        },
+        "2d6f1bc6-550c-4710-aa54-4ee479f396e6": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/hyundai",
+            "col_img": "shopify:\/\/shop_images\/Hyundai.jpg",
+            "col_title": "Hyundai"
+          }
+        },
+        "991c23b9-76af-4f72-a055-639fa88e9dcc": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/metabo",
+            "col_img": "shopify:\/\/shop_images\/Metabo_eaf8ebeb-eb50-4aaf-a98d-885abcc66acc.jpg",
+            "col_title": "metabo"
+          }
+        },
+        "12aeb956-1689-4540-8000-bd1752c16d09": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/sealey",
+            "col_img": "shopify:\/\/shop_images\/Sealey_9d082a8a-b89b-44d4-aa8e-85a36909c5b4.jpg",
+            "col_title": "Sealey"
+          }
+        },
+        "d0662e0e-98d3-4ed5-8142-889e61b58047": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/stanley",
+            "col_img": "shopify:\/\/shop_images\/Stanley.jpg",
+            "col_title": "Stanley"
+          }
+        },
+        "20440176-f5ca-4145-b90a-3f9629f70903": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/paslode",
+            "col_img": "shopify:\/\/shop_images\/Paslode.jpg",
+            "col_title": "Paslode"
+          }
+        },
+        "066da9fa-2681-450e-acb9-efe0418b05dd": {
+          "type": "select",
+          "settings": {
+            "collection": "https:\/\/tools4trade.co.uk\/collections\/trend",
+            "col_img": "shopify:\/\/shop_images\/Trend.jpg",
+            "col_title": "Trend"
+          }
+        }
+      },
+      "block_order": [
+        "ae84f5de-0f66-4b2b-a253-28d334d77edd",
+        "a9a91366-a7e6-4702-9357-87842b54ca6b",
+        "fd412d84-65f6-428c-a8f3-fcea45bf45d6",
+        "e0cb1e24-403d-4146-822d-22669aad092d",
+        "2cc01562-ba7b-44cd-985e-31bb60de4a61",
+        "9bf92b07-205e-4ac2-b50c-41ab7eb86092",
+        "da0f7e78-7cea-4b3b-bf8f-fbf8be00bf79",
+        "2d6f1bc6-550c-4710-aa54-4ee479f396e6",
+        "991c23b9-76af-4f72-a055-639fa88e9dcc",
+        "12aeb956-1689-4540-8000-bd1752c16d09",
+        "d0662e0e-98d3-4ed5-8142-889e61b58047",
+        "20440176-f5ca-4145-b90a-3f9629f70903",
+        "066da9fa-2681-450e-acb9-efe0418b05dd"
+      ],
+      "settings": {
+        "col_main_ttl": "Our Top Brands"
+      }
+    },
+    "f0c949a4-0738-4d0b-85f6-a0ebed253058": {
+      "type": "Review-section-new",
+      "settings": {
+        "title": "What Do Our Customers Say?"
+      }
     }
   },
   "order": [
     "63039a88-b01c-4faa-9e82-740f7550b233",
     "9abfbde7-b753-4d3b-92c9-dc0eccf13872",
-    "122103dc-8a52-4b69-9fa7-06e54de3a31c"
+    "122103dc-8a52-4b69-9fa7-06e54de3a31c",
+    "b2e4f86a-de14-4cd1-a6ce-1860b30d0071",
+    "263e2ee9-dfc0-43e8-9642-2ec573b0c1cc",
+    "6cefe5a0-0938-4666-9468-a17c71f53790",
+    "61fb3b98-1ecf-49f0-a681-8a51ec0db160",
+    "f0c949a4-0738-4d0b-85f6-a0ebed253058"
   ]
 }
