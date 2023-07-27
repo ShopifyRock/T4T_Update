@@ -1,0 +1,101 @@
+<!-- Offers section start -->
+<div class="offer-section">
+   <div class="container">
+     {% if section.settings.offer_img1 != blank %}
+       <div class="box box-1">
+         <a href="{{ section.settings.offer_img1_link1 }}" title="offer-1">
+           <img
+               srcset="
+                   {%- if section.settings.offer_img1.width >= 165 -%}{{ section.settings.offer_img1 | image_url: width: 165 }} 165w,{%- endif -%}
+                   {%- if section.settings.offer_img1.width >= 360 -%}{{ section.settings.offer_img1 | image_url: width: 360 }} 360w,{%- endif -%}
+                   {%- if section.settings.offer_img1.width >= 533 -%}{{ section.settings.offer_img1 | image_url: width: 533 }} 533w,{%- endif -%}
+                   {%- if section.settings.offer_img1.width >= 720 -%}{{ section.settings.offer_img1 | image_url: width: 720 }} 720w,{%- endif -%}
+                   {%- if section.settings.offer_img1.width >= 940 -%}{{ section.settings.offer_img1 | image_url: width: 940 }} 940w,{%- endif -%}
+                   {%- if section.settings.offer_img1.width >= 1066 -%}{{ section.settings.offer_img1 | image_url: width: 1066 }} 1066w,{%- endif -%}
+                   {{ section.settings.offer_img1 | image_url }} {{ section.settings.offer_img1.width }}w
+               "
+               src="{{ section.settings.offer_img1 | img_url: "master" }}" width="745" height="210"
+               alt="{{ section.settings.offer_img1.alt | escape }}"
+               class="lazyload" loading="lazy" 
+           >
+         </a>
+ <!--         <h3>{{ section.settings.content1 }}</h3> -->
+       </div>
+     {% endif %}
+     {% if section.settings.offer_img2 != blank %}
+       <div class="box box-2">
+         <a href="{{ section.settings.offer_img1_link2 }}" title="offer-2">
+           <img
+               srcset="
+                   {%- if section.settings.offer_img2.width >= 165 -%}{{ section.settings.offer_img2 | image_url: width: 165 }} 165w,{%- endif -%}
+                   {%- if section.settings.offer_img2.width >= 360 -%}{{ section.settings.offer_img2 | image_url: width: 360 }} 360w,{%- endif -%}
+                   {%- if section.settings.offer_img2.width >= 533 -%}{{ section.settings.offer_img2 | image_url: width: 533 }} 533w,{%- endif -%}
+                   {%- if section.settings.offer_img2.width >= 720 -%}{{ section.settings.offer_img2 | image_url: width: 720 }} 720w,{%- endif -%}
+                   {%- if section.settings.offer_img2.width >= 940 -%}{{ section.settings.offer_img2 | image_url: width: 940 }} 940w,{%- endif -%}
+                   {%- if section.settings.offer_img2.width >= 1066 -%}{{ section.settings.offer_img2 | image_url: width: 1066 }} 1066w,{%- endif -%}
+                   {{ section.settings.offer_img2 | image_url }} {{ section.settings.offer_img2.width }}w
+               "
+               src="{{ section.settings.offer_img2 | img_url: "master" }}" width="745" height="210"
+               alt="{{ section.settings.offer_img2.alt | escape }}"
+               class="lazyload" loading="lazy" 
+           >
+         </a>
+ <!--         <h3>{{ section.settings.content2 }}</h3> -->
+       </div>
+     {% endif %}
+   </div>
+ </div>
+ <!-- Offers section end -->
+ 
+ {% schema %}
+ {
+    "name":"Offers Banner",
+    "settings":[
+       {
+          "type":"image_picker",
+          "id":"offer_img1",
+          "label":"Select Image"
+       },
+       {
+          "type":"html",
+          "id":"content1",
+          "label":"Content",
+          "default":"Big Sale <span>Up To -30%</span><strong>Contractor Tools</strong>"
+       },
+       {
+          "type":"url",
+          "id":"offer_img1_link1",
+          "label":"URL"
+       },
+       {
+          "type":"image_picker",
+          "id":"offer_img2",
+          "label":"Select Image"
+       },
+       {
+          "type":"html",
+          "id":"content2",
+          "label":"Content",
+          "default":"Big Sale <span>Up To -30%</span><strong>Drilling Machin</strong>"
+       },
+       {
+          "type":"url",
+          "id":"offer_img1_link2",
+          "label":"URL"
+       }
+    ],
+    "presets":[
+       {
+          "name":"Offers Banner",
+          "category":"Custom"
+       }
+    ]
+ }
+ {% endschema %}
+ 
+ {% stylesheet %}
+ {% endstylesheet %}
+ 
+ {% javascript %}
+ {% endjavascript %}
+ 

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
 <head>
-    
-    {{ content_for_header }}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -13,13 +11,20 @@
         <meta name="description" content="{{ page_description | escape }}" />
     {% endif %}
     
-    <link rel="canonical" href="{{ canonical_url }}" />
+    {%- if canonical_url != blank  -%}
+        <link rel="canonical" href="{{ canonical_url }}">
+    {%- endif -%}
 
+    {%- if settings.favicon != blank -%}
+        <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    {%- endif -%}
     {% comment %} CSS LIBRARIES START {% endcomment %}
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
+    {% comment %} font awesome start {% endcomment %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% comment %} font awesome end {% endcomment %}
 
     {{ 'theme.css' | asset_url | | stylesheet_tag: preload: true }}
 
@@ -31,14 +36,58 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script src="{{ 'custom.js' | asset_url }}" rel="preload" as="script" defer="defer"></script>    
+    <!-- TrustBox script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <!-- End TrustBox script -->
     {% comment %} JS LIBRARIES END {% endcomment %}
-
+    {{ content_for_header }}
 
 </head>
 <body>
 
-    {% section 'header.liquid' %}
-    {{ content_for_layout }}    
+    {% comment %} Header start {% endcomment %}
+        {% section 'header.liquid' %}
+    {% comment %} Header end {% endcomment %}
+
+    {% comment %} Content start {% endcomment %}
+        <main class="homepage-content-wrapper main-content js-focus-hidden {% if template == 'collection' %} collection-page-main-new {% endif %}{% if page.handle == 'ts-cs-tools4trade-dewalt-redemption-offer' %} t-and-c-page {% endif %}{% if collection.handle == 'dewalt' %} sort-option-palcement {% endif %}" id="MainContent" role="main" tabindex="-1">
+            {{ content_for_layout }}    
+        </main>
+    {% comment %} Content end {% endcomment %}
+
+    {% comment %} Footer start {% endcomment %}
+        {% section 'Text-Column-With-Images-2'  %}
+        {% section 'footer-new' %}
+    {% comment %} Footer End {% endcomment %}
+
+
+    {% comment %} Extra JavaScript {% endcomment %}
+        <script type="text/javascript">
+            document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+            
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+            setTimeout(function () {
+                $('img.adroll_consent_first_page_logo')
+                    .attr('src', 'https://s.adroll.com/i/favicon/nextroll-32x32.png')
+                    .attr('width', '32')
+                    .attr('height', '32')
+                    //.attr('sizes', '32')
+                    .attr('alt', 'adroll-icon');
+                $('#adroll_consent_container a').attr('title', 'nextroll');
+                $('.reset23947hdfjue8934 img')
+                .attr('src', 'https://cdn.live.zoko.io/store/customers/71e1e783-e16c-4961-93bc-dc1f90f57178-zo-ko-Whatapp_ZOKO3.png')
+                .attr('width', '56')
+                .attr('height', '56')
+                //.attr('sizes', '56')
+                .attr('alt', 'whatsapp');
+                }, 5000);
+                
+            });
+        </script>    
+    {% comment %} Extra JavaScript {% endcomment %}
 
 </body>
 </html>

@@ -20,10 +20,10 @@
                 color: {{ section.settings.color_text }};
             }
         </style>
-        <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement_bar_label' | t }}">
+        <div class="announcement-bar" role="region" aria-label="{{ 'sections.announcements.announcement_bar' | t }}">
           {% if section.settings.announcement_desktop_image != blank %}
             {%- unless section.settings.message_link == blank -%}
-                <a href="{{ section.settings.message_link }}" class="announcement-bar__link">
+                <a href="{{ section.settings.message_link }}" title="Announcement" class="announcement-bar__link">
             {%- endunless -%}
                 <img src="{{ section.settings.announcement_desktop_image | img_url: 'master' }}" class="announcement_desktop_image" alt="{{ section.settings.announcement_desktop_image.alt }}" />
                 <img src="{{ section.settings.announcement_mobile_image | img_url: 'master' }}" class="announcement_mobile_image" alt="{{ section.settings.announcement_mobile_image.alt }}" />
@@ -32,7 +32,7 @@
              {%- endunless -%}
           {% else %}
             {%- unless section.settings.message_link == blank -%}
-              <a href="{{ section.settings.message_link }}" class="announcement-bar__link">
+              <a href="{{ section.settings.message_link }}" title="Announcement" class="announcement-bar__link">
             {%- endunless -%}
                 <p class="announcement-bar__message">{{ section.settings.message_text }}</p>
             {%- unless section.settings.message_link == blank -%}
@@ -139,9 +139,9 @@
                 <div class="minicart-wrapper">
                     <a class="mobile-user-icon" href="{% if customer %}/account{% else %}https://tools4trade.co.uk/account/login{% endif %}" class="sign-in" title="{% if customer %}{{ customer.name }}{% else %}Sign In{% endif %}">
                         {% render 'user-icon' %}
-                        <spn class="customer-name-mobile">{{ customer.name -}}</spn>
+                        <span class="customer-name-mobile">{{ customer.name -}}</span>
                     </a>
-                    <a href="{{ routes.cart_url }}" class="bag">
+                    <a href="{{ routes.cart_url }}" title="Minicart" class="bag">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25.035" height="25.035" viewBox="0 0 25.035 25.035">
                             <g id="Group_2799" data-name="Group 2799" transform="translate(-311.979 -12.965)">
                             <path id="Path_5" data-name="Path 5" d="M7.043,8.086H8.785L11.4,19.87a3.743,3.743,0,0,0-2.13,3.462,3.566,3.566,0,0,0,3.37,3.726H26.469a1.043,1.043,0,1,0,0-2.086H12.638a1.516,1.516,0,0,1-1.284-1.64,1.516,1.516,0,0,1,1.284-1.641H26.469a1.043,1.043,0,0,0,.981-.69l3.523-9.776a1.043,1.043,0,0,0-.981-1.4H11.308l-.667-3.011A1.042,1.042,0,0,0,9.623,6H7.043a1.043,1.043,0,1,0,0,2.086Zm21.464,3.829L25.736,19.6H13.475l-1.7-7.69H28.507Z" transform="translate(305.979 6.965)" fill="#ed1b30"/>

@@ -1,0 +1,239 @@
+{%- assign show_payment_icons = false -%}
+{%- if section.settings.show_payment_icons -%}
+  {%- unless shop.enabled_payment_types == empty -%}
+    {%- assign show_payment_icons = true -%}
+  {%- endunless -%}
+{%- endif -%}
+<footer class="site-footer" role="contentinfo" data-section-id="footer-new" data-section-type="footer-section">
+  <div class="container">
+    <div class="site-footer__content">
+      {% for block in section.blocks  %}
+        {% case block.type %}
+          {% when 'text_logo_contact' %}
+            <div class="site-footer__item site-footer__item--one-sixth">
+              <div class="site-footer__item-inner site-footer__item-inner--text_logo_contact">
+                <p class="h4">Address</p>
+                <div class="site-footer__item-inner__address">
+                    <div class="footer_logo_main_new">
+                        <a href="{{ block.settings.logo_image_link }}" title="Footer Logo">
+                          <img src="{{ block.settings.logo_image | img_url: 'master' }}" alt="{{ block.settings.logo_image.alt }}" height="29" width="188" />
+                        </a>
+                      </div>
+                      <div class="site-footer__rte ">
+                        {{ block.settings.text }}
+                        <p class="shop-map">
+                          <a href="{{ block.settings.show_map_link }}" target="_blank" title="{{ block.settings.show_map_text }}">
+                            {{ block.settings.show_map_text }}
+                          </a>
+                        </p>
+                      </div>
+                </div>
+              </div>
+            </div>
+          {% when 'link_list' %}
+            <div class="site-footer__item site-footer__item--one-sixth">
+              <div class="site-footer__item-inner site-footer__item-inner--link_list">
+                {%- if block.settings.title -%}
+                  <p class="h4">{{ block.settings.title | escape }}</p>
+                {%- endif -%}
+                <ul class="site-footer__linklist">
+                  {%- assign footer_linklist = block.settings.menu -%}
+                  {%- for link in linklists[footer_linklist].links -%}
+                    <li class="site-footer__linklist-item">
+                        <a href="{{ link.url }}" title="{{ link.title | escape }}">
+                          {{ link.title | escape }}
+                        </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% when 'newsletter' %}
+          <div class="site-footer__item site-footer__item--one-sixth">
+            <div class="site-footer__item-inner site-footer__item-inner--newsletter">
+              {%- if block.settings.title -%}
+                <p class="h4">{{ block.settings.title | escape }}</p>
+              {%- endif -%}
+              <div class="site-footer__newsletter {% if section.blocks.size == 1 %} site-footer__single-block--centered{% endif %}">
+                  {%- assign formId = 'ContactFooter' -%}
+                  {% form 'customer', id: formId, novalidate: 'novalidate' %}
+                    {%- if form.posted_successfully? -%}
+                      <p class="form-message form-message--success" tabindex="-1" data-form-status>
+                        {{ 'newsletter.success' | t }}
+                      </p>
+                    {%- endif -%}
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <div class="input-group {% if form.errors %} input-group--error{% endif %}">
+                      <input
+                        type="email"
+                        name="contact[email]"
+                        id="{{ formId }}-email"
+                        class="input-group__field newsletter__input{% if form.errors %} input--error{% endif %}"
+                        value="{{ form.email }}"
+                        placeholder="{{ 'Your email address' }}"
+                        aria-label="{{ 'newsletter.email_placeholder' | t }}"
+                        aria-required="true"
+                        required
+                        autocorrect="off"
+                        autocapitalize="off"
+                        {% if form.errors %}
+                          aria-invalid="true"
+                          aria-describedby="{{ formId }}-email-error"
+                          data-form-status
+                        {% endif %}
+                      >
+                      <span class="input-group__btn">
+                        <button type="submit" class="btn newsletter__submit" name="commit" title="{{ 'newsletter.button_label' | t }}">
+                          <span class="newsletter__submit-text--large">{{ 'newsletter.button_label' | t }}</span>
+                        </button>
+                      </span>
+                    </div>
+                    {% if form.errors contains 'email' %}
+                      <span id="{{ formId }}-email-error" class="input-error-message">
+                        <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                        {% include 'icon-error' %}
+                        <span class="site-footer__newsletter-error">
+                          {{- form.errors.translated_fields.email | capitalize }}
+                          {{ form.errors.messages.email }}.</span
+                        >
+                      </span>
+                    {% endif %}
+                  {% endform %}
+                  <p>I would like to receive news and special offers.</p>
+                  <p class="h4 new-heading">Get Our Social</p>
+                  {% assign socials = 'Facebook Twitter Pinterest Instagram Tumblr Snapchat YouTube Vimeo' | split: ' ' %}
+                  <ul class="list--inline site-footer__social-icons social-icons site-footer__icon-list social_left_new">
+                    {%- for social in socials -%}
+                      {%- assign social_link = social | prepend: 'social_' | append: '_link' | downcase -%}
+                      {%- assign icon_link = social | prepend: 'icon-' | downcase -%}
+                      {%- if settings[social_link] != blank -%}
+                        <li class="social-icons__item">
+                          <a class="social-icons__link" target="_blank" href="{{ settings[social_link] | escape }}" aria-describedby="a11y-external-message" title="{{ social }}">
+                            {%- include icon_link -%}
+                            <span class="icon__fallback-text">{{ social }}</span>
+                          </a>
+                        </li>
+                      {% endif %}
+                      {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+  {%- capture payment_icon_markup -%}
+    {%- if show_payment_icons -%}
+      <div class="grid__item site-footer__payment-icons"> 
+        <span class="visually-hidden">Payment methods</span>
+        <ul class="payment-icons list--inline site-footer__icon-list">
+          {%- for type in shop.enabled_payment_types -%}
+            <li class="payment-icon">
+              {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  {%- endcapture -%}
+  <div class="container copyright-container">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right">
+      <div class="grid__item small--hide payment-mobile-new {{ payment_width_class }} {% if show_payment_icons %}site-footer-item-center-vertically{% endif %}">
+        {{ payment_icon_markup }}
+      </div>
+      <div class="grid__item one-half small--one-whole site-footer-item-tall">
+        <div class="small--hide site-footer-item-align-right footer-icons-new footer_copyright_new site-footer-item-center-vertically">
+          <small class="site-footer__copyright-content">Copyright &copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}. All Rights Reserved.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% schema %}
+{
+  "name": "Footer",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Payment methods"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "Show payment icons",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Quick links"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "default": "footer"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "limit": 1,
+      "name": "Newsletter signup",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "info": "Subscribers will be added to your “accepts marketing” [customer list.](/admin/customers?query=&accepts_marketing=1)",
+          "default": "Newsletter"
+        }
+      ]
+    },
+	  {
+      "type": "text_logo_contact",
+      "name": "Text Logo Contact",
+      "settings": [
+		    {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo Image"
+        },
+		    {
+          "type": "url",
+          "id": "logo_image_link",
+          "label": "Logo Image Link",
+		      "default": "/"
+        },
+        {
+          "type": "html",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Tools4trade <br>6 Fitzhamon Court <br>Wolverton, Milton Keynes<br>MK12 6LB</p>",
+		      "info": "<p>Tools4trade <br>6 Fitzhamon Court <br>Wolverton, Milton Keynes<br>MK12 6LB</p>"
+        },
+		    {
+          "type": "text",
+          "id": "show_map_text",
+          "label": "Map Text",
+		      "default": "Show On Map"
+        },
+		    {
+          "type": "url",
+          "id": "show_map_link",
+          "label": "Map Link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

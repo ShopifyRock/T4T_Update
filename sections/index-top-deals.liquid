@@ -45,7 +45,7 @@
               </div>
               <div class="product-info">
                 <div class="product-image">
-                  <a href="{{product.url}}">
+                  <a href="{{product.url}}" title="{{ product.title }}">
                     <img srcset="
                       {%- if product.featured_image.width >= 165 -%}{{ product.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
                       {%- if product.featured_image.width >= 360 -%}{{ product.featured_image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -77,14 +77,14 @@
                     {% if product.available %}
                       {% if section.settings.button_text != blank %}
                         <div class="add-to-cart">
-                          <a href="{{product.url}}" data-var-id="{{ product.variants.first.id }}" data-qty="1" class="cart-btn custom_atc_btn"{% if product.available %} {% else %} style="pointer-events: none;" {% endif %}>
+                          <a href="{{product.url}}" data-var-id="{{ product.variants.first.id }}" title="{{- section.settings.button_text -}}" data-qty="1" class="cart-btn custom_atc_btn"{% if product.available %} {% else %} style="pointer-events: none;" {% endif %}>
                             {{- section.settings.button_text -}}
                           </a>
                         </div>
                       {% endif %}
                     {% else %}
                       <div class="sold-out-button">
-                        <a href="#" data-var-id="{{ product.variants.first.id }}" data-qty="1"  class="sold-out custom_sold__out_btn" >
+                        <a href="#" data-var-id="{{ product.variants.first.id }}" data-qty="1" title="Sold out" class="sold-out custom_sold__out_btn" >
                           Sold Out
                         </a>
                       </div>

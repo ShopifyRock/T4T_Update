@@ -1,0 +1,36 @@
+<div class="container">
+  {% if section.settings.title != blank %}
+ <div class="section-heading">
+        <h2 class="section-title">
+          <span>{{ section.settings.title }}</span>
+        </h2>
+ </div>
+{% endif %}
+<div class="">
+<!-- TrustBox widget - Grid -->
+<div class="trustpilot-widget" data-locale="en-GB" data-template-id="539adbd6dec7e10e686debee" data-businessunit-id="564473c60000ff00058571cd" data-style-height="500px" data-style-width="100%" data-theme="light" data-stars="5" data-review-languages="en" data-font-family="Rubik">
+  <a href="https://uk.trustpilot.com/review/tools4trade.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+</div>
+<!-- End TrustBox widget -->
+</div>
+ </div>
+{% schema %}
+  {
+    "name": "Review Section New",
+	"class": "Review_section_new index-section",
+    "settings": [
+	  {
+        "type": "text",
+        "id": "title",
+        "label": "Main Heading",
+        "default": "See what our customers say about us"
+	  }
+	],
+	"presets": [
+      {
+        "name": "Review Section New",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

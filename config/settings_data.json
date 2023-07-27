@@ -1,6 +1,7 @@
 {
   "current": {
     "logo_width": 90,
+    "favicon": "shopify:\/\/shop_images\/fav_2.jpg",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -99,11 +100,11 @@
     "brand_headline": "",
     "brand_description": "<p><\/p>",
     "brand_image_width": 100,
-    "social_facebook_link": "",
-    "social_instagram_link": "",
-    "social_youtube_link": "",
+    "social_facebook_link": "https:\/\/facebook.com\/Tools4trade",
+    "social_instagram_link": "https:\/\/instagram.com\/tools4trade\/",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCreUizwZW4MHYYGeWp0PE1w",
     "social_tiktok_link": "",
-    "social_twitter_link": "",
+    "social_twitter_link": "https:\/\/twitter.com\/tools4tradeuk?s=21&t=Ag1JEh54votTj8zxX_H4hg",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
     "social_tumblr_link": "",
@@ -119,6 +120,114 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "009a9da4-668d-449e-bd25-a6237c8d2e78": {
+            "type": "style_1",
+            "settings": {
+              "menu_title_text_1": "Power Tools",
+              "menu_title_text_1_link": "https:\/\/tools4trade.co.uk\/pages\/power-tools",
+              "menu_style_1": "power-tools",
+              "image_style_1": "shopify:\/\/shop_images\/power_tools_banner_1.jpg"
+            }
+          },
+          "f8f380d8-9c22-456d-bd40-79f710c2c34b": {
+            "type": "style_1",
+            "settings": {
+              "menu_title_text_1": "Hand Tools",
+              "menu_title_text_1_link": "https:\/\/tools4trade.co.uk\/pages\/hand-tools",
+              "menu_style_1": "hand-tools-1",
+              "image_style_1": "shopify:\/\/shop_images\/hand_tools_bfd8bb70-eabe-4518-be9e-bd3d9e1937f9.jpg"
+            }
+          },
+          "085fcfcf-1c0f-460e-99ac-2b5ba91b500f": {
+            "type": "style_1",
+            "settings": {
+              "menu_title_text_1": "Accessories",
+              "menu_title_text_1_link": "https:\/\/tools4trade.co.uk\/pages\/accessories",
+              "menu_style_1": "accessories-1",
+              "image_style_1": "shopify:\/\/shop_images\/accessories_1.jpg"
+            }
+          },
+          "d4a33636-5f6d-4f6a-997b-6c8ff2f1f227": {
+            "type": "style_1",
+            "settings": {
+              "menu_title_text_1": "Gardening & Outdoor",
+              "menu_title_text_1_link": "https:\/\/tools4trade.co.uk\/pages\/gardening-outdoor",
+              "menu_style_1": "gardening-outdoor",
+              "image_style_1": "shopify:\/\/shop_images\/mwnu-image.jpg"
+            }
+          },
+          "4e8d8b2c-e26b-41ae-a79f-310e126a05a1": {
+            "type": "style_1",
+            "settings": {
+              "menu_title_text_1": "Safety & Workwear",
+              "menu_title_text_1_link": "https:\/\/tools4trade.co.uk\/pages\/safety-workwear",
+              "menu_style_1": "safety-workwear-1",
+              "image_style_1": "shopify:\/\/shop_images\/safety___workwear_1.jpg"
+            }
+          },
+          "7a4f9b49-05ab-41be-a4fd-d3deea9beced": {
+            "type": "style_1",
+            "settings": {
+              "menu_title_text_1": "Tool Storage",
+              "menu_title_text_1_link": "https:\/\/tools4trade.co.uk\/pages\/tool-storage",
+              "menu_style_1": "tool-storage-1",
+              "image_style_1": "shopify:\/\/shop_images\/tools_strorage_1.jpg"
+            }
+          },
+          "e92e7387-ba95-4ca1-8457-b43a29132461": {
+            "type": "style_1",
+            "settings": {
+              "menu_title_text_1": "Ladders",
+              "menu_title_text_1_link": "https:\/\/tools4trade.co.uk\/pages\/ladders",
+              "menu_style_1": "ladders-1",
+              "image_style_1": "shopify:\/\/shop_images\/ladders_1.jpg"
+            }
+          },
+          "224812cb-47a3-4c94-9491-5535c2249338": {
+            "type": "style_1",
+            "settings": {
+              "menu_title_text_1": "Brands",
+              "menu_title_text_1_link": "https:\/\/tools4trade.co.uk\/pages\/brands",
+              "menu_style_1": "brands-1",
+              "image_style_1": "shopify:\/\/shop_images\/brands_1.jpg"
+            }
+          },
+          "dd7dad14-8d15-4bb5-b438-d4a43c6eaaee": {
+            "type": "style_2",
+            "settings": {
+              "menu_title_text_2": "Hot Deals",
+              "menu_title_link_2": "shopify:\/\/collections\/hot-deals"
+            }
+          },
+          "ca6fcc26-bf9a-4735-860d-351c0b76fdaf": {
+            "type": "style_2",
+            "settings": {
+              "menu_title_text_2": "Clearance",
+              "menu_title_link_2": "shopify:\/\/collections\/clearance"
+            }
+          },
+          "bdd64989-f1eb-494a-8422-57ec9e91fb7d": {
+            "type": "style_2",
+            "settings": {
+              "menu_title_text_2": "Warehouse Deals",
+              "menu_title_link_2": "shopify:\/\/collections\/warehouse-deals"
+            }
+          }
+        },
+        "block_order": [
+          "009a9da4-668d-449e-bd25-a6237c8d2e78",
+          "f8f380d8-9c22-456d-bd40-79f710c2c34b",
+          "085fcfcf-1c0f-460e-99ac-2b5ba91b500f",
+          "d4a33636-5f6d-4f6a-997b-6c8ff2f1f227",
+          "4e8d8b2c-e26b-41ae-a79f-310e126a05a1",
+          "7a4f9b49-05ab-41be-a4fd-d3deea9beced",
+          "e92e7387-ba95-4ca1-8457-b43a29132461",
+          "224812cb-47a3-4c94-9491-5535c2249338",
+          "dd7dad14-8d15-4bb5-b438-d4a43c6eaaee",
+          "ca6fcc26-bf9a-4735-860d-351c0b76fdaf",
+          "bdd64989-f1eb-494a-8422-57ec9e91fb7d"
+        ],
         "settings": {
           "logo_img": "shopify:\/\/shop_images\/tools4trade-logo_edd395f2-fdd3-497e-9510-a52a021c0aff.png",
           "menu": "main-menu-1",
@@ -138,6 +247,111 @@
           "message_link": "shopify:\/\/collections\/dewalt",
           "color_bg": "#222222",
           "color_text": "#ffffff"
+        }
+      },
+      "Text-Column-With-Images-2": {
+        "type": "Text-Column-With-Images-2",
+        "blocks": {
+          "c1a7430d-715d-4db4-8a05-e4b64e115409": {
+            "type": "Icon-Text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/earphones-alt-s.png",
+              "title": "NEED HELP? CONTACT US ON",
+              "subtitle": "01908 969966"
+            }
+          },
+          "da318412-94cd-4383-b9b4-d45842b46cbd": {
+            "type": "Icon-Text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/delivery-truck.png",
+              "title": "FREE NEXT DAY DELIVERY",
+              "subtitle": "on orders over £50.00"
+            }
+          },
+          "c3d72e03-5288-45f9-8f78-8b374d867432": {
+            "type": "Icon-Text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/credit-card-svg_1.png",
+              "title": "SAFE PAYMENT",
+              "subtitle": "100% secure payment"
+            }
+          },
+          "baae1bb6-7c62-445d-9370-565e99e93860": {
+            "type": "Icon-Text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/box-svgrepo-com.png",
+              "title": "Wide choice",
+              "subtitle": "10k items available"
+            }
+          }
+        },
+        "block_order": [
+          "c1a7430d-715d-4db4-8a05-e4b64e115409",
+          "da318412-94cd-4383-b9b4-d45842b46cbd",
+          "c3d72e03-5288-45f9-8f78-8b374d867432",
+          "baae1bb6-7c62-445d-9370-565e99e93860"
+        ],
+        "settings": {
+        }
+      },
+      "footer-new": {
+        "type": "footer-new",
+        "blocks": {
+          "95ef46f4-44e4-4ea0-8744-ebefeb7c8484": {
+            "type": "text_logo_contact",
+            "settings": {
+              "logo_image": "shopify:\/\/shop_images\/tools4trade-logo_edd395f2-fdd3-497e-9510-a52a021c0aff.png",
+              "logo_image_link": "\/",
+              "text": "<p>Tools4trade <br>6 Fitzhamon Court <br>Wolverton, Milton Keynes<br>MK12 6LB<\/p>",
+              "show_map_text": "Show On Map",
+              "show_map_link": "https:\/\/www.google.com\/maps\/place\/Tools4Trade+-+Power+Tools+UK,+Makita+Power+Tools,+Dewalt+Power+Tools\/@52.0570633,-0.8305662,18z\/data=!3m1!4b1!4m6!3m5!1s0x487701f89a653fc3:0x8d67ca6fec4621eb!8m2!3d52.0570633!4d-0.8294719!16s%2Fg%2F11c47xc1mc"
+            }
+          },
+          "3fabae65-12bc-4d5f-9b12-d3a5726bafe4": {
+            "type": "link_list",
+            "settings": {
+              "title": "Information",
+              "menu": "information"
+            }
+          },
+          "644516c9-0b6e-4c36-80f8-81c0ccaf2ec5": {
+            "type": "link_list",
+            "settings": {
+              "title": "Support",
+              "menu": "support"
+            }
+          },
+          "a43cdb96-dc6a-4e80-804a-f166e674275f": {
+            "type": "link_list",
+            "settings": {
+              "title": "My Services",
+              "menu": "service"
+            }
+          },
+          "ac757d11-8bbe-4db9-b0ee-c96a2223df5e": {
+            "type": "link_list",
+            "settings": {
+              "title": "Store",
+              "menu": "footer"
+            }
+          },
+          "294c7e07-31e8-4b98-a24a-1b7558dafe19": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Newsletter"
+            }
+          }
+        },
+        "block_order": [
+          "95ef46f4-44e4-4ea0-8744-ebefeb7c8484",
+          "3fabae65-12bc-4d5f-9b12-d3a5726bafe4",
+          "644516c9-0b6e-4c36-80f8-81c0ccaf2ec5",
+          "a43cdb96-dc6a-4e80-804a-f166e674275f",
+          "ac757d11-8bbe-4db9-b0ee-c96a2223df5e",
+          "294c7e07-31e8-4b98-a24a-1b7558dafe19"
+        ],
+        "settings": {
+          "show_payment_icons": true
         }
       }
     },

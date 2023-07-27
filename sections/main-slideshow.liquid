@@ -1,6 +1,7 @@
 <div class="main-slider-section">
   <div class="container">
     <div class="main-slider-inner hide-mobile">
+
       <div class="main-slider-left">
         <div class="banner-slideshow">
           {% for block in section.blocks %}
@@ -10,7 +11,7 @@
                 {%- assign block_image_mob = block.settings.imagemob -%}
                 <div class="banner-slides fade">
                   <div class="new-desk  {% if block.settings.desktop_hide != blank %}hide-desk {% endif %}">
-                    <a href="{{ block.settings.button_link }}" aria-label="Desktop Image">
+                    <a href="{{ block.settings.button_link }}" title="Desktop Image" aria-label="Desktop Image">
                       <img srcset="
                         {%- if block_image.width >= 165 -%}
                           {{ block_image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -43,7 +44,7 @@
       <div class="main-slider-right">
         {% if section.settings.desk_img1 != blank %}
           <div class="right-banner">
-            <a href="https://tools4trade.co.uk/collections/tool-kits-cordless?pf_v_brand=Milwaukee&pf_st_stock_filter=true" aria-label="Read more">
+            <a href="https://tools4trade.co.uk/collections/tool-kits-cordless?pf_v_brand=Milwaukee&pf_st_stock_filter=true" aria-label="Read more" title="Read more">
               <img srcset="
                   {%- if section.settings.desk_img1.width >= 165 -%}
                     {{ section.settings.desk_img1 | image_url: width: 165 }} 165w,{%- endif -%}
@@ -70,7 +71,7 @@
         {% endif %}
         {% if section.settings.desk_img2 != blank %}
           <div class="right-banner">
-            <a href="https://tools4trade.co.uk/collections/body-only-tools?pf_st_stock_filter=true" aria-label="Read more">
+            <a href="https://tools4trade.co.uk/collections/body-only-tools?pf_st_stock_filter=true" title="Read more" aria-label="Read more">
               <img srcset="
                   {%- if section.settings.desk_img2.width >= 165 -%}
                     {{ section.settings.desk_img2 | image_url: width: 165 }} 165w,{%- endif -%}
@@ -107,7 +108,7 @@
                 {%- assign block_image_mob = block.settings.imagemob -%}
                 <div class="banner-slides fade">
                   <div class="new-mob">
-                    <a href="{{ block.settings.button_link2 }}" aria-label="Mobile Image">
+                    <a href="{{ block.settings.button_link2 }}" title="Mobile Image" aria-label="Mobile Image">
                       <img srcset="
                         {%- if block_image_mob.width >= 165 -%}
                           {{ block_image_mob | image_url: width: 165 }} 165w,{%- endif -%}
@@ -137,7 +138,7 @@
           {% endfor %}
         </div>
       </div>
-    </div>
+    </div>    
   </div>
 </div>
 <style>
