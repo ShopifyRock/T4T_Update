@@ -107,4 +107,14 @@ $(document).ready(function() {
         $(this).hasClass("active") == !1 ? ($(".site-footer__item .h4").removeClass("active"), $(this).addClass("active"), $(".site-footer__item .site-footer__linklist, .site-footer__item .site-footer__item-inner__address").slideUp(), $(this).next(".site-footer__item .site-footer__linklist, .site-footer__item .site-footer__item-inner__address").slideToggle()) : ($(".site-footer__item .h4").removeClass("active"), $(".site-footer__item .site-footer__linklist, .site-footer__item .site-footer__item-inner__address").slideUp())
     })
 
+    jQuery('.filter-button-mobile').click(function () {
+        jQuery('html').addClass('active--filter--mobile')
+        jQuery('.filter-sidebar').addClass('activeFilterMobile')
+    })
+
+    jQuery('.drawer__close-button').click(function () {
+        jQuery('html').removeClass('active--filter--mobile')
+        jQuery('.filter-sidebar').removeClass('activeFilterMobile')
+    })
+
 });

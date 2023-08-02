@@ -1,0 +1,60 @@
+{% if section.blocks.size > 0 %}
+    {% for block in section.blocks %}
+        {%- if block.type == 'banner_image' -%}
+            {% assign select_coll = block.settings.collection %}
+            {% assign current_path = request.path | split: '/' | last %}
+            {% if select_coll == current_path %}
+                {% if block.settings.banner_img != blank or block.settings.banner_img_mobile != blank %}
+                    <div class="page-width">
+                        <div class="banner_img_new">
+                            {% if block.settings.banner_img_link != blank %}
+                                <a href="{{ block.settings.banner_img_link }}" target="_blank">
+                            {% endif %}
+                                    <img src="{{ block.settings.banner_img | img_url: 'master' }}" alt="{{ block.settings.banner_img.alt }}"
+                                        class="desktop_image_new" width="1920" height="300">
+                                    <img src="{{ block.settings.banner_img_mobile | img_url: 'master' }}" alt="{{ block.settings.banner_img_mobile.alt }}"
+                                        class="mobile_image_new" width="800" height="710">
+                            {% if block.settings.banner_img_link != blank %}
+                                </a>
+                            {% endif %} 
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% schema %}
+{
+    "name": "Collection Banner",
+    "settings": [],
+    "blocks": [
+        {
+            "type": "banner_image",
+            "name": "Banner Image",
+            "settings": [
+                {
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "Select Collection Display"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "banner_img",
+                    "label": "Desktop Banner Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "banner_img_mobile",
+                    "label": "Mobile Banner Image"
+                },
+                {
+                    "type": "url",
+                    "id": "banner_img_link",
+                    "label": "Banner Image Link"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
