@@ -1,0 +1,47 @@
+{% if template == 'product' %}
+    {% assign previous_page_name = '' %}
+    {% if request.headers.referer %}
+        {% assign referer_parts = request.headers.referer | split: '/' %}
+        {% assign previous_page_name = referer_parts | last | remove: '.html' %}
+    {% endif %}
+{% endif %}
+<div class="breadcrumb_text_new  ">
+    <div id="shopify-section-breadcrumb" class="shopify-section">
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs-list">
+                    <li class="item"><a href="/">Home</a></li>
+                    {% if template contains 'page' %}
+                        <li class="item current">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <a class="active" href="{{ page.link }}" aria-current="page">{{ page.title }}</a>
+                        </li>
+                    {% elsif template contains 'product' %}
+                        {% if collection.url %}
+                            <li class="item current">
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <a class="active" href="{{ collection.link }}" aria-current="page">{{ collection.title }}</a>
+                            </li>
+                        {% elsif previous_page_name != '' and request.url contains 'products' %}
+                            <li class="item current">
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <a class="active" href="{{ request.headers.referer }}" aria-current="page">{{ previous_page_name }}</a>
+                            </li>
+                        {% endif %}
+                    {% elsif template contains 'collection' and collection.handle %}
+                        <li class="item current">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <a class="active" href="{{ collection.link }}" aria-current="page">{{ collection.title }}</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Breadcrumb",
+    "settings": []
+  }
+{% endschema %}

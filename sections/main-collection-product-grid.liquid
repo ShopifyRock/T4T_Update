@@ -1,0 +1,575 @@
+{% comment %} Breadcrumbs START {% endcomment %}
+
+<div class="breadcrumb_text_new  ">
+    <div id="shopify-section-breadcrumb" class="shopify-section">
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs-list">
+                    <li class="item"><a href="/">Home</a></li>
+                    {% if template contains 'page' %}
+                        <li class="item current">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <a class="active" href="{{ page.link }}" aria-current="page">{{ page.title }}</a>
+                        </li>
+                    {% elsif template contains 'product' %}
+                        {% if collection.url %}
+                            <li class="item current">
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <a class="active" href="{{ collection.link }}" aria-current="page">{{ collection.title }}</a>
+                            </li>
+                        {% endif %}
+                        <li class="item current">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <a class="active" href="{{ product.link }}" aria-current="page">{{ product.title }}</a>
+                        </li>
+                    {% elsif template contains 'collection' and collection.handle %}
+                        <li class="item current">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <a class="active" href="{{ collection.link }}" aria-current="page">{{ collection.title }}</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% comment %} Breadcrumbs END {% endcomment %}
+
+{% comment %} COLLECTION CODE START {% endcomment %}
+
+<div class="container collections-container" id="collections">
+    {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+    <div class="filter-sidebar">
+        <div class="filter-title">
+            <h3>Filters</h3>
+            <button type="button" class="drawer__close-button" aria-label="Close filter button">
+                <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 64 64">
+                    <path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="filter-content">
+            <form class="filter-form " id="collection-sidebar-filter">
+                
+                <div class="active-filters selected-filters-options">
+                    <span>REFINE BY</span>
+                    {%- for filter in collection.filters -%}
+                    {%- if filter.type == 'price_range' -%}
+                    {%- if filter.min_value.value != null or filter.max_value.value != null -%}
+                    <a class="active-filters__remove-filter selected-option-item" title="Price"
+                        href="{{ filter.url_to_remove }}">
+                        {%- assign min_value = filter.min_value.value | default: 0 -%}
+                        {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
+                        {{ min_value | money }} - {{ max_value | money }} X
+                    </a>
+                    {%- endif -%}
+                    {%- else -%}
+                    {%- for filter_value in filter.active_values -%}
+                    <a class="active-filters__remove-filter selected-option-item"
+                        href="{{ filter_value.url_to_remove }}" title="Price">
+                        {% if filter.label == 'Colour' %}
+                        <span class="color-box"
+                            style="border: 1px solid #e8e8e1;height: 16px;width: 16px;display: inline-block;background-color:{{- filter_value.label -}}; background-image:url({{  filter_value.label |  replace: " ", "-" | append: '.png' | file_img_url }});"></span>
+                        {% else %}
+                        <div class="filter-selected-label">{{ filter.label }}: <span
+                                class="filter-selected-value">{{ filter_value.label -}}</span></div>
+                        {%- endif %}
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                            class="icon icon-close" fill="none" viewBox="0 0 18 17">
+                            <path
+                                d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
+                                fill="currentColor">
+                            </path>
+                        </svg>
+                    </a>
+                    {%- endfor -%}
+                    {%- endif -%}
+                    {%- endfor -%}
+                    {%- for filter in collection.filters -%}
+                    {% if filter.active_values.size > 0 %}
+                    {% break %}
+                    {% endif %}
+                    {%- endfor -%}
+                    <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}"
+                        class="active-filters__clear clear-all-btn" title="Clear all">Clear all</a>
+                </div>
+
+                {%- for filter in collection.filters -%}
+                <details class="filter-group" open>
+                    <summary class="filter-group-summary">
+                        <div class="filter-option-title">
+                            <span>{{ filter.label }}</span>
+                            {%- if filter.active_values.size > 0 -%}
+                            <span>({{ filter.active_values.size }})</span>
+                            {%- endif -%}
+                        </div>
+                    </summary>
+
+                    <div class="filter-group-display">
+                        {%- case filter.type -%}
+                        {%- when 'boolean', 'list' -%}
+                        <ul class="filter-group-display__list options-list">
+                            {%- for filter_value in filter.values -%}
+                            <li class="filter-group-display__list-item">
+                                <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                                    class="{{ filter_value.label}} filter_{{ filter.label }}">
+                                    <input type="checkbox" name="{{ filter_value.param_name }}"
+                                        value="{{ filter_value.value }}"
+                                        onclick="document.getElementById('collection-sidebar-filter').submit();"
+                                        id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                                        {% if filter_value.active -%} checked {%- endif %}
+                                        {% if filter_value.count == 0 and filter_value.active == false -%} disabled
+                                        {%- endif %}>
+                                    {% if filter.label == 'Colour' %}
+                                    <span class="color-box"
+                                        style="border: 1px solid #e8e8e1; height: 16px; width: 16px; display: inline-block; background-color:{{- filter_value.label -}}; background-image:url({{  filter_value.label |  replace: " ", "-" | append: '.png' | file_img_url }});"></span>
+                                    {% endif %}
+                                    <span>{{- filter_value.label -}}</span>
+                                </label>
+                            </li>
+                            {%- endfor -%}
+                        </ul>
+                        {%- when 'price_range' -%}
+                        <div class="filter-group-display__price-range">
+                            <div class="filter-group-display__price-range-from">
+                                <input name="{{ filter.min_value.param_name }}"
+                                    id="Filter-{{ filter.min_value.param_name }}" {% if filter.min_value.value -%}
+                                    value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                                    {%- endif %} type="number" placeholder="From" min="0"
+                                    max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+                            </div>
+                            <div class="filter-group-display__price-range-to">
+                                <input name="{{ filter.max_value.param_name }}"
+                                    id="Filter-{{ filter.max_value.param_name }}" {% if filter.max_value.value -%}
+                                    value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
+                                    {%- endif %} type="number" placeholder="To" min="0"
+                                    max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+                            </div>
+                        </div>
+
+                        <div class="filter-group-display__submit">
+                            <input type="submit" value="Apply">
+                        </div>
+                        {%- endcase -%}
+                    </div>
+                </details>
+                {%- endfor -%}
+            </form>
+
+        </div>
+    </div>
+    <section class="collections-grid">
+        <div class="sortby-wrapper">
+            <div class="sort-by">
+                <button type="button" title="Refine By" class="filter-button-mobile">Refine By</button>
+                <div class="sortby-toolbar">
+                    <label aria-label="sort by">sort by </label>
+                    <select id="sort-by" class="sortby-dropdown">
+                        <option value="manual">Featured</option>
+                        <option value="best-selling">Best Selling</option>
+                        <option value="title-ascending">Alphabetically, A-Z</option>
+                        <option value="title-descending">Alphabetically, Z-A</option>
+                        <option value="price-ascending">Price, low to high</option>
+                        <option value="price-descending">Price, high to low</option>
+                        <!-- Add more options if needed -->
+                      </select>
+                </div>
+            </div>
+        </div>
+        {% paginate collection.products by 8 %}
+        <div id="AjaxinateContainer" >
+            <ul class="collections-grid__wrapper">
+                {%- for product in collection.products -%}
+                {%- liquid
+                    if use_variant
+                      assign target = product.selected_or_first_available_variant
+                    else
+                      assign target = product
+                    endif
+                  
+                    assign compare_at_price = target.compare_at_price
+                    assign price = target.price | default: 1999
+                    assign available = target.available | default: false
+                    assign money_price = price | money
+                   
+                    if target == product and product.price_varies
+                      assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+                    endif
+                  -%}
+                <li class="collections-grid__item">
+                    <a href="{{ product.url | within: collection }}" title="{{ product.title }}" class="box-link">&nbsp;</a>
+                        <div class="product-label-and-sku-wrapper">
+                            <div></div>
+                            <div class="product-sku">
+                                <div class="sku-label">sku:</div>
+                                <span>{{ product.selected_or_first_available_variant.sku }}</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-image">
+                                <div class="product-image__wrapper">
+                                    <div class="product-image__container">
+                                        <img srcset=" {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%} {%- if product.featured_media.width >= 210 -%}{{ product.featured_media | image_url: width: 210 }} 360w,{%- endif -%} {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 420w,{%- endif -%} {%- if product.featured_media.width >= 420 -%}{{ product.featured_media | image_url: width: 420 }} 420w,{%- endif -%}{%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%} {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%} {{ product.featured_media | image_url }} {{ product.featured_media.width }}w " src="{{ product.featured_media | image_url: width: 533 }}" alt="{{ product.featured_media.alt | escape }}" class="motion-reduce" loading="lazy" width="210" height="210">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h3>{{ product.title }}</h3>
+                                <div class="price-wrapper">
+                                    <div class="normal-price">
+                                        <span class="price">{{ money_price }}<strong>{{ product.selected_or_first_available_variant.price | times:5 | divided_by: 6 | round: 2 |  money }} Ex.VAT</strong></span>
+                                    </div>
+                                </div>
+                                <div class="bottom-details">
+                                    <div class="add-to-cart">
+                                        {% if product.available %}
+                                        <a href="{{ product.url | within: collection }}" title="Order Now" class="cart-btn">Order Now</a>
+                                        {% else %}
+                                        <span class="cart-btn sold-out" aria-label="Sold out">Sold out</span>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                {% for tag in product.tags %}
+                                    {% if tag == 'b2g1' %}
+                                        <div class="offer-logo">
+                                            <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/final-new-3.png?v=1687522832" alt="" width="70" height="70">
+                                        </div>
+                                    {% elsif tag == 'dewalt_offer' %}
+                                        <div class="offer-logo">
+                                            <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/stamp-final.png?v=1688986330" alt="" width="70" height="70">
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                                {% if request.path contains '/warehouse-deals' %}
+                                    <div class="save_tag_new add_clearance_off_new warehouse_clearance_off_new">
+                                        <div class="save_tag_in_new">WAREHOUSE<br>DEALS</div>
+                                    </div>
+                                {% elsif request.path contains '/makita-165mm-plunge-saw-with-free-rail-bag' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/tag_free.png?v=1645015837" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/excel-thicknesser' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20220927185324.png?v=1664285390" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/buy-1-get-1-free' %}
+                                    <div class="offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/bogo-icon_6a728295-420b-44c1-85bc-c1d99f8b7c04.png?v=1684322038" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/makita-xgt-battery-redemption' %}
+                                    <div class="offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230404174624.png?v=1680610627" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/gardening-outdoor' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/lawn-mowers-accessories' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/hedge-trimmers-accessories' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/garden-multi-tools' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/grass-shears' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/grass-trimmers-accessories' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/chainsaws-accessories' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/garden-vacuums-blowers' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/wheelbarrows-accessories' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/pressure-washers' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/garden-cordless-range' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/garden-corded-range' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/garden-petrol-range' %}
+                                    <div class="top-offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230303201800.png?v=1677854935" alt="" />
+                                    </div>
+                                {% elsif request.path contains '/clearance' %}
+                                    <div class="offer-logo">
+                                        <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/clearance.png?v=1686644513" alt="" />
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>                    
+                </li>
+                {%- endfor -%}
+            </ul>
+        </div>
+        <div id="AjaxinatePagination">
+            {% if paginate.next %}
+            <a href="{{ paginate.next.url }}">
+                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/loader-ne.gif?v=1683283515" alt="Loader" width="64" height="64" />
+            </a>
+            {% endif %}  
+        </div>
+        {% endpaginate %}
+    </section>
+</div>
+{% comment %} COLLECTION CODE END {% endcomment %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var endlessScroll = new Ajaxinate();
+    });
+</script>
+<script>
+    // Function to handle sorting when the dropdown value changes
+    function handleSortChange() {
+      var sortByValue = document.getElementById("sort-by").value;
+      var collectionUrl = "{{ collection.url }}";
+  
+      switch (sortByValue) {
+        case "best-selling":
+          collectionUrl += "?sort_by=best-selling";
+          break;
+        case "title-ascending":
+          collectionUrl += "?sort_by=title-ascending";
+          break;
+        case "title-descending":
+          collectionUrl += "?sort_by=title-descending";
+          break;
+        case "price-ascending":
+          collectionUrl += "?sort_by=price-ascending";
+          break;
+        case "price-descending":
+          collectionUrl += "?sort_by=price-descending";
+          break;
+        // Add more cases if needed
+      }
+  
+      window.location.href = collectionUrl;
+    }
+  
+    // Attach event listener to the dropdown
+    document.getElementById("sort-by").addEventListener("change", handleSortChange);
+  </script>
+  
+
+
+{% schema %}
+{
+    "name": "t:sections.main-collection-product-grid.name",
+    "class": "section",
+    "settings": [
+        {
+            "type": "range",
+            "id": "products_per_page",
+            "min": 8,
+            "max": 24,
+            "step": 4,
+            "default": 16,
+            "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+        },
+        {
+            "type": "range",
+            "id": "columns_desktop",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "default": 4,
+            "label": "t:sections.main-collection-product-grid.settings.columns_desktop.label"
+        },
+        {
+            "type": "header",
+            "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+        },
+        {
+            "type": "select",
+            "id": "image_ratio",
+            "options": [
+                {
+                    "value": "adapt",
+                    "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__1.label"
+                },
+                {
+                    "value": "portrait",
+                    "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__2.label"
+                },
+                {
+                    "value": "square",
+                    "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
+                }
+            ],
+            "default": "adapt",
+            "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
+        },
+        {
+            "type": "select",
+            "id": "image_shape",
+            "options": [
+                {
+                    "value": "default",
+                    "label": "t:sections.all.image_shape.options__1.label"
+                },
+                {
+                    "value": "arch",
+                    "label": "t:sections.all.image_shape.options__2.label"
+                },
+                {
+                    "value": "blob",
+                    "label": "t:sections.all.image_shape.options__3.label"
+                },
+                {
+                    "value": "chevronleft",
+                    "label": "t:sections.all.image_shape.options__4.label"
+                },
+                {
+                    "value": "chevronright",
+                    "label": "t:sections.all.image_shape.options__5.label"
+                },
+                {
+                    "value": "diamond",
+                    "label": "t:sections.all.image_shape.options__6.label"
+                },
+                {
+                    "value": "parallelogram",
+                    "label": "t:sections.all.image_shape.options__7.label"
+                },
+                {
+                    "value": "round",
+                    "label": "t:sections.all.image_shape.options__8.label"
+                }
+            ],
+            "default": "default",
+            "label": "t:sections.all.image_shape.label",
+            "info": "t:sections.all.image_shape.info"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_secondary_image",
+            "default": false,
+            "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_vendor",
+            "default": false,
+            "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_rating",
+            "default": false,
+            "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
+            "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_quick_add",
+            "default": false,
+            "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
+        },
+        {
+            "type": "header",
+            "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_filtering",
+            "default": true,
+            "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
+            "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+        },
+        {
+            "type": "select",
+            "id": "filter_type",
+            "options": [
+                {
+                    "value": "horizontal",
+                    "label": "t:sections.main-collection-product-grid.settings.filter_type.options__1.label"
+                },
+                {
+                    "value": "vertical",
+                    "label": "t:sections.main-collection-product-grid.settings.filter_type.options__2.label"
+                },
+                {
+                    "value": "drawer",
+                    "label": "t:sections.main-collection-product-grid.settings.filter_type.options__3.label"
+                }
+            ],
+            "default": "vertical",
+            "label": "t:sections.main-collection-product-grid.settings.filter_type.label",
+            "info": "t:sections.main-collection-product-grid.settings.filter_type.info"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_sorting",
+            "default": true,
+            "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+        },
+        {
+            "type": "header",
+            "content": "t:sections.main-collection-product-grid.settings.header_mobile.content"
+        },
+        {
+            "type": "select",
+            "id": "columns_mobile",
+            "default": "2",
+            "label": "t:sections.main-collection-product-grid.settings.columns_mobile.label",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__1.label"
+                },
+                {
+                    "value": "2",
+                    "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__2.label"
+                }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 4,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 36
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 4,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 36
+        }
+    ]
+}
+{% endschema %}
