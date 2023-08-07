@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-login",
+      "settings": {
+        "desk_image": "shopify:\/\/shop_images\/register.jpg"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

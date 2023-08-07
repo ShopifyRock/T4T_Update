@@ -1,0 +1,58 @@
+<div class="cart-popup-wrapper cart-popup-wrapper--hidden" role="dialog" aria-modal="true"
+    aria-labelledby="CartPopupHeading" data-cart-popup-wrapper>
+    <div class="cart-popup" data-cart-popup tabindex="-1">
+        <div class="cart-popup__header">
+            <h2 id="CartPopupHeading" class="cart-popup__heading">Just added to your cart</h2>
+            <button class="cart-popup__close" aria-label="{{ 'accessibility.close' | t }}" data-cart-popup-close>{% render 'icon-close' %}</button>
+        </div>
+        <div class="cart-popup-item">
+            <div class="cart-popup-item__image-wrapper hide" data-cart-popup-image-wrapper>
+                <div class="cart-popup-item__image cart-popup-item__image--placeholder" data-cart-popup-image-placeholder>
+                    <div data-placeholder-size></div>
+                    <div class="placeholder-background placeholder-background--animation"></div>
+                </div>
+            </div>
+            <div class="cart-popup-item__description">
+                <div>
+                    <h3 class="cart-popup-item__title" data-cart-popup-title></h3>
+                    <ul class="product-details" aria-label="Product details" data-cart-popup-product-details></ul>
+                    <div class="cart-popup-item__quantity">
+                        <span class="visually-hidden" data-cart-popup-quantity-label></span>
+                        <span aria-hidden="true">QTY:</span>
+                        <span aria-hidden="true" data-cart-popup-quantity></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="{{ routes.cart_url }}" title="View cart" class="cart-popup__cta-link btn btn--secondary-accent">
+            View cart (<span data-cart-popup-cart-quantity></span>)
+        </a>
+
+        <div class="cart-popup__dismiss">
+            <button class="vipul-button text-link text-link--accent" title="Continue shopping"
+                aria-label="Continue shopping" data-cart-popup-dismiss>
+                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 18" width="11" height="18">
+                    <title>Path 6</title>
+                    <style>
+                        .s0 {
+                            fill: #232f3e
+                        }
+                    </style>
+                    <path id="Path 6" class="s0"
+                        d="m0.3 9.7l8 8q0.3 0.2 0.7 0.3 0.4-0.1 0.7-0.3l0.6-0.6c0.3-0.4 0.3-1 0-1.4l-6.8-6.7 6.8-6.7q0.2-0.3 0.2-0.7 0-0.4-0.2-0.7l-0.6-0.6q-0.3-0.3-0.7-0.3-0.4 0-0.7 0.3l-8 8q-0.3 0.3-0.3 0.7 0 0.4 0.3 0.7z" />
+                </svg>
+                Continue shopping
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".vipul-button").click(function () {
+            var vipul = document.referrer;
+            console.log("back-url", vipul);
+            window.location.href = vipul;
+        });
+    });
+</script>
