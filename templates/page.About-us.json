@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "about-us-page-new",
+      "blocks": {
+        "3f9ade8d-ff24-460a-a2a2-5ebd6ea53204": {
+          "type": "about_us_information",
+          "settings": {
+            "title": "About Us",
+            "alltext": "<p>Tools4trade was founded in 2004 by its present owners, and now commands a significant presence in the online power tools market, as one of the largest independent suppliers of power tools, accessories, hand tools, fixings, fasteners and construction consumables.<\/p><p>Offering next day delivery from its two distribution centres in Milton Keynes &amp; Northampton, supported by a trade counter in Hanwell London, tools4trade can react with speed to customer requests, without the need for delay.\nSupported by a Customer Service Team based at our Head Office in Milton Keynes, we are able to provide advice on repairs, servicing and warranties, making us a one stop shop for all power tool enquiries.<\/p>",
+            "image": "shopify:\/\/shop_images\/image1.png"
+          }
+        },
+        "ebe49667-b138-42b6-b4a8-fa87e81edc11": {
+          "type": "about_us_information",
+          "settings": {
+            "title": "Our People",
+            "alltext": "<p>At tools4trade, people are at the heart of everything we do. We aim to provide an excellence of Customer Service, with a commitment to do whatever it takes, to make your experience in dealing with us a memorable one.\nWe welcome your feedback and will listen to your comments, to help us drive our performance and service levels to you, as we continue to grow.\n<\/p>"
+          }
+        },
+        "cd023fd9-884e-488f-aa0b-f2b99c996dbe": {
+          "type": "about_us_information",
+          "settings": {
+            "title": "Our Brand",
+            "alltext": "<p>In 2018 we added our own brand <b><i>EXCEL<\/i><\/b> to our range, providing an affordable alternative to market. Without compromising on quality or performance, the Excel range puts power tools firmly in peoples reach, without compromising their financial budgets. All of this range is fully supported in the same way as the high end brand alternatives.<\/p>",
+            "image": "shopify:\/\/shop_images\/image2.png"
+          }
+        },
+        "29dbe7b6-70a3-4a16-a4aa-987809e1a8c2": {
+          "type": "about_us_information",
+          "settings": {
+            "title": "Our Promise",
+            "alltext": "<p>We wont be beaten on price, and regularly price check the market to ensure we offer our customers the best tools at the most competitive prices, without compromising on our high standards of service.\nOur pricing is transparent, which includes VAT, so there are no hidden extras when you proceed to checkout.<\/p>\n<p>We are open 6 days a week, for help or advice on anything within our power tools &amp; accessories range.<\/p>"
+          }
+        },
+        "3311b8fb-3d35-4ef8-bc70-eff81d59228e": {
+          "type": "about_us_information",
+          "settings": {
+            "title": "Our Services",
+            "alltext": "",
+            "image": "shopify:\/\/shop_images\/image3.png"
+          }
+        }
+      },
+      "block_order": [
+        "3f9ade8d-ff24-460a-a2a2-5ebd6ea53204",
+        "ebe49667-b138-42b6-b4a8-fa87e81edc11",
+        "cd023fd9-884e-488f-aa0b-f2b99c996dbe",
+        "29dbe7b6-70a3-4a16-a4aa-987809e1a8c2",
+        "3311b8fb-3d35-4ef8-bc70-eff81d59228e"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

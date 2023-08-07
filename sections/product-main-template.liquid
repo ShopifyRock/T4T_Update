@@ -1,339 +1,262 @@
 {% comment %} Main Product layout start {% endcomment %}
-
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign product_image_zoom_size = '1024x1024' -%}
+{%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
+{%- assign compare_at_price = current_variant.compare_at_price -%}
+{%- assign price = current_variant.price -%}
 <main class="product-main">
-
-    <section class="product__wrapper">
-        <div class="container">
-            <div class="product__main-container">
-                <div class="product__main--main-slider">
-                    <div class="product-thumb">
-
-                        <div>
-                            <div class="thumb-image-wrapper">
-                                <img src="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                    alt="" width="100" height="100">
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="thumb-image-wrapper">
-                                <img src="https://tools4trade.co.uk/cdn/shop/products/82291-2.jpg?v=1687047871" alt=""
-                                    width="100" height="100">
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="thumb-image-wrapper">
-                                <img src="https://i3.ytimg.com/vi/U6WNzaM1xN8/maxresdefault.jpg" alt="" width="100"
-                                    height="100">
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="thumb-image-wrapper">
-                                <img src="https://tools4trade.co.uk/cdn/shop/products/82291-2.jpg?v=1687047871" alt=""
-                                    width="100" height="100">
-                            </div>
-                        </div>
-
-                        <div>
-                            <img src="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129" alt=""
-                                width="100" height="100">
-                        </div>
-
-                        <div>
-                            <img src="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129" alt=""
-                                width="100" height="100">
-                        </div>
-
-                        <div>
-                            <img src="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129" alt=""
-                                width="100" height="100">
-                        </div>
-
-                    </div>
-                    <div class="product-main-image">
-                        <div><a title="Product title"
-                                href="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                data-fancybox="gallery"><img
-                                    src="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                    alt="" width="960" height="960"></a></div>
-
-                        <div><a title="Product title"
-                                href="https://tools4trade.co.uk/cdn/shop/products/82291-2.jpg?v=1687047871"
-                                data-fancybox="gallery"><img
-                                    src="https://tools4trade.co.uk/cdn/shop/products/82291-2.jpg?v=1687047871" alt=""
-                                    width="960" height="960"></a></div>
-
-                        <div>
-                            <a title="Product title" href="https://youtu.be/U6WNzaM1xN8" data-fancybox="gallery">
-                                <div class="video-wrapper">
-                                    <iframe width="560" height="315"
-                                        src="https://www.youtube.com/embed/U6WNzaM1xN8?controls=0"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen></iframe>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div><a title="Product title"
-                                href="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                data-fancybox="gallery"><img
-                                    src="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                    alt="" width="960" height="960"></a></div>
-
-                        <div><a title="Product title"
-                                href="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                data-fancybox="gallery"><img
-                                    src="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                    alt="" width="960" height="960"></a></div>
-
-                        <div><a title="Product title"
-                                href="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                data-fancybox="gallery"><img
-                                    src="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                    alt="" width="960" height="960"></a></div>
-
-                        <div><a title="Product title"
-                                href="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                data-fancybox="gallery"><img
-                                    src="https://tools4trade.co.uk/cdn/shop/products/F03FS09755-01.jpg?v=1690467129"
-                                    alt="" width="960" height="960"></a></div>
-                    </div>
-                </div>
-                <div class="product__details-main">
-                    <h1 class="product-main__title">Festool 260mm 80T Fine Tooth Saw Blade 494605</h1>
-
-                    <div class="price-wrapper">
-                        <div class="price-container">
-                            <div class="regular-price">
-                                <span>£100.00</span>
-                                <strong>£83.33 Ex.VAT</strong>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="promotion-boxes">
-                        <div class="box">
-                            <img width="45" height="39"
-                                src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/deliveryIcon.png?v=1681815023"
-                                alt="">
-                            <p>Free Next Working Day Delivery*</p>
-                        </div>
-                        <div class="box">
-                            <img width="45" height="39"
-                                src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/deliveryIcon.png?v=1681815023"
-                                alt="">
-                            <p>Free Next Working Day Delivery*</p>
-                        </div>
-                    </div>
-
-                    <div class="product-description">
-                        <ul>
-                            <li>Super Micro Grain Carbide Tips</li>
-                            <li>Perma-SHIELD Non-stick Coating</li>
-                            <li>Laser-cut Expansion and Anti-vibration Slots</li>
-                            <li>Ideal for Cutting Wooden Materials</li>
-                        </ul>
-                    </div>
-
-                    <div class="qty-box">
-                        <label for="" aria-label="Quantity:">Quantity:</label>
-                        <div class="qty-box-wrapper">
-                            <a href="javascript:void(0)" class="decrease" title="decrement">-</a>
-                            <input type="text" name="quantity" value="1" readonly="" min="1" class="qty__input">
-                            <a href="javascript:void(0)" class="increase" title="increment">+</a>
-                        </div>
-                    </div>
-
-                    <div class="product-actions">
-                        <button type="button" aria-label="Add to cart" title="add to cart" class="addtocart-btn">Add to
-                            cart</button>
-                    </div>
-
-                </div>
+  <section class="product__wrapper">
+    <div class="container">
+      <div class="product__main-container">
+        <div class="product__main--main-slider">
+          <div class="product-page-label {% if product.media.size <= 1 %} new-class {% endif %}">
+            {% for tag in product.tags %}
+              {% if tag contains 'b2g1' %}
+                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/final-new-3.png?v=1687522832" alt="">
+              {% endif %}
+              {% if tag contains 'dewalt_offer' %}
+                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/stamp-final.png?v=1688986330" alt="">
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% if product.selected_or_first_available_variant.sku != blank %}
+            <div class="sku">
+              <label aria-label="sku">sku: </label>
+              <span>{{ product.selected_or_first_available_variant.sku }}</span>
             </div>
+          {% endif %}
+          <div class="product-thumb">
+            {% render 'pdp-media' %}
+          </div>
+          <div class="product-main-image">
+            {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
+            {%- for media in product.media -%}
+              {% render 'media', media: media, height: height, enable_image_zoom: enable_image_zoom, image_zoom_size: product_image_zoom_size, image_scale: product_image_scale %}
+            {%- endfor -%}                        
+          </div> 
         </div>
-    </section>
-
-    <section class="product-bottom__wrapper">
-        <div class="container">
-            <div class="product__tabs">
-                <div class="product__tabs-wrapper">
-                    <input type="radio" id="Description" name="the_tabs" checked="checked">
-                    <label for="Description">Description</label>
-                    <div class="tab">
-                        {% for tag in product.tags %}
-                        {% if tag contains 'b2g1' %}
-                        <div class="banner_img_new">
-                            <a href="https://tools4trade.co.uk/collections/buy-2-get-1-free" title="Buy 2 get 1 Free">
-                                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/final-3.jpg?v=1687772466" alt="{{ block.settings.banner_img.alt }}" class="desktop_image_new lazyload" width="1920" height="300" loding="Lazy" />
-                            </a>
-                            <a href="https://tools4trade.co.uk/collections/buy-2-get-1-free" title="Buy 2 get 1 Free">
-                                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/final-1.jpg?v=1687772424" alt="{{ block.settings.banner_img_mobile.alt }}" class="mobile_image_new lazyload" width="800" height="710" loding="Lazy" />
-                            </a>
-                        </div>
-                        {% endif %}
-                        {% if tag contains 'dewalt_offer1' %}
-                        <div class="banner_img_new">
-                            <a href="https://tools4trade.co.uk/pages/ts-cs-tools4trade-dewalt-redemption-offer" title="TOOLS4TRADE Redemption Offer ON DEWALT">
-                                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/pdp.jpg?v=1688736735" alt="{{ block.settings.banner_img.alt }}" class="desktop_image_new lazyload" width="1920" height="300" loding="Lazy" />
-                            </a>
-                            <a href="https://tools4trade.co.uk/pages/ts-cs-tools4trade-dewalt-redemption-offer" title="TOOLS4TRADE Redemption Offer ON DEWALT">
-                                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230707160134.jpg?v=1688726085"
-                                    alt="{{ block.settings.banner_img_mobile.alt }}" width="800" height="710" class="mobile_image_new lazyload"
-                                    loding="Lazy" />
-                            </a>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                        {% assign my_description = product.description | split: '<!-- split -->' | last %}
-                        {% if my_description != blank %}
-                        {{ my_description }}
-                        {% endif %}
-                    </div>
-
-                    <input type="radio" id="review-tab" name="the_tabs">
-                    <label for="review-tab">Review</label>
-                    <div class="tab">
-                        <!-- TrustBox widget - Product Reviews -->
-                        <div class="trustpilot-widget" data-locale="en-GB" data-template-id="544a426205dc0a09088833c6" data-businessunit-id="564473c60000ff00058571cd" data-style-height="700px" data-style-width="100%" data-theme="light" data-sku="{{ product.selected_or_first_available_variant.sku }}" data-review-languages="en" data-no-reviews="show" data-fullwidth="true">
-                            <a href="https://uk.trustpilot.com/review/" target="_blank" rel="noopener" title="Trustpilot">Trustpilot</a>
-                        </div>
-                        <!-- End TrustBox widget -->
-                    </div>
-
-                    <input type="radio" id="tab-sample" name="the_tabs">
-                    <label for="tab-sample">sample tab</label>
-                    <div class="tab">Text here...</div>
+        <div class="product__details-main">
+          <h1 class="product-main__title">{{ product.title }}</h1>
+          <div class="review-section">
+            <span class="review-wrapper">
+              <!-- TrustBox widget - Product Mini -->
+                <div class="trustpilot-widget" data-locale="en-GB" data-template-id="54d39695764ea907c0f34825" data-businessunit-id="564473c60000ff00058571cd" data-style-height="24px" data-style-width="100%" data-theme="light" data-sku="{{ product.selected_or_first_available_variant.sku }}" data-star-color="#00b67a" data-no-reviews="show" data-scroll-to-list="true" data-style-alignment="left">
+                  <a href="https://uk.trustpilot.com/review/tools4trade.co.uk" target="_blank" title="Trustpilot" rel="noopener">Trustpilot</a>
                 </div>
+              <!-- End TrustBox widget -->
+            </span>                                              
+          </div>
+          <div class="price-wrapper">
+            <div class="price-container">
+              <div class="regular-price">
+                {% render 'product-price', variant: current_variant %}
+              </div>
             </div>
-            <aside class="recently__products">
-                Buy it with
-            </aside>
-        </div>
-    </section>
+          </div>
+          <div class="delivery-info">
+            <div>
+              <div class="delivery-info-container">
+                <div class="delivery-info-wrapper d-flex align-items-center">
+                  <div class="delivery-info-image">
+                    <img width="45" height="39" src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/deliveryIcon.png?v=1681815023" alt="{{ product.metafields.custom_fields["delivery_message"] }}">
+                  </div>
+                  {% if product.metafields.custom_fields["delivery_message"] != blank %}
+                    <div class="delivery-info-content">
+                      <p>{{ product.metafields.custom_fields["delivery_message"] }}</p>
+                    </div>
+                  {% else %}
+                    <div class="delivery-info-content">
+                      <p>Free Next Working Day Delivery*</p>
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="klarna-box"></div>
+              </div>
+            </div>
+          </div>
+          <div class="product-description">
+            {% if section.settings.product_stock != blank %}
+              <p>{{ section.settings.product_stock }}</p>
+            {% endif %}
+            {% assign my_description_first = product.description | split: '<!-- split -->' | first %}
+            {% if my_description_first != blank %}
+              {{ my_description_first }}
+            {% endif %}
+          </div>
+          {% capture "form_classes" -%}
+            product-form product-form-{{ section.id }}
+            {%- unless section.settings.show_variant_labels %} product-form--hide-variant-labels {% endunless %}
+            {%- if section.settings.enable_payment_button and product.has_only_default_variant %}
+              product-form--payment-button-no-variants {%- endif -%}
+            {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
+          {%- endcapture %}
+          {% form 'product', product, class: form_classes, novalidate: 'novalidate', data-product-form: '' %}
+            {% unless product.has_only_default_variant %}
+              <div class="product-form__controls-group">
+                {% for option in product.options_with_values %}
+                  <div class="selector-wrapper js product-form__item">
+                    <label
+                      {% if option.name == 'default' %} class="label--hidden" {% endif -%}  for="SingleOptionSelector-{{ forloop.index0 }}" >
+                      {{ option.name }}
+                    </label>
+                    <select class="single-option-selector single-option-selector-{{ section.id }} product-form__input" id="SingleOptionSelector-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
+                      {% for value in option.values %}
+                        {% unless value contains '% off)' %}
+                          <option value="{{ value | escape }}" {% if option.selected_value == value %} selected="selected" {% endif %} >
+                            {{ value }}
+                          </option>
+                        {% endunless %}
+                      {% endfor %}
+                    </select>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endunless %}
 
+            <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
+              {% for variant in product.variants %}
+                {% unless variant.metafields.secomapp.freegifts %}
+                  {% unless variant.title contains '(Freegifts)' %}
+                    <option value="{{ variant.id }}" var-qty="{{ variant.inventory_quantity }}" {%- if variant == current_variant %} selected="selected" {%- endif -%} >
+                      {{ variant.title }}
+                      {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                    </option>
+                  {% endunless %}
+                {% endunless %}
+              {% endfor %}
+            </select> 
+            <div class="product-form__error-message-wrapper product-form__error-message-wrapper--hidden{% if section.settings.enable_payment_button %} product-form__error-message-wrapper--has-payment-button{% endif %}" data-error-message-wrapper role="alert">
+              <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+              {% render 'icon-error' %}
+            </div>
+            <div class="add-to-cart-wrapper product-form__controls-group product-form__controls-group--submit">
+              <div class="qty-wrapper product-form__item product-form__item--submit{%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}{%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}">
+                <div class="add-cart-section qty-new">
+                  <div class="product-form__item product-form__item--quantity quantity_plus_minus_new">
+                    <label class="desktop-lable" for="Quantity-{{ section.id }}" aria-label="Quantity">Quantity:</label>
+                    <label class="mobile-lable" aria-label="Qty" for="Quantity-{{ section.id }}">Qty:</label>
+                    <div class="qty-input quantity-box">
+                      <a style="border: none;" href="javascript:void(0)" class="decrease qtyminus quantity-btn" title="decrement">-</a>
+                      <input onfocus="this.select()" type="text" id="Quantity-{{ section.id }}" name="quantity" value="1" readonly min="1" class="qty-text product-form__input" pattern="[0-9]*" data-quantity-input>
+                      <a style="border: none;" href="javascript:void(0)" class="increase qtyplus quantity-btn" title="increment">+</a>
+                    </div>
+                  </div>
+                  {% for collection in product.collections %}
+                    {% if collection.handle contains 'buy-1-get-1-free' %}
+                      <div class="bogof_message_new">Add 2 To Basket To Get One Free</div>
+                    {% endif %}
+                    {% if collection.handle contains 'buy-2-get-1-free' %}
+                      <div class="bogof_message_new">Add Any 3 eligible products to get cheapest FREE!<br>
+                        <a title="Shop the range here" href="https://tools4trade.co.uk/collections/buy-2-get-1-free" style="font-size: 0.86667em; text-decoration: underline;">Shop the range here</a>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                <button type="submit" name="add" {% unless current_variant.available %} aria-disabled="true" {% endunless %} aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}" title="add to cart" class="addtocart-btn btn product-form__cart-submit add-to-cart-btn-new {% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}" {% if settings.enable_ajax %} aria-haspopup="dialog" {% endif %} data-add-to-cart >
+                  <span data-add-to-cart-text>
+                    {% unless current_variant.available %}
+                      {{ 'products.product.sold_out' | t }}
+                    {% else %}
+                      {{ 'products.product.add_to_cart' | t }}
+                    {% endunless %}
+                  </span>
+                  <span class="hide" data-loader>
+                    {% render 'icon-spinner' %}
+                  </span>
+                </button>
+                {% if section.settings.enable_payment_button %}
+                  {{ form | payment_button }}
+                {% endif %}
+              </div>
+            </div>
+          {% endform %}
+        </div>
+      </div>
+    </div>
+    {% unless product == empty %}
+      <script type="application/json" id="ProductJson-{{ section.id }}">
+        {{ product | json }}
+      </script>
+      <script type="application/json" id="ModelJson-{{ section.id }}">
+        {{ product.media | where: 'media_type', 'model' | json }}
+      </script>
+    {% endunless %}
+  </section>
+  <section class="product-bottom__wrapper">
+    <div class="container">
+      <div class="product__tabs">
+        <div class="product__tabs-wrapper">
+          <input type="radio" id="Description" name="the_tabs" checked="checked">
+          <label for="Description"><span>Description</span></label>
+          <div class="tab">
+            {% for tag in product.tags %}
+              {% if tag contains 'b2g1' %}
+                <div class="banner_img_new">
+                  <a href="https://tools4trade.co.uk/collections/buy-2-get-1-free" title="Buy 2 get 1 Free">
+                    <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/final-3.jpg?v=1687772466" alt="{{ block.settings.banner_img.alt }}" class="desktop_image_new lazyload" width="1920" height="300" loding="Lazy" />
+                  </a>
+                  <a href="https://tools4trade.co.uk/collections/buy-2-get-1-free" title="Buy 2 get 1 Free">
+                    <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/final-1.jpg?v=1687772424" alt="{{ block.settings.banner_img_mobile.alt }}" class="mobile_image_new lazyload" width="800" height="710" loding="Lazy" />
+                  </a>
+                </div>
+              {% endif %}
+              {% if tag contains 'dewalt_offer1' %}
+                <div class="banner_img_new">
+                  <a href="https://tools4trade.co.uk/pages/ts-cs-tools4trade-dewalt-redemption-offer" title="TOOLS4TRADE Redemption Offer ON DEWALT">
+                    <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/pdp.jpg?v=1688736735" alt="{{ block.settings.banner_img.alt }}" class="desktop_image_new lazyload" width="1920" height="300" loding="Lazy" />
+                  </a>
+                  <a href="https://tools4trade.co.uk/pages/ts-cs-tools4trade-dewalt-redemption-offer" title="TOOLS4TRADE Redemption Offer ON DEWALT">
+                    <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Image20230707160134.jpg?v=1688726085" alt="{{ block.settings.banner_img_mobile.alt }}" width="800" height="710" class="mobile_image_new lazyload" loding="Lazy" />
+                  </a>
+                </div>
+              {% endif %}
+            {% endfor %}
+            {% assign my_description = product.description | split: '<!-- split -->' | last %}
+            {% if my_description != blank %}
+              {{ my_description }}
+            {% endif %}
+          </div>
+          <input type="radio" id="review-tab" name="the_tabs">
+          <label for="review-tab"><span>Review</span></label>
+          <div class="tab">
+            <!-- TrustBox widget - Product Reviews -->
+              <div class="trustpilot-widget" data-locale="en-GB" data-template-id="544a426205dc0a09088833c6" data-businessunit-id="564473c60000ff00058571cd" data-style-height="700px" data-style-width="100%" data-theme="light" data-sku="{{ product.selected_or_first_available_variant.sku }}" data-review-languages="en" data-no-reviews="show" data-fullwidth="true">
+                <a href="https://uk.trustpilot.com/review/" target="_blank" rel="noopener" title="Trustpilot">Trustpilot</a>
+              </div>
+            <!-- End TrustBox widget -->
+          </div>
+          {% if product.metafields.custom_fields["user_manual"] != blank %}
+            <input type="radio" id="tab-sample" name="the_tabs">
+            <label for="tab-sample"><span>Product Manual</span></label>
+            <div class="tab">
+              <a target="_blank" title="Download" href="{{ product.metafields.custom_fields["user_manual"] }}" download >
+                <button class="addtocart-btn btn add-to-cart-btn-new  btn--secondary-accent" type="button" aria-label="Download User Manual" title="Download User Manual">Download User Manual</button>
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <aside class="recently__products">
+        <div id="sr-fbt-holder"></div>
+        <div id="w3-product-accessories" data-product-handle="{{ product.handle }}">
+          <div id="w3-money-format" style="display:none;">{{ shop.money_format }}</div>
+        </div>
+      </aside>
+    </div>
+  </section>
 </main>
 
 {% comment %} Main Product layout end {% endcomment %}
-
-<style>
-    .product-main {
-        width: 100%;
-        display: inline-block;
-        margin-bottom: 50px;
-    }
-
-    .product__main-container {
-        margin-bottom: 50px;
-        background: #fff;
-        padding: 40px 20px 30px;
-        box-shadow: 0 1px 6px #00000029;
-        border-radius: 10px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -ms-flex-align: start;
-        align-items: flex-start;
-    }
-
-    .product__main-container .product__main--main-slider {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        width: calc(50% - 75px);
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-
-    .product__main-container .product__main--main-slider .slick-track {
-        display: block !important;
-    }
-
-    .product__main-container .product__main--main-slider .slick-track .slick-slide {
-        height: 100% !important;
-    }
-
-    .product__main-container .product__main--main-slider .slick-vertical .slick-track .slick-slide {
-        height: auto !important;
-    }
-
-    .product__main-container .product__main--main-slider .product-thumb {
-        width: 100px;
-    }
-
-    .product__main-container .product__main--main-slider .product-main-image {
-        width: calc(100% - 100px);
-    }
-
-    .product__main-container .product__details-main {
-        width: calc(50% - 75px);
-    }
-
-    .product-bottom__wrapper .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .product-bottom__wrapper .product__tabs {
-        width: 74%;
-    }
-
-    .product-bottom__wrapper .recently__products {
-        width: 24.5%;
-    }
-
-    .product__tabs-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .product__tabs-wrapper input[type="radio"] {
-        display: none;
-    }
-
-    .product__tabs-wrapper label {
-        position: relative;
-        line-height: 20px;
-        cursor: pointer;
-        display: inline-block;
-        color: #000;
-        font-weight: 500;
-        padding: 0 16px 18px;
-        font-size: 18px;
-        letter-spacing: .36px;
-    }
-
-    .product__tabs-wrapper .tab {
-        width: 100%;
-        padding: 36px 20px;
-        border-radius: 10px;
-        background: #ffffff;
-        box-shadow: 0 1px 6px #00000029;
-        order: 1;
-        display: none;
-    }
-
-    .product__tabs-wrapper input[type="radio"]:checked+label+.tab {
-        display: block;
-    }
-</style>
+{% schema %}
+  {
+    "name": "Main Product Page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_image_zoom",
+        "label": "Enable image zoom",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

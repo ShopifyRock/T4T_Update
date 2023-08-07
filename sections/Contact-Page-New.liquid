@@ -1,0 +1,414 @@
+<div class="container contact_main common-pages-new">
+    <div class="contact-main-page">
+        <div class="contact-page-section">
+            {% if section.settings.image != blank %}
+                <div class="contact_image_main">
+                    <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+                </div>
+            {% endif %}
+            {% if page.content != blank %}
+                <div class="rte contact_inner_text_new common-pages-inner-new contact-left">
+                    <div class="contact-heading"><h3 class="h4">Need help?</h3></div>
+                    {% if page.content != blank %}
+                        <div class="contact-page-description">
+                            {{ page.content }}
+                        </div>
+                    {% endif %}
+                    <div class="quick-action-links">
+                        <div class="quick-link email">
+                            <a href = "mailto:sales@tools4trade.co.uk"><img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/mail_90a52dbc-1c41-47eb-a50c-0bea561fe196.png?v=1681897911" />sales@tools4trade.co.uk</a>
+                        </div>
+                        <div class="quick-link number">
+                            <a href="tel:01908969966"><img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/mobile.png?v=1681897911" />01908 969966</a>
+                        </div>
+                        <div class="quick-link whatsapp">
+                            <a href="https://api.whatsapp.com/send/?phone=447426727794&text&type=phone_number&app_absent=0" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/whatsapp.png?v=1682670771" />Chat With Us</a>
+                        </div>
+                    </div>
+                    <div class="contact-us-data">
+                        <div class="web-sales">
+                            {% if section.settings.titletextmain1 != blank %}
+                                <div class="web-sales-heading">
+                                <h3 class="h4">{{ section.settings.titletextmain1 }}</h3>
+                                </div>
+                            {% endif %}
+                            <div class="web-sales-content">
+                                <div class="light-grey-bg padding5 left-content mobile_settings_new_1">
+                                    {% if section.settings.titleaddress1 != blank or section.settings.infoaddress1 != blank %}
+                                        <div class="contact-us-address">
+                                        {% if section.settings.titleaddress1 != blank %}
+                                            <div class="contact-us-address-label">
+                                                {{ section.settings.titleaddress1 }}
+                                            </div>
+                                        {% endif %}
+                                        {% if section.settings.infoaddress1 != blank %}
+                                            <div class="contact-us-address-content">
+                                                {{ section.settings.infoaddress1 }}
+                                            </div>
+                                        {% endif %}
+                                        </div>
+                                    {% endif %}
+                                    {% if section.settings.titleoffice1 != blank or section.settings.infooffice1 != blank %}
+                                        <div class="contact-us-address timings">
+                                        {% if section.settings.titleoffice1 != blank %}
+                                            <div class="contact-us-address-label">
+                                                {{ section.settings.titleoffice1 }}
+                                            </div>
+                                        {% endif %}
+                                        {% if section.settings.infooffice1 != blank %}
+                                            <div class="contact-us-address-content">
+                                                {{ section.settings.infooffice1 }}
+                                            </div>
+                                        {% endif %}
+                                        </div>
+                                    {% endif %}
+                                    <div class="mobile-fax-section">
+                                        {% if section.settings.titlephone1 != blank or section.settings.infophone1 != blank %}
+                                            <div class="contact-us-phone">
+                                                {% if section.settings.titlephone1 != blank %}
+                                                    <div class="contact-us-phone-label">
+                                                        {{ section.settings.titlephone1 }}
+                                                    </div>
+                                                {% endif %}
+                                                {% if section.settings.infophone1 != blank %}
+                                                    <div class="contact-us-phone-content">
+                                                    {{ section.settings.infophone1 }}
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        {% endif %}
+                                        {% if section.settings.titlefax1 != blank or section.settings.infofax1 != blank %}
+                                            <div class="contact-us-fax">
+                                                {% if section.settings.titlefax1 != blank %}
+                                                    <div class="contact-us-fax-label">
+                                                        {{ section.settings.titlefax1 }}
+                                                    </div>
+                                                {% endif %}
+                                                {% if section.settings.infofax1 != blank %}
+                                                    <div class="contact-us-fax-content">
+                                                        {{ section.settings.infofax1 }}
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        {% endif %}
+                                        {% if section.settings.titleemail1 != blank or section.settings.infoemail1 != blank %}
+                                            <div class="contact-us-email">
+                                                {% if section.settings.titleemail1 != blank %}
+                                                    <div class="contact-us-email-label">
+                                                        {{ section.settings.titleemail1 }}
+                                                    </div>
+                                                {% endif %}
+                                                {% if section.settings.infoemail1 != blank %}
+                                                    <div class="contact-us-email-content">
+                                                        <a href="mailto:{{ section.settings.infoemail1 }}">{{ section.settings.infoemail1 }}</a>
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                {% if section.settings.infoMap1 != blank %}
+                                    <div class="get-direction right-content mobile_settings_new_2">
+                                        {{ section.settings.infoMap1 }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="trade-counter">
+                            {% if section.settings.titletextmain2 != blank %}
+                                <div class="trade-counter-heading">
+                                <h3 class="h4">{{ section.settings.titletextmain2 }}</h3>
+                                </div>
+                            {% endif %}
+                            <div class="trade-counter-content">
+                                <div class="light-grey-bg padding5 left-content mobile_settings_new_1">
+                                {% if section.settings.titleaddress2 != blank or section.settings.infoaddress2 != blank %}
+                                    <div class="contact-us-address">
+                                    {% if section.settings.titleaddress2 != blank %}
+                                        <div class="contact-us-address-label">
+                                        {{ section.settings.titleaddress2 }}
+                                        </div>
+                                    {% endif %}
+                                    {% if section.settings.infoaddress2 != blank %}
+                                        <div class="contact-us-address-content">
+                                        {{ section.settings.infoaddress2 }}
+                                        </div>
+                                    {% endif %}
+                                    </div>
+                                {% endif %}
+                                {% if section.settings.titleoffice2 != blank or section.settings.infooffice2 != blank %}
+                                    <div class="contact-us-address timings">
+                                    {% if section.settings.titleoffice2 != blank %}
+                                        <div class="contact-us-address-label">
+                                        {{ section.settings.titleoffice2 }}
+                                        </div>
+                                    {% endif %}
+                                    {% if section.settings.infooffice2 != blank %}
+                                        <div class="contact-us-address-content">
+                                        {{ section.settings.infooffice2 }}
+                                        </div>
+                                    {% endif %}
+                                    </div>
+                                {% endif %}
+                                <div class="mobile-fax-section">
+                                {% if section.settings.titlephone2 != blank or section.settings.infophone2 != blank %}
+                                    <div class="contact-us-phone">
+                                    {% if section.settings.titlephone2 != blank %}
+                                        <div class="contact-us-phone-label">
+                                        {{ section.settings.titlephone2 }}
+                                        </div>
+                                    {% endif %}
+                                    {% if section.settings.infophone2 != blank %}
+                                        <div class="contact-us-phone-content">
+                                        {{ section.settings.infophone2 }}
+                                        </div>
+                                    {% endif %}
+                                    </div>
+                                {% endif %}
+                                {% if section.settings.titlefax2 != blank or section.settings.infofax2 != blank %}
+                                    <div class="contact-us-fax">
+                                    {% if section.settings.titlefax2 != blank %}
+                                        <div class="contact-us-fax-label">
+                                        {{ section.settings.titlefax2 }}
+                                        </div>
+                                    {% endif %}
+                                    {% if section.settings.infofax2 != blank %}
+                                        <div class="contact-us-fax-content">
+                                        {{ section.settings.infofax2 }}
+                                        </div>
+                                    {% endif %}
+                                    </div>
+                                {% endif %}
+                                {% if section.settings.titleemail2 != blank or section.settings.infoemail2 != blank %}
+                                    <div class="contact-us-email">
+                                    {% if section.settings.titleemail2 != blank %}
+                                        <div class="contact-us-email-label">
+                                        {{ section.settings.titleemail2 }}
+                                        </div>
+                                    {% endif %}
+                                    {% if section.settings.infoemail2 != blank %}
+                                        <div class="contact-us-email-content">
+                                        <a href="mailto:{{ section.settings.infoemail2 }}">{{ section.settings.infoemail2 }}</a>
+                                        </div>
+                                    {% endif %}
+                                    </div>		
+                                {% endif %}
+                                </div>
+                                </div>
+                                {% if section.settings.infoMap2 != blank %}
+                                <div class="get-direction right-content mobile_settings_new_2">
+                                    {{ section.settings.infoMap2 }}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+         
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name": "Contact Page New",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Normal Image"
+        },
+        {
+            "type": "header",
+            "content": "Contact Information-1"
+        },
+        {
+            "type": "text",
+            "id": "titletextmain1",
+            "label": "Add Main Heading",
+            "default": "Web Sales"
+        },
+        {
+            "type": "header",
+            "content": "Contact Address Information-1"
+        },
+        {
+            "type": "text",
+            "id": "titleaddress1",
+            "label": "Address Label Text",
+            "default": "Address:"
+        },
+        {
+            "type": "text",
+            "id": "infoaddress1",
+            "label": "Address Info Text",
+            "default": "Tools4trade , 22 Alston Drive, Bradwell Abbey, Milton Keynes, MK13 9HA United Kingdom"
+        },
+        {
+            "type": "header",
+            "content": "Contact Office Information-1"
+        },
+        {
+            "type": "text",
+            "id": "titleoffice1",
+            "label": "Office Hours Label Text",
+            "default": "Office Hours:"
+        },
+        {
+            "type": "html",
+            "id": "infooffice1",
+            "label": "Office Hours Info Text",
+            "default": "We are open Monday-Saturday on 9AM–5PM to assist you with any questions or queries you may have"
+        },
+        {
+            "type": "header",
+            "content": "Contact Phone Information-1"
+        },
+        {
+            "type": "text",
+            "id": "titlephone1",
+            "label": "Phone Label Text",
+            "default": "Phone:"
+        },
+        {
+            "type": "text",
+            "id": "infophone1",
+            "label": "Phone Info Text",
+            "default": "01908 969966"
+        },
+        {
+            "type": "header",
+            "content": "Contact Fax Information-1"
+        },
+        {
+            "type": "text",
+            "id": "titlefax1",
+            "label": "Fax Label Text",
+            "default": "Fax:"
+        },
+        {
+            "type": "text",
+            "id": "infofax1",
+            "label": "Fax Info Text",
+            "default": "01908 990004"
+        },
+        {
+            "type": "header",
+            "content": "Contact Email Information-1"
+        },
+        {
+            "type": "text",
+            "id": "titleemail1",
+            "label": "Email Label Text",
+            "default": "Email:"
+        },
+        {
+            "type": "text",
+            "id": "infoemail1",
+            "label": "Email Info Text",
+            "default": "sales@tools4trade.co.uk"
+        },
+        {
+            "type": "html",
+            "id": "infoMap1",
+            "label": "Map Info Iframe"
+        },
+        {
+            "type": "header",
+            "content": "Contact Information-2"
+        },
+        {
+            "type": "text",
+            "id": "titletextmain2",
+            "label": "Add Main Heading",
+            "default": "Trade Counter"
+        },
+        {
+            "type": "header",
+            "content": "Contact Address Information-2"
+        },
+        {
+            "type": "text",
+            "id": "titleaddress2",
+            "label": "Address Label Text",
+            "default": "Address:"
+        },
+        {
+            "type": "text",
+            "id": "infoaddress2",
+            "label": "Address Info Text",
+            "default": "Tools4trade , 149 Boston Road, LONDON, W7 3SA"
+        },
+        {
+            "type": "header",
+            "content": "Contact Office Information-2"
+        },
+        {
+            "type": "text",
+            "id": "titleoffice2",
+            "label": "Office Hours Label Text",
+            "default": "Office Hours:"
+        },
+        {
+            "type": "html",
+            "id": "infooffice2",
+            "label": "Office Hours Info Text",
+            "default": "We are open Monday-Saturday on 9AM–5PM to assist you with any questions or queries you may have"
+        },
+        {
+            "type": "header",
+            "content": "Contact Phone Information-2"
+        },
+        {
+            "type": "text",
+            "id": "titlephone2",
+            "label": "Phone Label Text",
+            "default": "Phone:"
+        },
+        {
+            "type": "text",
+            "id": "infophone2",
+            "label": "Phone Info Text",
+            "default": "0208 5661866"
+        },
+        {
+            "type": "header",
+            "content": "Contact Fax Information-2"
+        },
+        {
+            "type": "text",
+            "id": "titlefax2",
+            "label": "Fax Label Text",
+            "default": "Fax:"
+        },
+        {
+            "type": "text",
+            "id": "infofax2",
+            "label": "Fax Info Text",
+            "default": "0203 4177003"
+        },
+        {
+            "type": "header",
+            "content": "Contact Email Information-2"
+        },
+        {
+            "type": "text",
+            "id": "titleemail2",
+            "label": "Email Label Text",
+            "default": "Email:"
+        },
+        {
+            "type": "text",
+            "id": "infoemail2",
+            "label": "Email Info Text",
+            "default": "sales@tools4trade.co.uk"
+        },
+        {
+            "type": "html",
+            "id": "infoMap2",
+            "label": "Map Info Iframe"
+        }
+    ]
+}
+{% endschema %}

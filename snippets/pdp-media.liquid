@@ -1,0 +1,53 @@
+{% for media in product.media %}
+{% case media.media_type %}
+{% when 'image' %}
+<div>
+    <div class="thumb-image-wrapper">
+        <img width="88" height="88" src="{{ media | img_url: 'master'}}" alt="{{ media.alt }}" class="lazyload">
+    </div>
+</div>
+{% when 'external_video' %}
+<div class="product-single__media">
+    <a href="javascript:void(0)" class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}"
+        data-thumbnail-id="{{ section.id }}-{{ media.id }}"
+        {% if enable_image_zoom %}data-zoom="{{ media.preview_image | img_url: product_image_zoom_size, scale: product_image_scale }}"
+        {% endif %}>
+
+        {%- capture thumbnailAlt -%}
+        {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+        {{ 'sections.featured_product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+        {%- elsif media.media_type == 'model' -%}
+        {{ 'sections.featured_product.model_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+        {%- else -%}
+        {{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+        {%- endif -%}
+        {%- endcapture -%}
+
+        <img class="product-single__thumbnail-image" src="{{ media.preview_image | img_url: '110x110', scale: 2 }}"
+            alt="{{ thumbnailAlt }}">
+        {%- if media.media_type == 'video' or media.media_type =='external_video' -%}
+        <div class="product-single__thumbnail-badge">
+            {% render 'icon-video-badge-full-color' %}
+        </div>
+        {%- endif -%}
+        {%- if media.media_type == 'model' -%}
+        <div class="product-single__thumbnail-badge">
+            {% render 'icon-3d-badge-full-color' %}
+        </div>
+        {%- endif -%}
+    </a>
+</div>
+{% when 'video' %}
+<div class="product-single__video">
+    {{ media | video_tag: controls: true }}
+</div>
+{% when 'model' %}
+<div class="product-single__media">
+    {{ media | model_viewer_tag }}
+</div>
+{% else %}
+<div class="product-single__media">
+    {{ media | media_tag }}
+</div>
+{% endcase %}
+{% endfor %}

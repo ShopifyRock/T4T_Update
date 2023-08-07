@@ -4,7 +4,15 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         fade: false,
-        asNavFor: '.product-thumb'
+        infinite: false,
+        dots: false,
+        asNavFor: '.product-thumb',
+        responsive: [{
+            breakpoint: 767,
+            settings: {
+                dots: true
+            }
+        }]
     });
 
     $('.product-thumb').slick({
@@ -13,35 +21,12 @@ $(document).ready(function () {
         vertical:true,
         asNavFor: '.product-main-image',
         dots: false,
+        infinite: false,
         focusOnSelect: true,
         verticalSwiping:true,
-        responsive: [
-        {
-            breakpoint: 992,
-            settings: {
-              vertical: false,
-            }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            vertical: false,
-          }
-        },
-        {
-          breakpoint: 580,
-          settings: {
-            vertical: false,
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 380,
-          settings: {
-            vertical: false,
-            slidesToShow: 2,
-          }
-        }
-        ]
+        responsive: [{
+            breakpoint: 767,
+            settings: "unslick"
+        }]
     });
 })
