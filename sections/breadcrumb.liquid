@@ -33,6 +33,26 @@
                             <i class="fa-solid fa-chevron-right"></i>
                             <a class="active" href="{{ collection.link }}" aria-current="page">{{ collection.title }}</a>
                         </li>
+                    {% elsif template contains 'account' %}
+                        <li class="item current">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>My Account</span>
+                        </li>
+                    {% elsif template contains 'order' %}
+                        <li class="item current">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>Order</span>
+                        </li>
+                    {% elsif template contains 'addresses' %}
+                        <li class="item current">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>My Addresses</span>
+                        </li>
+                    {% elsif template contains 'cart' %}
+                        <li class="item current">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span>Cart</span>
+                        </li>
                     {% endif %}
                 </ul>
             </div>

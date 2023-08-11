@@ -35,144 +35,217 @@
             {%- endfor -%}                        
           </div> 
         </div>
-        <div class="product__details-main">
-          <h1 class="product-main__title">{{ product.title }}</h1>
-          <div class="review-section">
-            <span class="review-wrapper">
-              <!-- TrustBox widget - Product Mini -->
-                <div class="trustpilot-widget" data-locale="en-GB" data-template-id="54d39695764ea907c0f34825" data-businessunit-id="564473c60000ff00058571cd" data-style-height="24px" data-style-width="100%" data-theme="light" data-sku="{{ product.selected_or_first_available_variant.sku }}" data-star-color="#00b67a" data-no-reviews="show" data-scroll-to-list="true" data-style-alignment="left">
-                  <a href="https://uk.trustpilot.com/review/tools4trade.co.uk" target="_blank" title="Trustpilot" rel="noopener">Trustpilot</a>
-                </div>
-              <!-- End TrustBox widget -->
-            </span>                                              
+        <div class="product-info-wrapper product__details-main" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product"
+      data-enable-history-state="true" data-ajax-enabled="{{ settings.enable_ajax }}">
+        <h1 class="product-main__title">{{ product.title }}</h1>
+      <div class="review-section">
+        <span class="review-wrapper">
+        <!-- TrustBox widget - Product Mini -->
+          <div class="trustpilot-widget" data-locale="en-GB" data-template-id="54d39695764ea907c0f34825" data-businessunit-id="564473c60000ff00058571cd" data-style-height="24px" data-style-width="100%" data-theme="light" data-sku="{{ product.selected_or_first_available_variant.sku }}" data-star-color="#00b67a" data-no-reviews="show" data-scroll-to-list="true" data-style-alignment="left">
+            <a href="https://uk.trustpilot.com/review/tools4trade.co.uk" target="_blank" rel="noopener">Trustpilot</a>
           </div>
-          <div class="price-wrapper">
-            <div class="price-container">
-              <div class="regular-price">
-                {% render 'product-price', variant: current_variant %}
-              </div>
-            </div>
-          </div>
-          <div class="delivery-info">
-            <div>
-              <div class="delivery-info-container">
-                <div class="delivery-info-wrapper d-flex align-items-center">
-                  <div class="delivery-info-image">
-                    <img width="45" height="39" src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/deliveryIcon.png?v=1681815023" alt="{{ product.metafields.custom_fields["delivery_message"] }}">
-                  </div>
-                  {% if product.metafields.custom_fields["delivery_message"] != blank %}
-                    <div class="delivery-info-content">
-                      <p>{{ product.metafields.custom_fields["delivery_message"] }}</p>
-                    </div>
-                  {% else %}
-                    <div class="delivery-info-content">
-                      <p>Free Next Working Day Delivery*</p>
-                    </div>
-                  {% endif %}
-                </div>
-                <div class="klarna-box"></div>
-              </div>
-            </div>
-          </div>
-          <div class="product-description">
-            {% if section.settings.product_stock != blank %}
-              <p>{{ section.settings.product_stock }}</p>
-            {% endif %}
-            {% assign my_description_first = product.description | split: '<!-- split -->' | first %}
-            {% if my_description_first != blank %}
-              {{ my_description_first }}
-            {% endif %}
-          </div>
-          {% capture "form_classes" -%}
-            product-form product-form-{{ section.id }}
-            {%- unless section.settings.show_variant_labels %} product-form--hide-variant-labels {% endunless %}
-            {%- if section.settings.enable_payment_button and product.has_only_default_variant %}
-              product-form--payment-button-no-variants {%- endif -%}
-            {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
-          {%- endcapture %}
-          {% form 'product', product, class: form_classes, novalidate: 'novalidate', data-product-form: '' %}
-            {% unless product.has_only_default_variant %}
-              <div class="product-form__controls-group">
-                {% for option in product.options_with_values %}
-                  <div class="selector-wrapper js product-form__item">
-                    <label
-                      {% if option.name == 'default' %} class="label--hidden" {% endif -%}  for="SingleOptionSelector-{{ forloop.index0 }}" >
-                      {{ option.name }}
-                    </label>
-                    <select class="single-option-selector single-option-selector-{{ section.id }} product-form__input" id="SingleOptionSelector-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
-                      {% for value in option.values %}
-                        {% unless value contains '% off)' %}
-                          <option value="{{ value | escape }}" {% if option.selected_value == value %} selected="selected" {% endif %} >
-                            {{ value }}
-                          </option>
-                        {% endunless %}
-                      {% endfor %}
-                    </select>
-                  </div>
-                {% endfor %}
-              </div>
-            {% endunless %}
+        <!-- End TrustBox widget -->
+        </span>         
+      </div>
+      {% comment %}
+        Get first variant, or deep linked one
+      {% endcomment %}
+      {%- assign current_variant = product.selected_or_first_available_variant -%}
+      {%- assign product_image_zoom_size = '1024x1024' -%}
+      {%- assign product_image_scale = '2' -%}
+      {%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
+      {%- assign compare_at_price = current_variant.compare_at_price -%}
+      {%- assign price = current_variant.price -%}
 
-            <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
-              {% for variant in product.variants %}
-                {% unless variant.metafields.secomapp.freegifts %}
-                  {% unless variant.title contains '(Freegifts)' %}
-                    <option value="{{ variant.id }}" var-qty="{{ variant.inventory_quantity }}" {%- if variant == current_variant %} selected="selected" {%- endif -%} >
-                      {{ variant.title }}
-                      {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
-                    </option>
-                  {% endunless %}
-                {% endunless %}
-              {% endfor %}
-            </select> 
-            <div class="product-form__error-message-wrapper product-form__error-message-wrapper--hidden{% if section.settings.enable_payment_button %} product-form__error-message-wrapper--has-payment-button{% endif %}" data-error-message-wrapper role="alert">
-              <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-              {% render 'icon-error' %}
+      <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
+        <div class="{{ product_description_width }}">
+          <div class="product-single__meta">
+            <div class="price-wrapper">
+              <div class="price-container">
+                {% render 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
+              </div>
             </div>
-            <div class="add-to-cart-wrapper product-form__controls-group product-form__controls-group--submit">
-              <div class="qty-wrapper product-form__item product-form__item--submit{%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}{%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}">
-                <div class="add-cart-section qty-new">
-                  <div class="product-form__item product-form__item--quantity quantity_plus_minus_new">
-                    <label class="desktop-lable" for="Quantity-{{ section.id }}" aria-label="Quantity">Quantity:</label>
-                    <label class="mobile-lable" aria-label="Qty" for="Quantity-{{ section.id }}">Qty:</label>
-                    <div class="qty-input quantity-box">
-                      <a style="border: none;" href="javascript:void(0)" class="decrease qtyminus quantity-btn" title="decrement">-</a>
-                      <input onfocus="this.select()" type="text" id="Quantity-{{ section.id }}" name="quantity" value="1" readonly min="1" class="qty-text product-form__input" pattern="[0-9]*" data-quantity-input>
-                      <a style="border: none;" href="javascript:void(0)" class="increase qtyplus quantity-btn" title="increment">+</a>
-                    </div>
+<div class="delivery-info">
+                <div>
+                  <div class="delivery-info-container">
+                  <div class="delivery-info-wrapper d-flex align-items-center">
+                      <div class="delivery-info-image">
+                          <img width="45" height="39" src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/deliveryIcon.png?v=1681815023" alt="{{ product.metafields.custom_fields["delivery_message"] }}">
+                      </div> 
+                      {% if product.metafields.custom_fields["delivery_message"] != blank %}
+                        <div class="delivery-info-content">
+                          <p>{{ product.metafields.custom_fields["delivery_message"] }}</p>
+                        </div>
+                      {% else %}
+                         <div class="delivery-info-content">
+                           <p>Free Next Working Day Delivery*</p>
+                         </div>
+                      {% endif %}
                   </div>
-                  {% for collection in product.collections %}
-                    {% if collection.handle contains 'buy-1-get-1-free' %}
-                      <div class="bogof_message_new">Add 2 To Basket To Get One Free</div>
-                    {% endif %}
-                    {% if collection.handle contains 'buy-2-get-1-free' %}
-                      <div class="bogof_message_new">Add Any 3 eligible products to get cheapest FREE!<br>
-                        <a title="Shop the range here" href="https://tools4trade.co.uk/collections/buy-2-get-1-free" style="font-size: 0.86667em; text-decoration: underline;">Shop the range here</a>
-                      </div>
-                    {% endif %}
+                   <div class="klarna-box"></div>                    
+              </div>
+
+                  
+                </div>
+              </div>
+            <div class="product-description">
+              {% if section.settings.product_stock != blank %}
+                <p>{{ section.settings.product_stock }}</p>
+              {% endif %}
+              {% assign my_description_first = product.description | split: '<!-- split -->' | first %}
+              {% if my_description_first != blank %}  
+             {{ my_description_first }}
+              {% endif %}
+            </div>
+
+            {% capture "form_classes" -%}
+          product-form product-form-{{ section.id }}
+          {%- unless section.settings.show_variant_labels %} product-form--hide-variant-labels {% endunless %}
+          {%- if section.settings.enable_payment_button and product.has_only_default_variant %} product-form--payment-button-no-variants {%- endif -%}
+          {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
+        {%- endcapture %}
+
+            {% form 'product', product, class: form_classes, novalidate: 'novalidate', data-product-form: '' %}
+              {% unless product.has_only_default_variant %}
+                <div class="product-form__controls-group">
+                  {% for option in product.options_with_values %}
+                    <div class="selector-wrapper js product-form__item">
+                      <label
+                        {% if option.name == 'default' %}
+                          class="label--hidden"
+                        {% endif -%}
+                        for="SingleOptionSelector-{{ forloop.index0 }}"
+                      >
+                        {{ option.name }}
+                      </label>
+                      <select
+                        class="single-option-selector single-option-selector-{{ section.id }} product-form__input"
+                        id="SingleOptionSelector-{{ forloop.index0 }}"
+                        data-index="option{{ forloop.index }}"
+                      >
+                        {% for value in option.values %}
+                          {% unless value contains '% off)' %}
+                            <option
+                              value="{{ value | escape }}"
+                              {% if option.selected_value == value %}
+                                selected="selected"
+                              {% endif %}
+                            >
+                              {{ value }}
+                            </option>
+                          {% endunless %}
+                        {% endfor %}
+                      </select>
+                    </div>
                   {% endfor %}
                 </div>
-                <button type="submit" name="add" {% unless current_variant.available %} aria-disabled="true" {% endunless %} aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}" title="add to cart" class="addtocart-btn btn product-form__cart-submit add-to-cart-btn-new {% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}" {% if settings.enable_ajax %} aria-haspopup="dialog" {% endif %} data-add-to-cart >
-                  <span data-add-to-cart-text>
-                    {% unless current_variant.available %}
-                      {{ 'products.product.sold_out' | t }}
-                    {% else %}
-                      {{ 'products.product.add_to_cart' | t }}
+              {% endunless %}
+
+              <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
+                {% for variant in product.variants %}
+                  {% unless variant.metafields.secomapp.freegifts %}
+                    {% unless variant.title contains '(Freegifts)' %}
+                      <option
+                        value="{{ variant.id }}"
+                        var-qty="{{ variant.inventory_quantity }}"
+                        {%- if variant == current_variant %}
+                          selected="selected"
+                        {%- endif -%}
+                      >
+                        {{ variant.title }}
+                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                      </option>
                     {% endunless %}
-                  </span>
-                  <span class="hide" data-loader>
-                    {% render 'icon-spinner' %}
-                  </span>
-                </button>
-                {% if section.settings.enable_payment_button %}
-                  {{ form | payment_button }}
-                {% endif %}
+                  {% endunless %}
+                {% endfor %}
+              </select>             
+              <div
+                class="product-form__error-message-wrapper product-form__error-message-wrapper--hidden{% if section.settings.enable_payment_button %} product-form__error-message-wrapper--has-payment-button{% endif %}"
+                data-error-message-wrapper
+                role="alert"
+              >
+                <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                {% render 'icon-error' %}
+                <span class="product-form__error-message" data-error-message>
+                  {{- 'products.product.quantity_minimum_message' | t -}}
+                </span>
               </div>
-            </div>
-          {% endform %}
+
+              <div id="sr-volumeDiscounts-holder"></div>
+
+              <div class="add-to-cart-wrapper product-form__controls-group product-form__controls-group--submit">
+                <div class="qty-wrapper product-form__item product-form__item--submit{%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}{%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}">
+                  <div class="add-cart-section qty-new">
+                    <div class="product-form__item product-form__item--quantity quantity_plus_minus_new">
+                      <label class="desktop-lable" for="Quantity-{{ section.id }}" aria-label="Quantity">Quantity:</label>
+                      <label class="mobile-lable" aria-label="Qty" for="Quantity-{{ section.id }}">Qty:</label>
+                      <div class="qty-input quantity-box">
+                        <a style="border: none;" href="javascript:void(0)" class="decrease qtyminus quantity-btn" title="decrement">-</a>
+                        <input onfocus="this.select()" type="text" id="Quantity-{{ section.id }}" name="quantity" value="1" readonly min="1" class="qty-text product-form__input" pattern="[0-9]*" data-quantity-input>
+                        <a style="border: none;" href="javascript:void(0)" class="increase qtyplus quantity-btn" title="increment">+</a>
+                      </div>
+                    </div>
+                    {% for collection in product.collections %}
+                      {% if collection.handle contains 'buy-1-get-1-free' %}
+                        <div class="bogof_message_new">Add 2 To Basket To Get One Free</div>
+                      {% endif %}
+                      {% if collection.handle contains 'buy-2-get-1-free' %}
+                        <div class="bogof_message_new">Add Any 3 eligible products to get cheapest FREE!<br>
+                          <a title="Shop the range here" href="https://tools4trade.co.uk/collections/buy-2-get-1-free" style="font-size: 0.86667em; text-decoration: underline;">Shop the range here</a>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                  <button type="submit" name="add" {% unless current_variant.available %} aria-disabled="true" {% endunless %} aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}" title="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}" class="addtocart-btn btn product-form__cart-submit add-to-cart-btn-new {% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %} {% unless current_variant.available %}sold-out{% else %}add-to-cart{% endunless %}" {% if settings.enable_ajax %} aria-haspopup="dialog" {% endif %} data-add-to-cart >
+                    <span data-add-to-cart-text class="{% unless current_variant.available %}sold-out{% else %}add-to-cart{% endunless %}">
+                      {% unless current_variant.available %}
+                        {{ 'products.product.sold_out' | t }}
+                      {% else %}
+                        {{ 'products.product.add_to_cart' | t }}
+                      {% endunless %}
+                    </span>
+                    <span class="hide" data-loader>
+                      {% render 'icon-spinner' %}
+                    </span>
+                  </button>
+                  {% if section.settings.enable_payment_button %}
+                    {{ form | payment_button }}
+                  {% endif %}
+                </div>
+              </div>
+
+              
+            {% endform %}
+            <div class="sca-fg-cat-list" style="display:none;" name="secomapp-fg-data-{{ product.id }}"></div>
+          </div>
+
+          {%- comment -%}
+            Live region for announcing updated price and availability to screen readers
+          {%- endcomment -%}
+          <p
+            class="visually-hidden"
+            data-product-status
+            aria-live="polite"
+            role="status"
+          ></p>
+
+          {%- comment -%}
+            Live region for announcing that the product form has been submitted and the
+            product is in the process being added to the cart
+          {%- endcomment -%}
+          <p
+            class="visually-hidden"
+            data-loader-status
+            aria-live="assertive"
+            role="alert"
+            aria-hidden="true"
+          >
+            {{ 'products.product.loader_label' | t }}
+          </p>
         </div>
       </div>
     </div>
+
     {% unless product == empty %}
       <script type="application/json" id="ProductJson-{{ section.id }}">
         {{ product | json }}
@@ -180,7 +253,18 @@
       <script type="application/json" id="ModelJson-{{ section.id }}">
         {{ product.media | where: 'media_type', 'model' | json }}
       </script>
+    {% endunless %}   
+      </div>
+      {% unless product == empty %}
+      <script type="application/json" id="ProductJson-{{ section.id }}">
+        {{ product | json }}
+      </script>
+      <script type="application/json" id="ModelJson-{{ section.id }}">
+        {{ product.media | where: 'media_type', 'model' | json }}
+      </script>
     {% endunless %}
+    </div>
+    
   </section>
   <section class="product-bottom__wrapper">
     <div class="container">
@@ -216,6 +300,15 @@
               {{ my_description }}
             {% endif %}
           </div>
+          {% if product.metafields.custom_fields["user_manual"] != blank %}
+            <input type="radio" id="tab-sample" name="the_tabs">
+            <label for="tab-sample"><span>Product Manual</span></label>
+            <div class="tab">
+              <a target="_blank" title="Download" href="{{ product.metafields.custom_fields["user_manual"] }}" download >
+                <button class="addtocart-btn btn add-to-cart-btn-new  btn--secondary-accent download-btn" type="button" aria-label="Download User Manual" title="Download User Manual">Download User Manual</button>
+              </a>
+            </div>
+          {% endif %}
           <input type="radio" id="review-tab" name="the_tabs">
           <label for="review-tab"><span>Review</span></label>
           <div class="tab">
@@ -225,15 +318,7 @@
               </div>
             <!-- End TrustBox widget -->
           </div>
-          {% if product.metafields.custom_fields["user_manual"] != blank %}
-            <input type="radio" id="tab-sample" name="the_tabs">
-            <label for="tab-sample"><span>Product Manual</span></label>
-            <div class="tab">
-              <a target="_blank" title="Download" href="{{ product.metafields.custom_fields["user_manual"] }}" download >
-                <button class="addtocart-btn btn add-to-cart-btn-new  btn--secondary-accent" type="button" aria-label="Download User Manual" title="Download User Manual">Download User Manual</button>
-              </a>
-            </div>
-          {% endif %}
+          
         </div>
       </div>
       <aside class="recently__products">
@@ -245,18 +330,101 @@
     </div>
   </section>
 </main>
-
+<script>
+  setInterval(function() {
+  var countdiv = $(".accessories-item").length;
+  if(countdiv >= 1){
+  $("button.buyitwith.custom-add-to-cart").show();
+  }
+  }, 1000);
+  $('.custom-add-to-cart').on('click',function(){
+  $('#addToCartCopy').trigger('click');
+  });
+  </script>
+  <script>
+    $(".single-option-selector").change(function(){
+          var element = $("#ProductSelect-product-main-template").find('option:selected');
+          var variant_qty = element.attr("var-qty");
+  
+          $('.variant-qty-update').text(variant_qty);
+  });
+  </script>
 {% comment %} Main Product layout end {% endcomment %}
 {% schema %}
+{
+"name": "Product Main Template",
+"settings": [
   {
-    "name": "Main Product Page",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "enable_image_zoom",
-        "label": "Enable image zoom",
-        "default": true
-      }
-    ]
+    "type": "liquid",
+    "id": "product_stock",
+    "label": "Product Stock Amount"
+  },
+  {
+    "type": "liquid",
+    "id": "product_stock2",
+    "label": "Product Stock Amount"
+  },
+  {
+    "type": "text",
+    "id": "tab_title1",
+    "label": "Tab Title",
+    "default": "Description"
+  },
+  {
+    "type": "text",
+    "id": "tab_title2",
+    "label": "Tab Title",
+    "default": "Download Product Manual"
+  },
+  {
+    "type": "text",
+    "id": "tab_title3",
+    "label": "Tab Title",
+    "default": "Reviews"
+  },
+  {
+    "type": "textarea",
+    "id": "btm_text",
+    "label": "Text",
+    "default": "**images for illustrative purposes only – please refer to description and specification for full details of product**"
+  },
+  {
+    "type": "text",
+    "id": "title",
+    "label": "Title",
+    "default": "Recently viewed products"
+  },
+  {
+    "type": "checkbox",
+    "id": "show_quantity_selector",
+    "label": "Show quantity selector",
+    "default": false
+  },
+  {
+    "type": "checkbox",
+    "id": "enable_image_zoom",
+    "label": "Enable image zoom",
+    "default": true
+  },
+  {
+    "type": "checkbox",
+    "id": "show_variant_labels",
+    "label": "Show variant labels",
+    "default": true
+  },
+  {
+    "type": "checkbox",
+    "id": "enable_payment_button",
+    "label": "Show dynamic checkout button",
+    "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+    "default": true
   }
+]
+}
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

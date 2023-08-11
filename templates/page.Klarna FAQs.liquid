@@ -1,0 +1,122 @@
+<style type="text/css">
+  
+ul.tabs {
+  border-top: 2px solid #999;
+  border-right: 1px solid #dedfde;
+  border-bottom: 1px solid #dedfde;
+  border-left: 1px solid #dedfde;
+  background-color: #F7F7F7;
+  text-align:center;
+}
+ul.tabs li {
+  display: inline-block;
+  float: none;
+  margin-bottom: 0;
+  padding: 0;
+  margin:0 -2px;
+  width: auto;
+}
+ul.tabs li a {
+  padding: 13px 15px;
+  border-radius: 0;
+  font-size: 16px;
+  color: #666;
+  margin-right: 0px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  display: block;
+  margin-bottom: -2px;
+  margin-top:-2px;
+  font-family: "DIN Next Slab", serif;
+  font-weight: 600;
+  border-top: 2px solid #999;
+  border-bottom:0px;
+}
+ul.tabs li a.active {
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  border-color: #ddd; 
+ border-top-color:#e2373a; 
+  border-bottom:0px;
+}
+
+ul.tabs:before, ul.tabs:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+}
+ul.tabs:after {
+  clear: both;
+}
+.tab-content{ 
+  padding: 15px;
+  border-top: none;
+  border-right: 1px solid #dedfde;
+  border-bottom: 1px solid #dedfde;
+  border-left: 1px solid #dedfde;
+}
+  
+</style>
+
+<div class="page-width Klarna_main common-pages-new container">
+  <div class="grid">
+    <div class="grid__item">
+      {% section 'Klarna-faqs-New' %}
+      {% if page.title != blank %}
+        <div class="section-header text-center klarna-faqs-new-title">
+          <h1>{{ page.title }}</h1>
+        </div>
+      {% endif %}
+      {% if settings.tabheading1 != blank or settings.tabheading2 != blank or settings.tabheading3 != blank %}
+        <div class="tabs_full_block_new klarna-faqs-tabs-title">
+          <ul class="tabs">
+            {% if settings.tabheading1 != blank %}
+              <li><a href="#tabfaq-1">{{ settings.tabheading1 }}</a></li>
+            {% endif %}
+            {% if settings.tabheading2 != blank %}
+              <li><a href="#tabfaq-2">{{ settings.tabheading2 }}</a></li>
+            {% endif %}
+            {% if settings.tabheading3 != blank %}
+              <li><a href="#tabfaq-3">{{ settings.tabheading3 }}</a></li>
+            {% endif %}
+          </ul>
+          <div class="tab-content">
+            {% if settings.tabheading1 != blank %}
+              <div id="tabfaq-1">
+                <div class="klerna_faq_text">
+                  <p>Tools4Trade Limited acts as a broker and offers credit from Klarna Bank AB (publ). Klarna Bank AB (publ) is Authorised by the Swedish Financial Services Authority (Finansinspektionen) and is subject to limited regulation by the Financial Conduct Authority. Details about the extent of our regulation by the Financial Conduct Authority are available from us on request. Finance is only available to permanent UK residents aged >18, subject to status, terms and conditions apply. Registered office: Sveavägen 46, 111 34 Stockholm, Sweden. Corporation ID number: 556737-0431.</p>
+                  <p>Late or missing repayments may have serious consequences for you and cause you serious money problems</p>
+                </div>
+  				{% section 'Klarna-faqs-accordion-tab-1' %}
+              </div>
+            {% endif %}
+            {% if settings.tabheading2 != blank %}
+              <div id="tabfaq-2">
+                <div class="klerna_faq_text">
+                  <p>Tools4Trade Limited acts as a broker and offers credit from Klarna Bank AB (publ). Klarna Bank AB (publ) is Authorised by the Swedish Financial Services Authority (Finansinspektionen) and is subject to limited regulation by the Financial Conduct Authority. Details about the extent of our regulation by the Financial Conduct Authority are available from us on request. Finance is only available to permanent UK residents aged >18, subject to status, terms and conditions apply. Registered office: Sveavägen 46, 111 34 Stockholm, Sweden. Corporation ID number: 556737-0431.</p>
+                  <p>Late or missing repayments may have serious consequences for you and cause you serious money problems</p>
+                  <p>Please spend responsibly – Borrowing beyond your means could seriously affect your financial status, ensure you can afford to make your monthly repayments on time by the due date. Failure to make payment on time could result in your debt being passed to a debt collection agency and affect future lending decisions made by Klarna.</p>
+                </div>  
+				{% section 'Klarna-faqs-accordion-tab-2' %}
+              </div>
+            {% endif %}
+            {% if settings.tabheading3 != blank %}
+              <div id="tabfaq-3">
+                <div class="klerna_faq_text">
+                  <p>Tools4Trade Limited acts as a broker and offers credit from Klarna Bank AB (publ). Klarna Bank AB (publ) is Authorised by the Swedish Financial Services Authority (Finansinspektionen) and is subject to limited regulation by the Financial Conduct Authority. Details about the extent of our regulation by the Financial Conduct Authority are available from us on request. Finance is only available to permanent UK residents aged >18, subject to status, terms and conditions apply. Registered office: Sveavägen 46, 111 34 Stockholm, Sweden. Corporation ID number: 556737-0431.</p>
+                  <p>Late or missing repayments may have serious consequences for you and cause you serious money problems</p>
+                  <p>Please spend responsibly – Borrowing beyond your means could seriously affect your financial status, ensure you can afford to make your monthly repayments on time by the due date. Failure to make payment on time could result in your debt being passed to a debt collection agency and affect future lending decisions made by Klarna.</p>
+                </div>
+				{% section 'Klarna-faqs-accordion-tab-3' %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

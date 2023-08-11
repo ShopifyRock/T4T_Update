@@ -132,26 +132,42 @@
                             {%- endfor -%}
                         </ul>
                         {%- when 'price_range' -%}
-                        <div class="filter-group-display__price-range">
-                            <div class="filter-group-display__price-range-from">
-                                <input name="{{ filter.min_value.param_name }}"
-                                    id="Filter-{{ filter.min_value.param_name }}" {% if filter.min_value.value -%}
-                                    value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
-                                    {%- endif %} type="number" placeholder="From" min="0"
-                                    max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+                            <div class="filter-group-display__price-range">
+                                <div class="filter-group-display__price-range-from">
+                                    <input 
+                                      name="{{ filter.min_value.param_name }}"
+                                      id="Filter-{{ filter.min_value.param_name }}" 
+                                      {% if filter.min_value.value -%}
+                                        value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                                      {% else %}
+                                        value="1"
+                                      {%- endif %} 
+                                      type="text" 
+                                      placeholder="1" 
+                                      min="1"
+                                      max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                                    >
+                                </div>
+                                <div class="filter-group-display__price-range-to">
+                                    <input 
+                                      name="{{ filter.max_value.param_name }}"
+                                      id="Filter-{{ filter.max_value.param_name }}" 
+                                      {% if filter.max_value.value -%}
+                                        value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
+                                      {% else %}
+                                        value="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                                      {%- endif %}
+                                      type="text" 
+                                      placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}" 
+                                      min="0"
+                                      max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                                    >
+                                </div>
                             </div>
-                            <div class="filter-group-display__price-range-to">
-                                <input name="{{ filter.max_value.param_name }}"
-                                    id="Filter-{{ filter.max_value.param_name }}" {% if filter.max_value.value -%}
-                                    value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
-                                    {%- endif %} type="number" placeholder="To" min="0"
-                                    max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+                            <div class="price-range-slider">
+                              <div id="slider-range" class="range-bar"></div>
+                              <div id="stepsCount"></div>
                             </div>
-                        </div>
-
-                        <div class="filter-group-display__submit">
-                            <input type="submit" value="Apply">
-                        </div>
                         {%- endcase -%}
                     </div>
                 </details>
@@ -373,7 +389,41 @@
     document.getElementById("sort-by").addEventListener("change", handleSortChange);
   </script>
   
-
+  {% comment %} Range slider pn price filter {% endcomment %}
+  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script>
+    const money_format = '{{ shop.money_format }}';
+    const __rtMoneyFormate = (price) => {
+      return money_format.replace("\{\{amount\}\}", price);
+    }
+    $(function() {
+      let rangeToInput = $( '.filter-group-display__price-range-to input');
+      let rangeFromInput = $( '.filter-group-display__price-range-from input');
+      let stepCount = Math.round(( parseInt(rangeToInput.attr("max")) - parseInt(rangeFromInput.attr("min")))/ 4);
+      let stepsCount = `<span class="step step-1">${__rtMoneyFormate(parseInt(rangeFromInput.attr("min")))}</span>`;
+      let initCount = parseInt(rangeFromInput.attr("min"));
+      for(let i=0; i<4; i++ ) {
+        i == 3 ? initCount = parseInt(rangeToInput.attr("max")):initCount += stepCount;
+        stepsCount += `<span class="step step-${i + 2}">${__rtMoneyFormate(initCount)}</span>`;
+      }
+      $('#stepsCount').html(stepsCount);
+      $( "#slider-range" ).slider({
+        range: true,
+        min: parseInt(rangeFromInput.attr("min")),
+        max: parseInt(rangeToInput.attr("max")),
+        values: [ parseInt(rangeFromInput.val()) , parseInt(rangeToInput.val()) ],
+        slide: function( event, ui ) {
+          rangeFromInput.val( ui.values[ 0 ] );
+          rangeToInput.val( ui.values[ 1 ] );
+          $('#collection-sidebar-filter').submit();
+        }
+      });
+      rangeFromInput.val( $( "#slider-range" ).slider( "values", 0 ) );
+      rangeToInput.val( $( "#slider-range" ).slider( "values", 1 ) );
+    });
+  </script>
 
 {% schema %}
 {

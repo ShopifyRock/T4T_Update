@@ -3891,6 +3891,10 @@ body.template-index .breadcrumb_text_new {
     width: calc(50% - 36px);
 }
 
+.product__main-container .product__details-main .grid {
+    margin: 0;
+}
+
 .product__main-container .product__details-main .product-main__title {
     font-size: 24px;
     color: #222;
@@ -4165,7 +4169,10 @@ body .delivery-info .delivery-info-container .delivery-info-wrapper {
     max-width: 100% !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
+    display: none;
 }
+
+
 
 .product__main-container .product__details-main .add-to-cart-wrapper,
 .product__main-container .product__details-main .add-to-cart-wrapper .qty-wrapper {
@@ -4260,6 +4267,23 @@ body .delivery-info .delivery-info-container .delivery-info-wrapper {
     letter-spacing: 0;
     padding: 13px 15px;
     margin-left: 50px
+}
+
+.product__main-container .product__details-main .add-to-cart-wrapper .btn[aria-label="Sold out"] {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.product__tabs-wrapper .tab .download-btn {
+    background: #242f3d;
+    border-color: #e11125;
+    color: #fff;
+}
+
+.product__tabs-wrapper .tab .download-btn:hover {
+    background-color: #fff;
+    color: #ac111a;
+    border-color: #ac111a;
 }
 
 .qty-new .product-form__item {
@@ -6506,8 +6530,1043 @@ body .wishlist__grid .grid-view-item {
     justify-content: center
 }
 
+.zoomContainer {
+    left: 1px !important;
+    top: 1px !important;
+    border-radius: 5px;
+}
 
 /* Collection list style end */
+
+
+/* CMS page style start */
+
+.rte {
+	color: #272626;
+}
+
+.common-pages-inner-new {
+	border: 0;
+	box-shadow: 0 0 4px #00000026;
+	padding: 20px 20px 10px;
+}
+
+
+
+.common-pages-inner-new p {
+	color: #272626;
+	margin: 0 0 20px;
+}
+
+.rte:last-child {
+	margin-bottom: 0;
+}
+
+.rte a:not(.btn) {
+	border-bottom: 1px solid currentColor;
+	padding-bottom: 1px;
+}
+
+.common-pages-inner-new .h4,
+.common-pages-inner-new h4 {
+    font-size: 1.1333333333em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.rte .h1, 
+.rte .h2, 
+.rte .h3, 
+.rte .h4, 
+.rte .h5, 
+.rte .h6, 
+.rte h1, 
+.rte h2, 
+.rte h3, 
+.rte h4, 
+.rte h5, 
+.rte h6 {
+	margin-top: 55px;
+	margin-bottom: 27.5px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.common-pages-new .h1, 
+.common-pages-new .h2, 
+.common-pages-new .h3, 
+.common-pages-new .h4, 
+.common-pages-new .h5, 
+.common-pages-new .h6, 
+.common-pages-new h1, 
+.common-pages-new h2, 
+.common-pages-new h3, 
+.common-pages-new h4, 
+.common-pages-new h5, 
+.common-pages-new h6 {
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+.common-pages-new a {
+    background-color: transparent;
+    transition: all .3s linear;
+	color: #df232a;
+}
+
+.delivery_inner_text_new,
+.careers_inner_text_new,
+.returns_inner_text_new,
+.terms_condition_inner_text_new,
+.Payment_Options_inner_text_new {
+	margin-top: 15px;
+	background: #fff;	
+}
+
+.rte.common-pages-inner-new.Payment_Options_inner_text_new {
+    border-radius: 10px;
+}
+.payment_option_tabs_new ul li {
+    text-transform: uppercase;
+}
+
+.rte .h1:first-child, 
+.rte .h2:first-child, 
+.rte .h3:first-child, 
+.rte .h4:first-child, 
+.rte .h5:first-child, 
+.rte .h6:first-child, 
+.rte h1:first-child, 
+.rte h2:first-child, 
+.rte h3:first-child, 
+.rte h4:first-child, 
+.rte h5:first-child, 
+.rte h6:first-child {
+	margin-top: 0;
+}
+
+.red-text.margin-L20.h4, 
+h4.red-text.margin-L20 {
+	margin: 30px 0 20px;
+	background-color: #5e5e5e;
+	color: #fff;
+	padding: 6px 33px 6px 6px;
+	font-size: 17px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: right;
+	width: 51%;
+}
+
+.common-pages-inner-new .h3,
+.common-pages-inner-new h3 {
+	font-size: 1.7333333333em;
+	text-transform: none;
+	letter-spacing: 0;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+
+.rte ul {
+	list-style: disc outside;
+    margin-left: 35px;
+    margin-bottom: 18px;
+}
+
+.rte li {
+	margin-bottom: 4px;
+	list-style: inherit;
+}
+
+.rte img {
+	height: auto;
+}
+img.faq_banner {
+    width: 100%;
+}
+
+.postcode-list li {
+	float: left;
+	width: 20%;
+	box-sizing: border-box;
+	list-style-type: none;
+	font-size: 15px;
+	text-align: center;
+	font-style: italic;
+	background-color: #f8f8f8;
+	color: gray;
+	padding: 3px 10px;
+	margin-bottom: 10px;
+}
+
+.postcode-list li::before {
+	content: url('https://cdn.shopify.com/s/files/1/0508/5220/0645/files/square-dot.png?v=1691406114');
+	margin-right: 10px;
+}
+
+.red-text.margin-L20.h4::after, 
+h4.red-text.margin-L20::after {
+	content: url('https://cdn.shopify.com/s/files/1/0508/5220/0645/files/truck.webp?v=1691406180');
+	position: absolute;
+	margin-top: -44px;
+}
+
+.postcodes-container {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.accordion-page-main {
+	margin: 25px 0;
+	border-bottom: 1px solid #dedfde;
+}
+
+.accordion-page-list {
+	border-top: 1px solid #dedfde;
+}
+
+.accordion-page-title {
+	position: relative;
+	font-style: normal;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 1.2;
+	cursor: pointer;
+	padding: 15px 20px 15px 0;
+	width: 100%;
+	border: 0;
+	text-align: left;
+	outline: 0;
+	transition: .4s;
+}
+
+.accordion-page-title::after {
+	content: "+";
+	position: absolute;
+	right: 0;
+	top: 13px;
+	color: #333232;
+	font-weight: 400;
+	float: right;
+	font-size: 27px;
+	margin-left: 5px;
+	line-height: 20px;
+}
+
+.accordion-page-title.active::after {
+	content: "\2212";
+}
+
+.accordion-page-desc {
+	border-top: 1px solid #dedfde;
+	padding: 15px 0;
+	text-align: left;
+	overflow: hidden;
+	display: none;
+}
+
+.Klarna_Ts_Cs_main.common-pages-new.container {
+    max-width: 100%;
+}
+
+.Klarna_Ts_Cs_main .Klarna_Ts_Cs_image_main img {
+	width: 100%;
+	display: flex;
+}
+
+.Klarna_Ts_Cs_inner_text_new {
+	margin-top: 15px;
+	background: #fff;
+}
+
+.Klarna_main.common-pages-new.container {
+    max-width: 100%;
+}
+
+.Klarna_main .tabs_full_block_new {
+	border: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	box-shadow: 0 0 4px #00000026;
+}
+
+.klarna-faqs-tabs-title ul li {
+	text-transform: uppercase;
+}
+
+.klarna-faqs-new-title .h1, 
+.klarna-faqs-new-title h1 {
+	font-size: 39px;
+	display: inline-block;
+	padding: 12px 30px;
+	font-weight: 400;
+	background: #0b0b09;
+	color: #fff;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	border-radius: 35px;
+}
+
+    /* shopify policy page */
+
+    .shopify-policy__container {
+        max-width:100%;
+        margin:0 auto;
+        padding-left:20px;
+        padding-right:20px
+    }
+    .shopify-policy__title {
+        text-align:center
+    }       
+
+    .shopify-policy__title h1 {
+        font-weight: 400;
+    }
+
+    .shopify-policy__body .rte {
+        border-radius: 10px;
+    }
+
+    /* shopify policy page */
+
+    /* About us page */
+
+    .about_us_page_new .page-width {
+        max-width: 1230px;
+        margin: 0 auto;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .about_us_page_inner_new {
+        padding-bottom:26px
+    }
+   .about_us_page_heading_new {
+        background:#ccc;
+        background:-moz-linear-gradient(left,rgba(204,204,204,.6) 0,#fff 60%);
+        background:-webkit-linear-gradient(left,rgba(204,204,204,.6) 0,#fff 60%);
+        background:linear-gradient(to right,rgba(204,204,204,.6) 0,#fff 60%);
+        font-size:34px;
+        line-height:40px;
+        color:#000;
+        padding:8px 10px
+    }
+   .about_us_page_texts_new p {
+        font-size:18px;
+        line-height:26px;
+        color:#323232;
+        padding-top:24px;
+        margin-bottom:0
+    }
+   .about_us_page_images_new {
+        padding-top:24px
+    }
+   .about_us_page_images_new img {
+        width:100%
+    }
+
+    /* About us page */
+
+    /* Contact us page */
+
+    .common-pages-new p {
+        color: #272626;
+        margin-bottom: 10px;
+    }
+
+    .contact_main .contact-page-description {
+        border-bottom: 1px solid #cbcbcb
+    }
+    
+    .contact_main .web-sales {
+        float: left;
+        width: 100%
+    }
+    
+    .contact_main .web-sales-heading {
+        min-height: 100px;
+        position: relative;
+        background: url(https://www.tools4trade.co.uk/pub/media/t4t/icons/websale.png) no-repeat left top;
+        margin: 1px 0
+    }
+    
+    .contact_main .web-sales-heading .h3,
+    .contact_main .web-sales-heading h3 {
+        font-size: 24px;
+        color: #5e5e5e;
+        font-weight: 600;
+        margin: 0;
+        position: absolute;
+        top: 25px;
+        left: 90px;
+        line-height: 1.1
+    }
+    
+    .contact_main .trade-counter {
+        float: right;
+        width: 100%;
+        padding-bottom: 15px
+    }
+    
+    .contact_main .trade-counter-heading {
+        min-height: 100px;
+        position: relative;
+        border-top: 1px solid #cbcbcb;
+        margin-top: 20px !important;
+        background: url(https://www.tools4trade.co.uk/pub/media/t4t/icons/websale.png) no-repeat left top;
+        margin: 1px 0
+    }
+    
+    .contact_main .trade-counter-heading .h3,
+    .contact_main .trade-counter-heading h3 {
+        font-size: 24px;
+        color: #5e5e5e;
+        font-weight: 600;
+        margin: 0;
+        position: absolute;
+        top: 25px;
+        left: 90px;
+        line-height: 1.1
+    }
+    
+    .contact_main .light-grey-bg.padding5.left-content {
+        float: left;
+        width: 40%
+    }
+    
+    .contact_main .contact-us-address.timings:before,
+    .contact_main .contact-us-address:before,
+    .contact_main .contact-us-email:before,
+    .contact_main .contact-us-fax:before,
+    .contact_main .contact-us-phone:before {
+        position: absolute;
+        margin-top: 0
+    }
+    
+    .contact_main .contact-us-address:before {
+        content: url('https://cdn.shopify.com/s/files/1/0508/5220/0645/files/location_5f65a773-9a9a-4f6e-84ec-897950a683ab.png?v=1681897911');
+        margin-top: 0
+    }
+    
+    .contact_main .contact-us-address.timings:before {
+        content: url('https://cdn.shopify.com/s/files/1/0508/5220/0645/files/clock.png?v=1681897912')
+    }
+    
+    .contact_main .contact-us-phone:before {
+        content: url('https://cdn.shopify.com/s/files/1/0508/5220/0645/files/mobile.png?v=1681897911')
+    }
+    
+    .contact_main .contact-us-fax:before {
+        content: url('https://cdn.shopify.com/s/files/1/0508/5220/0645/files/fax.png?v=1681897911')
+    }
+    
+    .contact_main .contact-us-email:before {
+        content: url('https://cdn.shopify.com/s/files/1/0508/5220/0645/files/mail_90a52dbc-1c41-47eb-a50c-0bea561fe196.png?v=1681897911');
+        margin-top: 0
+    }
+    
+    .contact_main .get-direction {
+        margin-top: 10px;
+        width: 50%;
+        float: right
+    }
+    
+    .contact_main .get-direction iframe {
+        width: 100%;
+        height: 210px;
+        border: 1px solid #d3d3d3
+    }
+    
+    .contact_main .contact-us-address-label,
+    .contact_main .contact-us-email-label,
+    .contact_main .contact-us-fax-label,
+    .contact_main .contact-us-phone-label {
+        font-size: 15px;
+        font-weight: 700;
+        color: gray;
+        margin-top: 10px;
+        margin-left: 50px
+    }
+    
+    .contact_main .contact-us-address-label {
+        padding-top: 0
+    }
+    
+    .contact_main .contact-us-address-content,
+    .contact_main .contact-us-email-content a,
+    .contact_main .contact-us-email-content a:hover,
+    .contact_main .contact-us-fax-content,
+    .contact_main .contact-us-phone-content {
+        font-size: 14px;
+        color: #000;
+        margin-left: 40px;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 700
+    }
+
+    .common-pages-new {
+        font-family: Rubik, sans-serif
+    }
+    
+    body .contact-main-page .contact-page-section {
+        display: flex;
+        margin-bottom: 50px
+    }
+    
+    body .contact-main-page .contact-page-section .contact-left {
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0
+    }
+    
+    body .contact-main-page .contact-page-section .left-content .contact-us-address {
+        width: 100%
+    }
+    
+    body .contact-main-page .contact-page-section .contact-right {
+        width: 30%;
+        margin-top: 0;
+        background: #fff;
+        padding: 30px 20px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
+    
+    body .contact-main-page .contact-page-section .contact-right .form-heading {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 50px
+    }
+    
+    body .contact-main-page .contact-page-section .contact-left .contact-heading h3.h4 {
+        font-size: 20px;
+        font-weight: 700
+    }
+    
+    body .contact-main-page .contact-page-section .contact-left .contact-page-description {
+        border: 0;
+        font-size: 18px
+    }
+    
+    body .contact-main-page .contact-page-section .contact-left h3.h4 {
+        font-size: 20px;
+        color: #000;
+        font-weight: 700;
+        position: static
+    }
+    
+    body .contact-main-page .contact-page-section .contact-left .web-sales .web-sales-heading,
+    body .contact-main-page .contact-page-section .contact-left .trade-counter .trade-counter-heading {
+        min-height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        background: transparent;
+        margin: 25px 0 15px
+    }
+    
+    body .contact-main-page .contact-page-section .contact-left .web-sales .web-sales-content,
+    body .contact-main-page .contact-page-section .contact-left .trade-counter .trade-counter-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px
+    }
+    
+    body .contact-main-page .contact-page-section .left-content {
+        width: 50% !important
+    }
+    
+    body .contact-main-page .contact-page-section .left-content {
+        width: 50% !important;
+        background: #fff;
+        padding: 35px 25px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px
+    }
+    
+    body .contact-main-page .contact-page-section .right-content {
+        margin-top: 0
+    }
+    
+    body .contact-main-page .contact-page-section .right-content iframe {
+        height: 100%;
+        border-radius: 10px
+    }
+    
+    body .contact-main-page .contact-page-section .contact-left .trade-counter {
+        margin-top: 15px;
+        padding: 0
+    }
+    
+    body .contact-main-page .contact-page-section .left-content .contact-us-address-label,
+    body .contact-main-page .contact-page-section .left-content .contact-us-phone-label,
+    body .contact-main-page .contact-page-section .left-content .contact-us-fax-label,
+    body .contact-main-page .contact-page-section .left-content .contact-us-email-label {
+        display: none
+    }
+    
+    body .contact-main-page .contact-page-section .left-content .contact-us-address.timings {
+        order: 2;
+        width: calc(50% - 7.5px)
+    }
+    
+    body .contact-main-page .contact-page-section .left-content .mobile-fax-section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: calc(50% - 7.5px)
+    }
+    
+    body .contact-main-page .contact-page-section .contact-left .trade-counter .trade-counter-heading {
+        border: 0
+    }
+    
+    body .contact-main-page .contact-page-section .contact-right .form-box label {
+        display: none
+    }
+    
+    body .contact-main-page .contact-page-section .contact-right .form-box input,
+    body .contact-main-page .contact-page-section .contact-right .form-box textarea {
+        border-radius: 5px;
+        color: #000;
+        font-weight: 600
+    }
+    
+    body .contact-main-page .contact-page-section .contact-right .form-box input::placeholder,
+    body .contact-main-page .contact-page-section .contact-right .form-box textarea::placeholder {
+        color: #000;
+        opacity: 1;
+        font-size: 14px
+    }
+    
+    body .contact-main-page .contact-page-section .contact-right .form-button input.btn {
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        border-radius: 5px;
+        font-weight: 700;
+        letter-spacing: 0;
+        font-size: 16px
+    }
+    
+    body .custom-page-section-main .custom-page-section {
+        margin-top: 0;
+        border-radius: 10px
+    }
+    
+    body .custom-page-section-main .custom-page-section h1,
+    body .custom-page-section-main .custom-page-section h2,
+    body .custom-page-section-main .custom-page-section h3.h4,
+    body .custom-page-section-main .custom-page-section p b {
+        color: #e81516;
+        font-size: 24px;
+        letter-spacing: 0;
+        font-weight: 500
+    }
+    
+    body .custom-page-section-main .custom-page-section p,
+    body .custom-page-section-main .custom-page-section ul li {
+        font-size: 18px;
+        color: #222
+    }
+    
+    .contact_main .contact-us-address-content .red {
+        display: inline-block;
+        margin-left: 10px;
+        color: #ec0029
+    }
+    
+    body .contact-main-page .contact-page-section .left-content .contact-us-email-content a {
+        border: 0
+    }
+    
+    body .quick-action-links .quick-link a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        border-bottom: 0;
+        margin: 10px 0
+    }
+
+    /* Contact us page */
+
+    /* Career page */
+
+    .careers_main .careers_image_main img {
+        width: 100%;
+        display: flex;
+    }
+
+    .career_inner_img_main {
+        font-size: 0;
+    }
+
+    .career_inner_img_list {
+        width: 33.33%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .career_inner_img_list img {
+        width: 100%;
+        display: flex;
+        padding: 5px;
+    }
+
+    /* Career page */
+
+    /* payment options page */
+
+    .Payment_Options_main .columns-wrap {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -3px;
+        margin-left: -3px;
+    }
+
+    .payment-icon-po {
+        background: #f1f1f1;
+        margin: 3px;
+        height: 60px;
+        max-width: 19.83333333%;
+        padding: 5px .5%;
+        width: 100%;
+    }
+
+    .payment-p {
+        font-weight: 600;
+        font-size: 16px;
+        float: left;
+    }
+
+    .payment-img {
+        float: right;
+    }
+
+    .finance-banner {
+        margin-top: 15px;
+    }
+
+    .feature_section {
+        background: #f1f1f1;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .feature_section .h1, 
+    .feature_section h1 {
+        text-align: center;
+    }
+
+    .FeatureCards {
+        display: flex;
+        justify-content: center;
+    }
+
+    .FeatureCard {
+        width: 341px;
+        margin: 0 14px;
+    }
+
+    .FeatureCard__Card {
+        border: 1px solid hsla(0,0,96.1%,.8);
+        box-shadow: 0 2px 4px #00000082;
+        border-radius: 30px;
+        background: #fff;
+        display: flex;
+        padding: 35px 12px;
+        flex-direction: column;
+        height: 320px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .FeatureCard__Header {
+        display: flex;
+        min-height: 90px;
+    }
+    .FeatureCard__Icon {
+        margin-right: 12px;
+    }
+    .FeatureCard__Icon img {
+        width: 50px;
+    }
+    .FeatureCard__Title {
+        line-height: 1.4;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #000;
+    }
+    .FeatureCard__Header p {
+        margin: 0 !important;
+    }
+
+    .Paragraph--bold {
+        font-weight: 700;
+    }
+    .Paragraph--normal {
+        font-size: 17px;
+    }
+    .FeatureCard__List {
+        padding: 0;
+        margin: 0 !important;
+    }
+    .FeatureCard__ListItem {
+        list-style-type: none !important;
+        line-height: 1.4;
+        margin-bottom: 4px;
+        font-size: 15px;
+        padding: 0 0 0 30px;
+        position: relative;
+        color: #0b0b09;
+    }
+    .FeatureCard__ListItem::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 0;
+        background-image: url('https://cdn.shopify.com/s/files/1/0508/5220/0645/files/tick.webp?v=1691410009');
+        background-size: cover;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        top: 2px;
+    }
+
+    .FeatureCard__Link {
+        cursor: pointer;
+        margin-top: 0;
+        font-size: 17px;
+        text-align: right;
+        position: absolute;
+        bottom: 32px;
+        right: 20px;
+        color: #0b0b09;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    a:focus, 
+    a:not([disabled]):hover {
+        color: #4e4c4c;
+    }
+
+    .scrollable-wrapper {
+        max-width: 100%;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .rte table {
+        table-layout: fixed;
+    }
+
+    .calulation-table table td {
+        border: 1px solid #eef2f6;
+        width: 100px;
+        text-align: center;
+        padding: 2px 10px;
+        font-size: 13px;
+    }
+
+    /* payment options page */
+
+/* Warranty page css start */
+
+.tabs-warranty {
+    font-size: 0;
+    text-align: center
+}
+
+.tabs-warranty li {
+    display: inline-block;
+    width: calc(11.11% - 7px);
+    vertical-align: top;
+    margin-bottom: 7px;
+    margin-right: 7px
+}
+
+.tabs-warranty li a {
+    opacity: .5
+}
+
+.tabs-warranty li a.active {
+    opacity: 1
+}
+
+.tabs-warranty li:nth-child(9n) {
+    margin-right: 0
+}
+
+.tabs-content-warranty {
+    padding: 15px 0 30px
+}
+
+.tabs-content-warranty .h3,.tabs-content-warranty h3 {
+    background: #232f3e;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 20px
+}
+
+.tabs-content-warranty p {
+    font-family: 'Rubik', sans-serif;
+    margin: 0 0 19.4444444444px;
+}
+
+.tabs-content-warranty p a,.tabs-content-warranty p a:hover {
+    color: #df232a;
+    border-bottom: 1px solid #df232a
+}
+
+.tabs-content-warranty ul {
+    list-style: disc outside;
+    margin: 0 0 17.5px 35px
+}
+
+.tabs-content-warranty ul li {
+    margin-bottom: 4px;
+    list-style: inherit;
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.tabs-content-warranty div {
+    padding: 0 15px
+}
+
+.tabs-content-warranty .h3, .tabs-content-warranty h3 {
+    margin: 0 0 17.5px;
+    font-family: 'Rubik', sans-serif;
+}
+/* Warranty page css End */
+
+.terms_condition_main .terms_condition_image_main img,
+.returns_main .returns_image_main img {
+    width: 100%;
+    display: flex;
+}
+
+#shopify-section-template--16113124638917__Warranty-Tabs .container {
+    max-width: 1230px;
+}
+
+.faqs_main.common-pages-new.container {
+    max-width: 100%;
+}
+
+.faqs_inner_text_new {
+	margin-top: 15px;
+	background: #fff;
+}
+
+.Klarna_main .accordion-page-main, 
+.faqs_main .accordion-page-main {
+	margin: 0 0 10px;
+}
+
+.careers_main.common-pages-new {
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 100%;
+}
+
+.page-width.Payment_Options_main.common-pages-new {
+    max-width: 100%;
+}
+
+.page-width.Payment_Options_main.common-pages-new ul.tabs {
+    margin: 0;
+}
+
+.page-width.Payment_Options_main.common-pages-new #shopify-section-Payments-Options-New-3 {
+    display: inline-block;
+}
+
+.page-width.Payment_Options_main.common-pages-new .rte.common-pages-inner-new.Payment_Options_inner_text_new {
+    border-radius: 0;
+}
+
+.privacy_polisy_main .privacy_polisy_image_main img {
+	width: 100%;
+	display: flex;
+}
+
+.weee_inner_text_new {
+	margin-top: 15px;
+	background: #fff;
+}
+
+/* CMS page style end */
+
+
+/* Back to top */
+
+#button-top {
+    display: inline-block;
+    background-color: #ed1b30;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 85px;
+    right: -3px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#button-top::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+#button-top:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+#button-top:active {
+    background-color: #555;
+}
+
+#button-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Back to top */
+
 
 
 /* Media query start */
@@ -7033,6 +8092,20 @@ body .wishlist__grid .grid-view-item {
 @media only screen and (min-width:768px) and (max-width:991px) {
     #shopify-section-cart-template .cart .cart-table .cart__row .cart__meta .cart__product-information .list-view-item__title {
         font-size: 12px
+    }
+}
+
+@media only screen and (min-width:750px) and (max-width:1000px) {
+    .Payment_Options_main .payment-icon-po {
+        max-width: 30%;
+    }
+    .Payment_Options_main .FeatureCards {
+        display: block;
+    }
+    .Payment_Options_main .FeatureCard {
+        width: 100%;
+        margin: auto;
+        max-width: 100%;
     }
 }
 
@@ -9008,6 +10081,19 @@ body .wishlist__grid .grid-view-item {
         margin: 0 -8px;
     }
 
+    .product__main-container .product__details-main .price-wrapper .price-container .regular-price {
+        width: 100%;
+    }
+
+    .product__main-container .product__details-main .price-wrapper .price-container .price {
+        font-size: 18px;
+        align-items: flex-end;
+    }
+
+    #button-top {
+        right: 22px;
+    }
+
 }
 
 @media only screen and (max-width:749px) {
@@ -9481,6 +10567,44 @@ body .wishlist__grid .grid-view-item {
 
     .grid {
         margin-left: -22px
+    }
+
+    .about_us_page_heading_new {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .about_us_page_texts_new p {
+        font-size: 15px;
+        line-height: 24px;
+        padding-top: 16px;
+    }
+
+    .postcode-list li {
+        width: 33%;
+    }
+    .Payment_Options_main .payment-icon-po {
+        height: auto;
+        max-width: 47.5%;
+        width: 100%;
+    }
+    .Payment_Options_main .payment-p, 
+    .Payment_Options_main .payment-img {
+        float: inherit;
+        text-align: center;
+    }
+    .Payment_Options_main .FeatureCards {
+        display: block;
+    }
+    .Payment_Options_main .FeatureCard {
+        width: 100%;
+        margin: auto;
+        max-width: 100%;
+    }
+
+    .klarna-faqs-new-title .h1, 
+    .klarna-faqs-new-title h1 {
+        font-size: 20px;
     }
 
 }

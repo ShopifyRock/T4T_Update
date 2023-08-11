@@ -1,0 +1,55 @@
+<div class="page-width container">
+    {% if section.blocks.size > 0 %}
+        <div class="tabs-warranty-main">
+            <ul class="tabs tabs-warranty">
+                {% for block in section.blocks %}
+                    {% if block.settings.tabimage != blank %}
+                        <li>
+                            <a class="{% if forloop.first %}active{% endif %}" href="#tab{{ block.id }}">
+                                <img src="{{ block.settings.tabimage | img_url: 'master' }}" alt="{{ block.settings.tabimage.alt }}"/>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <ul class="tabs-content tabs-content-warranty" id="tabs_content_warranty">
+            {% for block in section.blocks %}
+                {% if block.settings.tabimage != blank %}
+                    <li class="{% if forloop.first %}active{% endif %}" id="tab{{ block.id }}">
+                        {{ block.settings.texttab }}
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+{% schema %}
+    {
+        "name": "Warranty Tabs",
+        "class": "warranty_tabs",
+        "settings": [
+	 
+	        ],
+	    "blocks": [
+            {
+                "type": "contact_information",
+                "name": "Contact Information",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "tabimage",
+                        "label": "Add Tabs Image"
+		            },
+                    {
+                        "type": "textarea",
+                        "id": "texttab",
+                        "label": "Add Tabs Information",
+                        "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
+  

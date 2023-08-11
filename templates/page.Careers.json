@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "Careers-New",
+      "blocks": {
+        "5028def7-7604-456b-9a11-710a78bd752a": {
+          "type": "add_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hand-tool.png"
+          }
+        },
+        "4b10bfd4-2642-4de3-bbf6-fc9ffc607aef": {
+          "type": "add_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/power-tool.png"
+          }
+        },
+        "42c702ff-a55d-4256-a9ab-6d51bf583b13": {
+          "type": "add_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/accessories.png"
+          }
+        },
+        "b6a1f099-477d-4d93-9247-3658827a7453": {
+          "type": "add_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fixing.png"
+          }
+        },
+        "f5707c4d-744e-48e6-9c1e-9ae8af0f2694": {
+          "type": "add_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/safety-and-workfare.png"
+          }
+        },
+        "f3c22969-fbb1-43eb-9e10-11b0e0ef2505": {
+          "type": "add_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tool-storage.png"
+          }
+        }
+      },
+      "block_order": [
+        "5028def7-7604-456b-9a11-710a78bd752a",
+        "4b10bfd4-2642-4de3-bbf6-fc9ffc607aef",
+        "42c702ff-a55d-4256-a9ab-6d51bf583b13",
+        "b6a1f099-477d-4d93-9247-3658827a7453",
+        "f5707c4d-744e-48e6-9c1e-9ae8af0f2694",
+        "f3c22969-fbb1-43eb-9e10-11b0e0ef2505"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/career-desktop.png"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

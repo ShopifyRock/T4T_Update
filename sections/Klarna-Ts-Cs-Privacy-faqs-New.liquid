@@ -1,0 +1,28 @@
+<div class="page-width Klarna_Ts_Cs_main common-pages-new container">
+    <div class="grid">
+        <div class="grid__item">
+            {% if section.settings.image != blank %}
+                <div class="Klarna_Ts_Cs_image_main">
+                    <img class="faq_banner" src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+                </div>
+            {% endif %}
+            {% if page.content != blank %}
+            <div class="rte Klarna_Ts_Cs_inner_text_new common-pages-inner-new">
+                {{ page.content }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+"name": "Klarna Ts Cs Privacy Faqs",
+"settings": [
+    {
+    "type": "image_picker",
+    "id": "image",
+    "label": "Normal Image"
+    }
+]
+}
+{% endschema %}

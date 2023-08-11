@@ -1,0 +1,12 @@
+{
+    "sections": {
+      "Delivery-New": {
+        "type": "Delivery-New",
+        "settings": {
+        }
+      }
+    },
+    "order": [
+      "Delivery-New"
+    ]
+  }

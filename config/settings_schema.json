@@ -1455,5 +1455,68 @@
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
       }
     ]
+  },
+  {
+    "name": "Add to cart notification",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_ajax",
+        "label": "Show notification when item is added to cart",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Klarna FAQs Tabs Heading",
+    "settings": [
+      {
+        "type": "text",
+        "id": "tabheading1",
+        "label": "Heading Tab-1",
+        "default": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "tabheading2",
+        "label": "Heading Tab-2",
+        "default": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "tabheading3",
+        "label": "Heading Tab-3",
+        "default": "Heading"
+      }
+    ]
+  },
+  {
+    "name": "Payment Options Tabs Heading",
+    "settings": [
+      {
+        "type": "text",
+        "id": "mainheading",
+        "label": "Main Heading",
+        "default": "FAQs"
+      },
+      {
+        "type": "text",
+        "id": "paymenttabheading1",
+        "label": "Payment Heading Tab-1",
+        "default": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "paymenttabheading2",
+        "label": "Payment Heading Tab-2",
+        "default": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "paymenttabheading3",
+        "label": "Payment Heading Tab-3",
+        "default": "Heading"
+      }
+    ]
   }
 ]

@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "Terms-Condition-New": {
+      "type": "Terms-Condition-New",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Term-and-Condition-desktop.png"
+      }
+    }
+  },
+  "order": [
+    "Terms-Condition-New"
+  ]
+}

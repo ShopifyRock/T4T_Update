@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "Returns-New": {
+      "type": "Returns-New",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/return-desktop.jpg"
+      }
+    }
+  },
+  "order": [
+    "Returns-New"
+  ]
+}

@@ -1,0 +1,63 @@
+{% if section.settings.mainheading != blank %}
+  <h1>{{ section.settings.mainheading }}</h1>
+{% endif %}
+{% if section.settings.innerheading != blank %}
+  <h3 class="h4"><strong>{{ section.settings.innerheading }}</strong></h3>
+{% endif %}
+{% if section.blocks.size > 0 %}
+  <div class="payment-content columns-wrap">
+    {% for block in section.blocks %}
+      <div class="payment-icon-po">      
+        <div class="payment-mini-wrapper">
+          {% if block.settings.title != blank %}
+            <div class="payment-p"><p>{{ block.settings.title }}</p></div>
+          {% endif %}
+          {% if block.settings.image != blank %}
+            <div class="payment-img"><img alt="{{ block.settings.image.alt }}" src="{{ block.settings.image | img_url: 'master' }}"></div>
+          {% endif %}
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Payments Options New 1",
+	"class": "Payments-Options-New-1",
+    "settings": [
+	  {
+        "type": "text",
+        "id": "mainheading",
+        "label": "Main Heading",
+        "default": "Methods of Payment"
+      },
+	  {
+        "type": "text",
+        "id": "innerheading",
+        "label": "Inner Heading",
+        "default": "We accept"
+      }
+	],
+	"blocks": [
+      {
+        "type": "add_text",
+        "name": "Add Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Add Heading",
+			"default": "Heading"
+          },
+		  {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

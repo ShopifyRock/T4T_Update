@@ -1,0 +1,62 @@
+<div class="page-width faqs_main common-pages-new container">
+    <div class="grid">
+      <div class="grid__item">
+        {% if section.settings.image != blank %}
+            <div class="faqs_image_main">
+                <img class="faq_banner" src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+            </div>
+        {% endif %}
+        {% if section.blocks.size > 0 %}
+            <div class="rte faqs_inner_text_new common-pages-inner-new">
+                <div class="accordion-page-main">
+                    {% for block in section.blocks %}
+                        {% if block.settings.title != blank %}
+                            <div class="accordion-page-list">
+                                {% if block.settings.title != blank %}
+                                    <div class="accordion-page-title">{{ block.settings.title }}</div>
+                                {% endif %}
+                                {% if block.settings.subtitle != blank %}
+                                    <div class="accordion-page-desc">{{ block.settings.subtitle }}</div>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% schema %}
+  {
+    "name": "FAQs New",
+    "settings": [
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Normal Image"
+      }
+	],
+	"blocks": [
+      {
+        "type": "add_text",
+        "name": "Add Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Add Heading",
+			"default": "Heading"
+          },
+		  {
+            "type": "html",
+            "id": "subtitle",
+            "label": "Add Description",
+			"default": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+  

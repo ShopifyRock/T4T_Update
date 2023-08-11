@@ -117,6 +117,14 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "enable_ajax": true,
+    "tabheading1": "General",
+    "tabheading2": "3 easy payments",
+    "tabheading3": "Financing",
+    "mainheading": "FAQs",
+    "paymenttabheading1": "General",
+    "paymenttabheading2": "3 easy payments",
+    "paymenttabheading3": "Financing",
     "sections": {
       "header": {
         "type": "header",
@@ -241,7 +249,7 @@
           "address_text": "My Address",
           "logout_text": "Logout",
           "cat_title": "All Categories",
-          "message": true,
+          "message": false,
           "home_page_only": false,
           "message_text": "<strong>Claim up to <span style=\"color: #ffe100;\">£50<\/span> cashback voucher on DeWalt. Ts&Cs Apply. Offer ends <span style=\"color: #ffe100;\">24th July 23.<\/span><\/strong>",
           "message_link": "shopify:\/\/collections\/dewalt",
@@ -352,6 +360,925 @@
         ],
         "settings": {
           "show_payment_icons": true
+        }
+      },
+      "breadcrumb": {
+        "type": "breadcrumb",
+        "settings": {
+        }
+      },
+      "Payment-Options-New": {
+        "type": "Payment-Options-New",
+        "settings": {
+        }
+      },
+      "Payments-Options-New-1": {
+        "type": "Payments-Options-New-1",
+        "blocks": {
+          "34344410-a609-4395-999a-ce0a724a2b9d": {
+            "type": "add_text",
+            "settings": {
+              "title": "Paypal",
+              "image": "shopify:\/\/shop_images\/pay-pal.png"
+            }
+          },
+          "ba181a10-4446-475a-adf0-a72e3cd345fa": {
+            "type": "add_text",
+            "settings": {
+              "title": "Maestro",
+              "image": "shopify:\/\/shop_images\/maestro-img.png"
+            }
+          },
+          "76366993-b948-45ba-9137-1ba4f976b5cc": {
+            "type": "add_text",
+            "settings": {
+              "title": "Mastercard",
+              "image": "shopify:\/\/shop_images\/master-card.png"
+            }
+          },
+          "b2857773-32c9-4c80-aa60-e45535ffd70a": {
+            "type": "add_text",
+            "settings": {
+              "title": "Klarna",
+              "image": "shopify:\/\/shop_images\/klarna_1.png"
+            }
+          },
+          "d3bfe5da-b3bd-422e-aaa9-436178b81aae": {
+            "type": "add_text",
+            "settings": {
+              "title": "Visa",
+              "image": "shopify:\/\/shop_images\/visa-img.png"
+            }
+          },
+          "9bf7a42c-3f47-4f55-8de3-9de3d34e104d": {
+            "type": "add_text",
+            "settings": {
+              "title": "Worldpay",
+              "image": "shopify:\/\/shop_images\/worldpay-img.png"
+            }
+          }
+        },
+        "block_order": [
+          "34344410-a609-4395-999a-ce0a724a2b9d",
+          "ba181a10-4446-475a-adf0-a72e3cd345fa",
+          "76366993-b948-45ba-9137-1ba4f976b5cc",
+          "b2857773-32c9-4c80-aa60-e45535ffd70a",
+          "d3bfe5da-b3bd-422e-aaa9-436178b81aae",
+          "9bf7a42c-3f47-4f55-8de3-9de3d34e104d"
+        ],
+        "settings": {
+          "mainheading": "Methods of Payment",
+          "innerheading": "We accept"
+        }
+      },
+      "Payments-Options-New-2": {
+        "type": "Payments-Options-New-2",
+        "blocks": {
+          "ae51f47a-994c-4f2c-b876-8738c7647e97": {
+            "type": "add_text",
+            "settings": {
+              "title": "What is Klarna?",
+              "subtitle": "Klarna is a Swedish payment service provider that takes end-to-end responsibility for your payment. Klarna is the provider of smooth payments to more than 200,000 online stores. Over 85 million consumers worldwide have trusted Klarna to securely handle their payments."
+            }
+          }
+        },
+        "block_order": [
+          "ae51f47a-994c-4f2c-b876-8738c7647e97"
+        ],
+        "settings": {
+          "imagetop": "shopify:\/\/shop_images\/Desktop_Java_New.jpg",
+          "boxheading": "Two new ways to pay",
+          "imageicons1": "shopify:\/\/shop_images\/circle.png",
+          "titletext1": "3 Easy Payments",
+          "titlesubtext1": "<p class=\"Paragraph Paragraph--regular Paragraph--normal Paragraph--left Paragraph--color-black FeatureCard__Subtitle\">on baskets between £250 and £1,000<\/p>",
+          "box1html": "<ul class=\"FeatureCard__List\">\n              <li class=\"FeatureCard__ListItem\">Pay in 3 equal payments every 30 days<\/li>\n              <li class=\"FeatureCard__ListItem\">No fees, interest or credit agreement<\/li>\n              <li class=\"FeatureCard__ListItem\">Instant credit approval at checkout<\/li>\n           <\/ul>\n           <a class=\"FeatureCard__Link 3-easy-payments\" href=\"#payments-list-box\">FAQs<\/a>",
+          "imageicons2": "shopify:\/\/shop_images\/spread.png",
+          "titletext2": "Spread the cost up to 3 years*",
+          "titlesubtext2": "<p class=\"Paragraph Paragraph--regular Paragraph--normal Paragraph--left Paragraph--color-black FeatureCard__Subtitle\">on baskets over £250<\/p>",
+          "box1htm2": "<ul class=\"FeatureCard__List\">\n              <li class=\"FeatureCard__ListItem\">Monthly financing from 6-36 months with min spending of £250<\/li>\n              \n              <li class=\"FeatureCard__ListItem\">14.9% for 12-36 months<\/li>\n           <\/ul>\n           <a class=\"FeatureCard__Link financing\" href=\"#financing-list-box\">FAQs<\/a>",
+          "innerbox1htm2": "<p class=\"Paragraph Paragraph--regular-14 Paragraph--bold Paragraph--left Paragraph--color-black \">Representative 18.9% APR (variable)<br>Purchase interest rate 18.9% p.a. (variable)<br>Assumed credit limit £1,200<\/p>",
+          "imageicons3": "shopify:\/\/shop_images\/spread.png",
+          "titletext3": "Example",
+          "titlesubtext3": "<p style=\"line-height: normal;\"><span style=\"font-size: 16px;\">Cost of item: <span style=\"font-weight: 600; color: #dd2429;\">£1200 <\/span><\/span><span style=\"font-size: 16px;\"><span style=\"font-weight: 600; color: #dd2429;\">+ 14.9% APR<\/span><\/span><\/p>",
+          "box1htm3": "<div class=\"calulation-table\">\n              <table align=\"left\" border=\"10\" frame=\"border\" cellspacing=\"0\" cellpadding=\"0\">\n                 <tbody>\n                    <tr align=\"center\" valign=\"middle\">\n                       <td><strong>Plan<\/strong><\/td>\n                       <td><strong>Cost Per Month<\/strong><\/td>\n                       <td><strong>Total Amount<\/strong><\/td>\n                    <\/tr>\n                    <tr style=\"background-color: #ffffff; height: 30px;\" align=\"center\" valign=\"middle\">\n                       <td>12 Months<\/td>\n                       <td><span>£114.90<\/span><\/td>\n                       <td><span>£1378.80<\/span><\/td>\n                    <\/tr>\n                    <tr style=\"background-color: #ffffff; height: 30px;\" align=\"center\" valign=\"middle\">\n                       <td>18 Months<\/td>\n                       <td><span>£76.60<\/span><\/td>\n                       <td><span>£1378.80<\/span><\/td>\n                    <\/tr>\n                    <tr style=\"background-color: #ffffff; height: 30px;\" align=\"center\" valign=\"middle\">\n                       <td>24 Months<\/td>\n                       <td><span>£57.45<\/span><\/td>\n                       <td><span>£1378.80<\/span><\/td>\n                    <\/tr>\n                    <tr style=\"background-color: #ffffff; height: 30px;\" align=\"center\" valign=\"middle\">\n                       <td>36 Months<\/td>\n                       <td><span>£38.30<\/span><\/td>\n                       <td><span>£1378.80<\/span><\/td>\n                    <\/tr>\n                 <\/tbody>\n              <\/table>\n           <\/div>"
+        }
+      },
+      "Payments-Options-accordion-tab-1": {
+        "type": "Payments-Options-accordion-tab-1",
+        "blocks": {
+          "8a40ee33-8aca-4ac4-abe2-24f15cddf0fb": {
+            "type": "add_text",
+            "settings": {
+              "title": "Who is Klarna?",
+              "subtitle": "Klarna is a Swedish payment service provider that takes end-to-end responsibility for your payment. Klarna is the provider of smooth payments to more than 200,000 online stores. Over 85 million consumers worldwide have trusted Klarna to securely handle their payments."
+            }
+          },
+          "23beb77b-0bce-4bdf-a030-554309cf40c7": {
+            "type": "add_text",
+            "settings": {
+              "title": "Is my payment information safe?",
+              "subtitle": "Payment information is processed securely by Klarna. No card details are transferred to or held by Tools4trade. All transactions take place via connections secured with the latest industry standard security protocols."
+            }
+          },
+          "2ec8b487-ae39-4476-a62f-24cc58a8b0c4": {
+            "type": "add_text",
+            "settings": {
+              "title": "What do I need to provide when I make a purchase?",
+              "subtitle": "If you want to make a purchase with Klarna you need to provide your name, address and email address. It is important to update your billing address in the checkout if it is different from your delivery address. For some orders you may need to provide your mobile number or date of birth, too. All information will be sent to your email address, including payment reminders and links to your online statements. It's very important, that you give us the correct details, as otherwise you will not receive the payment information."
+            }
+          },
+          "b40f6f34-a5d0-4aab-a5db-b5f4348fec83": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have been asked to go to Klarna's site. Is this correct?",
+              "subtitle": "You can view all of your Klarna purchases and payment options simply by logging onto Klarna.com\/uk"
+            }
+          },
+          "ecaf4136-5100-46df-835b-b5fc069bf8d8": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have cancelled my order. How long will it take until I receive my refund?",
+              "subtitle": "As soon as the store has registered your cancellation or your return, the refund will be processed within 5-7 business days."
+            }
+          },
+          "6c85512b-1047-4f14-aa0e-6bc83a924587": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have asked for a refund. How will I be refunded?",
+              "subtitle": "Refunds shall be issued back to the debit or credit card which was originally entered at checkout."
+            }
+          },
+          "18a78d7c-cec9-44cc-af0f-d58761582b9d": {
+            "type": "add_text",
+            "settings": {
+              "title": "I haven't received an email with my statement\/payment information.",
+              "subtitle": "You can log in at www.klarna.com\/uk, where you will find all of your orders and payment schedule information."
+            }
+          },
+          "23bae47f-bf16-4dd1-9eb0-fd7b0ee3830d": {
+            "type": "add_text",
+            "settings": {
+              "title": "I still have questions regarding payment, how can I get in touch?",
+              "subtitle": "Visit Klarna's Customer Service for a full list of FAQ's, live chat and telephone options."
+            }
+          },
+          "dae0947c-9129-49a2-bbc7-e59b2f421cb7": {
+            "type": "add_text",
+            "settings": {
+              "title": "I tried to pay using Klarna but received an ‘unavailable payment method’ message. What went wrong?",
+              "subtitle": "Make sure you are using your home address or whichever address is attached to afteryour personal credit file as your billing address. We need to perform a credit check for instalment plans but we cannot perform a credit check on a business address, so in these cases the application will be rejected automatically. Please use your personal address and try again. If the problem persists, it’s possible there is an issue with your credit rating. If you are still having issues and believe your credit application should be successful, please visit Klarna Customer Service for a full list of FAQ's, live chat and telephone options."
+            }
+          },
+          "29ff7490-45b2-40b1-a906-bcc42f812d81": {
+            "type": "add_text",
+            "settings": {
+              "title": "Can I use Klarna to pay for a repair?",
+              "subtitle": "Yes. Paying with Klarna is available when you use our doorstep repair service, postal repair service or a repair arranged through a Samsung Support Centre. Please note that our repair services are carried out by our third party repair partners, and your contract for the repair of your device would be directly with the partner carrying out your repair."
+            }
+          }
+        },
+        "block_order": [
+          "8a40ee33-8aca-4ac4-abe2-24f15cddf0fb",
+          "23beb77b-0bce-4bdf-a030-554309cf40c7",
+          "2ec8b487-ae39-4476-a62f-24cc58a8b0c4",
+          "b40f6f34-a5d0-4aab-a5db-b5f4348fec83",
+          "ecaf4136-5100-46df-835b-b5fc069bf8d8",
+          "6c85512b-1047-4f14-aa0e-6bc83a924587",
+          "18a78d7c-cec9-44cc-af0f-d58761582b9d",
+          "23bae47f-bf16-4dd1-9eb0-fd7b0ee3830d",
+          "dae0947c-9129-49a2-bbc7-e59b2f421cb7",
+          "29ff7490-45b2-40b1-a906-bcc42f812d81"
+        ],
+        "settings": {
+        }
+      },
+      "Payments-Options-accordion-tab-2": {
+        "type": "Payments-Options-accordion-tab-2",
+        "blocks": {
+          "92c59447-fa3e-40ae-921b-fdd999e86153": {
+            "type": "add_text",
+            "settings": {
+              "title": "How does Pay later in 3 interest-free instalments work?",
+              "subtitle": "Pay later in 3 interest-free instalments will allow you to spread the cost of your purchase over 3 equal payments. The payment for each instalment will automatically be collected from the debit or credit card you entered at checkout. Your first instalment will be collected when your order is confirmed by [MERCHANT] and instalments 2 and 3 are scheduled 30 and 60 days later, respectively. You can always monitor your payments’ schedule in the Klarna app."
+            }
+          },
+          "41b36fb5-9efd-433d-bb6c-8fdc1c3748a4": {
+            "type": "add_text",
+            "settings": {
+              "title": "Am I eligible for Pay later in 3 interest-free instalments?",
+              "subtitle": "To use Pay later in 3 interest-free instalments you must be at least 18. Whilst this option is widely promoted, Pay later in 3 interest-free instalments is subject to your financial circumstances. When choosing Pay later in 3 interest-free instalments, our assessment will not affect your credit rating."
+            }
+          },
+          "8c19db1c-9474-4e73-a655-54dc9eb37986": {
+            "type": "add_text",
+            "settings": {
+              "title": "How can I increase my chances of being accepted for Pay later in 3 interest-free instalments?",
+              "subtitle": "Klarna is unique and offers Pay later in 3 interest-free instalments based on a number of factors such as the order value, previous order history and item availability. If you are 18 or over, you can improve your chances of being offered Pay later in 3 interest-free instalments by ensuring you provide your full name and accurate address details and shipping to your registered billing address. All orders are assessed individually. Just because you have been accepted for a Klarna payment method before does not mean it will be offered for every order and in turn, as it is denied does not mean it will be denied for all future orders."
+            }
+          },
+          "b9c07473-1dcf-4a08-bcce-703f1a767658": {
+            "type": "add_text",
+            "settings": {
+              "title": "What do I need to provide when I make a purchase?",
+              "subtitle": "If you want to make a purchase with Klarna using Pay later in 3 interest-free instalments, you'll need to provide your mobile phone number, email address, current billing address and a debit or card card. The mobile number is required in case we need to reach you. All communications will be sent to your email address. It's very important that you give us the correct details, as otherwise you will not receive your payment schedule and any updated order information."
+            }
+          },
+          "ce2046a3-9fcb-4e6f-93c6-5a52a94c1169": {
+            "type": "add_text",
+            "settings": {
+              "title": "Will a credit search take place against me?",
+              "subtitle": "Klarna may run so-called unrecorded enquiries (or soft credit searches) that do not affect credit scoring and are only visible to you and Klarna, but not visible to other lenders. Neither Klarna nor [MERCHANT] run credit searches against you that could impact your credit rating."
+            }
+          },
+          "991691cb-42e1-4d42-8129-1cdfd509eccb": {
+            "type": "add_text",
+            "settings": {
+              "title": "Why have I not been offered Pay later in 3 interest-free instalments?",
+              "subtitle": "Although Pay later in 3 interest-free instalments is widely promoted it is not always universally available. The Pay later in 3 interest-free instalments payment option is automatically generated by algorithms that are dependent upon a number of factors including address details, cardholder details, amount of order, the online store, previous order history and item availability."
+            }
+          },
+          "e75453af-32c9-41ef-a3d2-4a6645b9a400": {
+            "type": "add_text",
+            "settings": {
+              "title": "What are my payment options with Klarna?",
+              "subtitle": "Payment for your Pay later in 3 interest-free instalments will automatically be collected from the debit or credit card you entered at checkout. The first payment is taken when the order is confirmed. The second and third instalments are collected 30 and 60 days, respectively, after the first instalment. You can always monitor your payments’ schedule in the Klarna app."
+            }
+          },
+          "64cda695-a84f-450b-8c16-c91610d496af": {
+            "type": "add_text",
+            "settings": {
+              "title": "What happens if I cancel or return my order?",
+              "subtitle": "As soon as [MERCHANT] have accepted your cancellation\/return, Klarna will cancel any future scheduled payments as well as refund any amounts due. The return will be reflected in the Klarna app immediately."
+            }
+          },
+          "49c679f9-2bee-412c-a04e-8c310c8108c5": {
+            "type": "add_text",
+            "settings": {
+              "title": "What happens if I don’t pay for my order?",
+              "subtitle": "Klarna will automatically attempt to collect your payment for your Pay later in 3 interest-free instalments purchase at [MERCHANT] from the debit or credit card you entered at checkout. If we are unable to collect your payment on the scheduled due date Klarna will make one further attempt to automatically collect payment two days later. Should this last payment attempt fail, Klarna will issue you a statement for the full outstanding order amount which will become payable 15 days later. Klarna shall notify you when a payment is due two days in advance of attempting to collect your payment and you can always monitor the due date in Klarna app at your convenience. Your credit score will not be impacted by using Klarna’s ‘Pay later in 3 instalments’ product even if you have failed to pay on time."
+            }
+          },
+          "066d1509-cb71-4eb3-a120-a158f286b0bd": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have been asked to go to the Klarna site. Is this correct?",
+              "subtitle": "You can view all of your Klarna purchases and payment schedule in the Klarna app or by logging onto Klarna.com\/uk."
+            }
+          },
+          "a5db8e20-5e5e-4e2d-b9e6-3b62a2a9a37c": {
+            "type": "add_text",
+            "settings": {
+              "title": "Is my payment information safe?",
+              "subtitle": "Payment information is processed securely by Klarna. No card details are transferred to or held by [MERCHANT]. All transactions take place via connections secured with the latest industry standard security protocols."
+            }
+          },
+          "7c32ff05-d9d5-4304-a987-d7da7636b585": {
+            "type": "add_text",
+            "settings": {
+              "title": "Can I pay before the due date?",
+              "subtitle": "Yes. Just go to the Klarna app or log onto Klarna.com\/uk and pay off early."
+            }
+          },
+          "0b5e1c65-6c5f-4ca7-9574-8d12ed4b67a8": {
+            "type": "add_text",
+            "settings": {
+              "title": "Have you received my payment?",
+              "subtitle": "Klarna will notify you via email and push notification from the Klarna app when a payment is due and when this has successfully been collected, or in the unlikely event of your payment failing. If a payment has been collected but you have not received payment confirmation, you can always check the status of your order and payments in the Klarna app or by logging in at www.klarna.com\/uk."
+            }
+          },
+          "bc3f5df3-7a5a-474e-a704-ac0726430cfc": {
+            "type": "add_text",
+            "settings": {
+              "title": "What happens to my statement, when I've returned the goods?",
+              "subtitle": "Once [MERCHANT] has received the return (partial or full) and you have received their confirmation of this, an updated statement with an adjusted payment schedule will be sent to you by Klarna if you've made a partial return. With a full return, we shall refund any payments collected and cancel any future scheduled payments. You are always able to monitor the status of your order in the Klarna app."
+            }
+          },
+          "42fce4e4-1600-4be2-b6b2-0d15fe62ce95": {
+            "type": "add_text",
+            "settings": {
+              "title": "I've received a statement, but I've not yet received my goods.",
+              "subtitle": "In the event that your goods have not been received please call [MERCHANT] to check on your order and delivery status. You can also contact Klarna’s Customer Service so that we can postpone the due date on your payment or put the order on hold in the Klarna app while you wait for the goods to arrive."
+            }
+          },
+          "0f88e7a0-ab34-4239-9aec-0f9859f165d5": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have cancelled my order. How long will it take until I receive my refund?",
+              "subtitle": "As soon as the store has registered your cancellation or your return, the refund will be processed within 5-7 business days."
+            }
+          },
+          "e3f92b1c-1635-4c18-8ba6-15181a695bb8": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have asked for a refund. How will I be refunded?",
+              "subtitle": "Refunds shall be issued back to the debit or credit card which was originally entered at checkout."
+            }
+          },
+          "2b9a17d0-02bd-4cd3-95a3-ae3767acd8cb": {
+            "type": "add_text",
+            "settings": {
+              "title": "I haven’t received an email with my statement\/payment information.",
+              "subtitle": "You can log in the Klarna app or at www.klarna.com\/uk, where you will find all of your orders and payment schedule information."
+            }
+          },
+          "ea7a85fa-2266-4ea8-906f-f099b00c7efc": {
+            "type": "add_text",
+            "settings": {
+              "title": "I still have questions regarding payment, how can I get in touch?",
+              "subtitle": "Visit Klarna app or Klarna’s Customer Service page for a full list of FAQ’s, live chat and telephone options."
+            }
+          }
+        },
+        "block_order": [
+          "92c59447-fa3e-40ae-921b-fdd999e86153",
+          "41b36fb5-9efd-433d-bb6c-8fdc1c3748a4",
+          "8c19db1c-9474-4e73-a655-54dc9eb37986",
+          "b9c07473-1dcf-4a08-bcce-703f1a767658",
+          "ce2046a3-9fcb-4e6f-93c6-5a52a94c1169",
+          "991691cb-42e1-4d42-8129-1cdfd509eccb",
+          "e75453af-32c9-41ef-a3d2-4a6645b9a400",
+          "64cda695-a84f-450b-8c16-c91610d496af",
+          "49c679f9-2bee-412c-a04e-8c310c8108c5",
+          "066d1509-cb71-4eb3-a120-a158f286b0bd",
+          "a5db8e20-5e5e-4e2d-b9e6-3b62a2a9a37c",
+          "7c32ff05-d9d5-4304-a987-d7da7636b585",
+          "0b5e1c65-6c5f-4ca7-9574-8d12ed4b67a8",
+          "bc3f5df3-7a5a-474e-a704-ac0726430cfc",
+          "42fce4e4-1600-4be2-b6b2-0d15fe62ce95",
+          "0f88e7a0-ab34-4239-9aec-0f9859f165d5",
+          "e3f92b1c-1635-4c18-8ba6-15181a695bb8",
+          "2b9a17d0-02bd-4cd3-95a3-ae3767acd8cb",
+          "ea7a85fa-2266-4ea8-906f-f099b00c7efc"
+        ],
+        "settings": {
+        }
+      },
+      "Payments-Options-accordion-tab-3": {
+        "type": "Payments-Options-accordion-tab-3",
+        "blocks": {
+          "e3241124-bcbe-4e96-9b24-fb7f1aa9837a": {
+            "type": "add_text",
+            "settings": {
+              "title": "How does Financing work?",
+              "subtitle": "Spread the cost of your purchase into equal monthly payments with 14.9% interest for 12-36 months. Financing is a promotional plan on the Klarna Account."
+            }
+          },
+          "37ec1140-3cb8-4a38-a961-0a55a175a00c": {
+            "type": "add_text",
+            "settings": {
+              "title": "How do I use Financing?",
+              "subtitle": "When you shop online, Klarna’s system reviews each order to determine which payment options are available to you. If Financing is offered, simply select this option. The first time you shop with Financing you will be asked to apply for a Klarna Account. If you’re approved Klarna will create an account for you and your order will be placed. Every time you shop with Financing after that, you only need to agree to the purchase and won’t need to sign up again. The order amount will be added to your Klarna Account as additional promotional plans. You can always monitor the payments due in the Klarna app."
+            }
+          },
+          "5ce52992-7463-4a4f-aa55-f372926c98b7": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have been asked to go to the Klarna site. Is this correct?",
+              "subtitle": "If you have chosen to pay with Financing by Klarna, Klarna will send you an email with further details on how to pay."
+            }
+          },
+          "ef6f1b0a-25ff-4d95-9d9e-14df48c059a5": {
+            "type": "add_text",
+            "settings": {
+              "title": "Can I pay less than the amount owed each month?",
+              "subtitle": "You can at any time choose to pay your minimum payment instead of your interest-saver payment. Your monthly minimum payment is the amount to be paid to avoid incurring late fees on your Klarna Account. Should you choose to pay your minimum payment instead of your interest-saver payment this will mean you will lose your promotional plan offer and the remaining balance will start to incur interest at 18.9% APR (variable)."
+            }
+          },
+          "5207e8b9-4134-4e15-b943-2bbd76573278": {
+            "type": "add_text",
+            "settings": {
+              "title": "Do I need to be 18?",
+              "subtitle": "Financing is only available to people aged 18 or over and is an online exclusive payment method."
+            }
+          },
+          "7ade1ec6-5017-4b44-b66e-acd0bab975ef": {
+            "type": "add_text",
+            "settings": {
+              "title": "How do I manage my Klarna Account?",
+              "subtitle": "Log in to the Klarna App or Klarna.com\/uk at any time day or night, to review your purchases and settle your monthly statement. If you need further assistance, you can contact Klarna’s Customer Service team."
+            }
+          },
+          "40b8a38a-ac1d-4129-af94-190a936d978a": {
+            "type": "add_text",
+            "settings": {
+              "title": "How can I increase my chances of being accepted for Financing?",
+              "subtitle": "Klarna is unique and offers Pay later based on a number of factors such as the order value, previous order history and item availability. If you are 18 or over, you can improve your chances of being offered Pay later by ensuring you provide your full name and accurate address details and shipping to your registered billing address. All orders are assessed individually. Just because you have had Pay later before does not mean it will be offered for every order and in turn, as it is denied does not mean it will be denied for all future orders."
+            }
+          },
+          "7caf7b64-63e8-45f3-a14d-22e10caf600e": {
+            "type": "add_text",
+            "settings": {
+              "title": "How is my statement sent?",
+              "subtitle": "If you chose to use Financing, we will send your monthly statement notification via email with instructions on how to make a payment and an overview of your Klarna Account. Once you have been landed on your Klarna Account overview page, simply select ‘Make a payment’ and enter the amount you wish to pay towards your balance. You can always monitor the active statements in Klarna app at your convenience."
+            }
+          },
+          "b317bfed-2c26-441c-8f6b-4d8ab785f21c": {
+            "type": "add_text",
+            "settings": {
+              "title": "What do I need to provide when I make a purchase?",
+              "subtitle": "If you want to make a purchase with a Klarna Account you need to provide your mobile phone number and your email address as well as name, billing address and your date of birth. Your mobile number is required in case we need to reach you. All statements will be sent to your email address. It's very important that you give us the correct details, as otherwise you will not receive monthly statements and so be liable for late payment fees."
+            }
+          },
+          "a38c3958-aa1e-4787-a899-90a816db0c55": {
+            "type": "add_text",
+            "settings": {
+              "title": "Is my payment information safe?",
+              "subtitle": "Payment information is processed securely by Klarna. No payment information is transferred to us or held by us. All transactions take place via connections secured with the latest industry standard security protocols."
+            }
+          },
+          "5747ddef-d89f-4b17-80ce-58ef7036de53": {
+            "type": "add_text",
+            "settings": {
+              "title": "How do I make a payment?",
+              "subtitle": "First, log in the Klarna app or in www.klarna.com\/uk and visit your Klarna Account overview page. Then, simply select ‘Make a payment’ and enter the amount you wish to pay towards your balance. Should you have any questions or concerns when making a payment you can contact Klarna’s Customer Service."
+            }
+          },
+          "d493cf46-b8fe-4925-b538-b67e0744f096": {
+            "type": "add_text",
+            "settings": {
+              "title": "I haven't received an email with my statement.",
+              "subtitle": "Please log in the Klarna app to view the statements or contact Klarna’s Customer Service via live chat or phone."
+            }
+          },
+          "98b04d40-bb4c-4818-b734-1898dffcf686": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have cancelled my order. How long will it take until I receive my refund?",
+              "subtitle": "As soon as the store has registered your cancellation or your return, the refund will be processed within 5 business days."
+            }
+          },
+          "b570c9fc-907c-4d3a-9605-a0133ed25848": {
+            "type": "add_text",
+            "settings": {
+              "title": "What happens if I cancel or return my order?",
+              "subtitle": "As soon as [MERCHANT] have accepted your cancellation\/return, then Klarna will make any necessary adjustments to your balance and provide further help if needed."
+            }
+          },
+          "4db2d33a-3ae4-4fb6-b20b-26b8308cee72": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have cancelled my order. How long will it take until I receive my refund?",
+              "subtitle": "As soon as the store has registered your cancellation or your return, we will credit the balance back to your Klarna Account within the next 5 business days."
+            }
+          },
+          "2de1810c-95dd-4ca5-a8f0-327c7e85de0e": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have asked for a refund. How will I be refunded?",
+              "subtitle": "If you have paid for your order with a card, the refund will be made back to your Klarna Account balance. If the Account ends up in a credit balance, this can be used towards future purchases or you can request it to be paid back by contacting Customer Service."
+            }
+          },
+          "3f8f2083-3013-493c-92f9-874fc728ad83": {
+            "type": "add_text",
+            "settings": {
+              "title": "I've received my monthly statement and a payment is due, but I've not yet received my goods.",
+              "subtitle": "You should of course not pay your statement until you've received your goods. In this case, we would ask that you contact the store and get an update on your order. You should also contact our Customer Service so that we can postpone the due date on your payment. or put the order on hold in the Klarna app while you wait for the goods to arrive."
+            }
+          },
+          "1a7481c9-8b49-435f-82e8-27866619c223": {
+            "type": "add_text",
+            "settings": {
+              "title": "I still have questions regarding payment.",
+              "subtitle": "Visit Klarna app Klarna’s Customer Service page for a full list of FAQ’s, live chat and telephone options"
+            }
+          }
+        },
+        "block_order": [
+          "e3241124-bcbe-4e96-9b24-fb7f1aa9837a",
+          "37ec1140-3cb8-4a38-a961-0a55a175a00c",
+          "5ce52992-7463-4a4f-aa55-f372926c98b7",
+          "ef6f1b0a-25ff-4d95-9d9e-14df48c059a5",
+          "5207e8b9-4134-4e15-b943-2bbd76573278",
+          "7ade1ec6-5017-4b44-b66e-acd0bab975ef",
+          "40b8a38a-ac1d-4129-af94-190a936d978a",
+          "7caf7b64-63e8-45f3-a14d-22e10caf600e",
+          "b317bfed-2c26-441c-8f6b-4d8ab785f21c",
+          "a38c3958-aa1e-4787-a899-90a816db0c55",
+          "5747ddef-d89f-4b17-80ce-58ef7036de53",
+          "d493cf46-b8fe-4925-b538-b67e0744f096",
+          "98b04d40-bb4c-4818-b734-1898dffcf686",
+          "b570c9fc-907c-4d3a-9605-a0133ed25848",
+          "4db2d33a-3ae4-4fb6-b20b-26b8308cee72",
+          "2de1810c-95dd-4ca5-a8f0-327c7e85de0e",
+          "3f8f2083-3013-493c-92f9-874fc728ad83",
+          "1a7481c9-8b49-435f-82e8-27866619c223"
+        ],
+        "settings": {
+        }
+      },
+      "Payments-Options-New-3": {
+        "type": "Payments-Options-New-3",
+        "settings": {
+          "imagebottom": "shopify:\/\/shop_images\/klarna_page_banner.jpg"
+        }
+      },
+      "Klarna-faqs-New": {
+        "type": "Klarna-faqs-New",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/FAQs-banner.jpg"
+        }
+      },
+      "Klarna-faqs-accordion-tab-1": {
+        "type": "Klarna-faqs-accordion-tab-1",
+        "blocks": {
+          "cbbbbef3-fef7-41aa-8cc8-4a8a69b95ff3": {
+            "type": "add_text",
+            "settings": {
+              "title": "Who is Klarna?",
+              "subtitle": "<p>Klarna is a Swedish payment service provider that takes end-to-end responsibility for your payment. Klarna is the provider of smooth payments to more than 200,000 online stores. Over 85 million consumers worldwide have trusted Klarna to securely handle their payments.<\/p>"
+            }
+          },
+          "bb12ebaa-5f68-4b2f-9d04-84991a950bf5": {
+            "type": "add_text",
+            "settings": {
+              "title": "Is my payment information safe?",
+              "subtitle": "<p>Payment information is processed securely by Klarna. No card details are transferred to or held by Tools4trade. All transactions take place via connections secured with the latest industry standard security protocols.<\/p>"
+            }
+          },
+          "928433d3-21b2-4649-9fe3-c86b16d3667a": {
+            "type": "add_text",
+            "settings": {
+              "title": "What do I need to provide when I make a purchase?",
+              "subtitle": "<p>If you want to make a purchase with Klarna you need to provide your name, address and email address. It is important to update your billing address in the checkout if it is different from your delivery address. For some orders you may need to provide your mobile number or date of birth, too. All information will be sent to your email address, including payment reminders and links to your online statements. It's very important, that you give us the correct details, as otherwise you will not receive the payment information.<\/p>"
+            }
+          },
+          "e5fac68e-6c8e-4dc1-b688-2012e6d1939a": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have been asked to go to Klarna's site. Is this correct?",
+              "subtitle": "<p>You can view all of your Klarna purchases and payment options simply by logging onto Klarna.com\/uk<\/p>"
+            }
+          },
+          "824bde4b-e32a-4a7a-941e-d2ce97e3aa3c": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have cancelled my order. How long will it take until I receive my refund?",
+              "subtitle": "<p>As soon as the store has registered your cancellation or your return, the refund will be processed within 5-7 business days.<\/p>"
+            }
+          },
+          "26a46f32-0b86-4d3b-aca2-9efc0d0f1968": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have asked for a refund. How will I be refunded?",
+              "subtitle": "<p>Refunds shall be issued back to the debit or credit card which was originally entered at checkout.<\/p>"
+            }
+          },
+          "0348d389-a872-497e-8586-8e66a76d334e": {
+            "type": "add_text",
+            "settings": {
+              "title": "I haven't received an email with my statement\/payment information.",
+              "subtitle": "<p>You can log in at www.klarna.com\/uk, where you will find all of your orders and payment schedule information.<\/p>"
+            }
+          },
+          "84bfdbfe-8713-4414-816b-c96f63cdec11": {
+            "type": "add_text",
+            "settings": {
+              "title": "I still have questions regarding payment, how can I get in touch?",
+              "subtitle": "<p>Visit Klarna's Customer Service for a full list of FAQ's, live chat and telephone options.<\/p>"
+            }
+          },
+          "8af375a9-e20c-40c1-9432-1757ae73c3f0": {
+            "type": "add_text",
+            "settings": {
+              "title": "I tried to pay using Klarna but received an ‘unavailable payment method’ message. What went wrong?",
+              "subtitle": "<p>Make sure you are using your home address or whichever address is attached to afteryour personal credit file as your billing address. We need to perform a credit check for instalment plans but we cannot perform a credit check on a business address, so in these cases the application will be rejected automatically. Please use your personal address and try again. If the problem persists, it’s possible there is an issue with your credit rating. If you are still having issues and believe your credit application should be successful, please visit Klarna Customer Service for a full list of FAQ's, live chat and telephone options.<\/p>"
+            }
+          },
+          "af809b09-e570-49a3-be57-841e4045d594": {
+            "type": "add_text",
+            "settings": {
+              "title": "Can I use Klarna to pay for a repair?",
+              "subtitle": "<p>Yes. Paying with Klarna is available when you use our doorstep repair service, postal repair service or a repair arranged through a Samsung Support Centre. Please note that our repair services are carried out by our third party repair partners, and your contract for the repair of your device would be directly with the partner carrying out your repair.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "cbbbbef3-fef7-41aa-8cc8-4a8a69b95ff3",
+          "bb12ebaa-5f68-4b2f-9d04-84991a950bf5",
+          "928433d3-21b2-4649-9fe3-c86b16d3667a",
+          "e5fac68e-6c8e-4dc1-b688-2012e6d1939a",
+          "824bde4b-e32a-4a7a-941e-d2ce97e3aa3c",
+          "26a46f32-0b86-4d3b-aca2-9efc0d0f1968",
+          "0348d389-a872-497e-8586-8e66a76d334e",
+          "84bfdbfe-8713-4414-816b-c96f63cdec11",
+          "8af375a9-e20c-40c1-9432-1757ae73c3f0",
+          "af809b09-e570-49a3-be57-841e4045d594"
+        ],
+        "settings": {
+        }
+      },
+      "Klarna-faqs-accordion-tab-2": {
+        "type": "Klarna-faqs-accordion-tab-2",
+        "blocks": {
+          "751884f3-bd35-4518-9b4c-fd43bfcb6370": {
+            "type": "add_text",
+            "settings": {
+              "title": "How does Pay later in 3 interest-free instalments work?",
+              "subtitle": "<p>Pay later in 3 interest-free instalments will allow you to spread the cost of your purchase over 3 equal payments. The payment for each instalment will automatically be collected from the debit or credit card you entered at checkout. Your first instalment will be collected when your order is confirmed by [Tools4trade] and instalments 2 and 3 are scheduled 30 and 60 days later, respectively. You can always monitor your payments’ schedule in the Klarna app.<\/p>"
+            }
+          },
+          "b0fe8527-148d-41ba-83da-d3664928d6db": {
+            "type": "add_text",
+            "settings": {
+              "title": "Am I eligible for Pay later in 3 interest-free instalments?",
+              "subtitle": "<p>To use Pay later in 3 interest-free instalments you must be at least 18. Whilst this option is widely promoted, Pay later in 3 interest-free instalments is subject to your financial circumstances. When choosing Pay later in 3 interest-free instalments, our assessment will not affect your credit rating.<\/p>"
+            }
+          },
+          "b190e3cd-fc35-4f83-83be-345f96153ea1": {
+            "type": "add_text",
+            "settings": {
+              "title": "How can I increase my chances of being accepted for Pay later in 3 interest-free instalments?",
+              "subtitle": "<p>Klarna is unique and offers Pay later in 3 interest-free instalments based on a number of factors such as the order value, previous order history and item availability. If you are 18 or over, you can improve your chances of being offered Pay later in 3 interest-free instalments by ensuring you provide your full name and accurate address details and shipping to your registered billing address. All orders are assessed individually. Just because you have been accepted for a Klarna payment method before does not mean it will be offered for every order and in turn, as it is denied does not mean it will be denied for all future orders.<\/p>"
+            }
+          },
+          "cbd379cf-4f92-416c-be7b-e8c167c4a3eb": {
+            "type": "add_text",
+            "settings": {
+              "title": "What do I need to provide when I make a purchase?",
+              "subtitle": "<p>If you want to make a purchase with Klarna using Pay later in 3 interest-free instalments, you'll need to provide your mobile phone number, email address, current billing address and a debit or card card. The mobile number is required in case we need to reach you. All communications will be sent to your email address. It's very important that you give us the correct details, as otherwise you will not receive your payment schedule and any updated order information.<\/p>"
+            }
+          },
+          "c209a0c9-dbfc-4a1b-af79-f55030102295": {
+            "type": "add_text",
+            "settings": {
+              "title": "Will a credit search take place against me?",
+              "subtitle": "<p>Klarna may run so-called unrecorded enquiries (or soft credit searches) that do not affect credit scoring and are only visible to you and Klarna, but not visible to other lenders. Neither Klarna nor [Tools4trade] run credit searches against you that could impact your credit rating.<\/p>"
+            }
+          },
+          "ffb9ea76-6aa5-42f5-8961-ad31cc410057": {
+            "type": "add_text",
+            "settings": {
+              "title": "Why have I not been offered Pay later in 3 interest-free instalments?",
+              "subtitle": "<p>Although Pay later in 3 interest-free instalments is widely promoted it is not always universally available. The Pay later in 3 interest-free instalments payment option is automatically generated by algorithms that are dependent upon a number of factors including address details, cardholder details, amount of order, the online store, previous order history and item availability.<\/p>"
+            }
+          },
+          "68978d94-c4a5-42af-b8aa-8151f0e22655": {
+            "type": "add_text",
+            "settings": {
+              "title": "What are my payment options with Klarna?",
+              "subtitle": "<p>Payment for your Pay later in 3 interest-free instalments will automatically be collected from the debit or credit card you entered at checkout. The first payment is taken when the order is confirmed. The second and third instalments are collected 30 and 60 days, respectively, after the first instalment. You can always monitor your payments’ schedule in the Klarna app.<\/p>"
+            }
+          },
+          "1517c516-0b22-433c-8463-1e5ae8150303": {
+            "type": "add_text",
+            "settings": {
+              "title": "What happens if I cancel or return my order?",
+              "subtitle": "<p>As soon as [Tools4trade] have accepted your cancellation\/return, Klarna will cancel any future scheduled payments as well as refund any amounts due. The return will be reflected in the Klarna app immediately.<\/p>"
+            }
+          },
+          "d75829db-c249-4ac4-a9a0-1972d80ac4e9": {
+            "type": "add_text",
+            "settings": {
+              "title": "What happens if I don’t pay for my order?",
+              "subtitle": "<p>Klarna will automatically attempt to collect your payment for your Pay later in 3 interest-free instalments purchase at [Tools4trade] from the debit or credit card you entered at checkout. If we are unable to collect your payment on the scheduled due date Klarna will make one further attempt to automatically collect payment two days later. Should this last payment attempt fail, Klarna will issue you a statement for the full outstanding order amount which will become payable 15 days later. Klarna shall notify you when a payment is due two days in advance of attempting to collect your payment and you can always monitor the due date in Klarna app at your convenience. Your credit score will not be impacted by using Klarna’s ‘Pay later in 3 instalments’ product even if you have failed to pay on time.<\/p>"
+            }
+          },
+          "21696a71-72d6-4a91-ac8a-d4d996ef97ec": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have been asked to go to the Klarna site. Is this correct?",
+              "subtitle": "<p>You can view all of your Klarna purchases and payment schedule in the Klarna app or by logging onto Klarna.com\/uk.<\/p>"
+            }
+          },
+          "8e8d771a-9c0d-4b32-9aec-3453527fea82": {
+            "type": "add_text",
+            "settings": {
+              "title": "Is my payment information safe?",
+              "subtitle": "<p>Payment information is processed securely by Klarna. No card details are transferred to or held by [Tools4trade]. All transactions take place via connections secured with the latest industry standard security protocols.<\/p>"
+            }
+          },
+          "e046a8a8-86f9-4bb8-a67d-2717a5cbd251": {
+            "type": "add_text",
+            "settings": {
+              "title": "Can I pay before the due date?",
+              "subtitle": "<p>Yes. Just go to the Klarna app or log onto Klarna.com\/uk and pay off early.<\/p>"
+            }
+          },
+          "4ae80eb9-6f4d-4dc0-992c-d5189a9aafc9": {
+            "type": "add_text",
+            "settings": {
+              "title": "Have you received my payment?",
+              "subtitle": "<p>Klarna will notify you via email and push notification from the Klarna app when a payment is due and when this has successfully been collected, or in the unlikely event of your payment failing. If a payment has been collected but you have not received payment confirmation, you can always check the status of your order and payments in the Klarna app or by logging in at www.klarna.com\/uk.<\/p>"
+            }
+          },
+          "65601fd2-47d0-407e-aca1-28bf03029acb": {
+            "type": "add_text",
+            "settings": {
+              "title": "What happens to my statement, when I've returned the goods?",
+              "subtitle": "<p>Once [Tools4trade] has received the return (partial or full) and you have received their confirmation of this, an updated statement with an adjusted payment schedule will be sent to you by Klarna if you've made a partial return. With a full return, we shall refund any payments collected and cancel any future scheduled payments. You are always able to monitor the status of your order in the Klarna app.<\/p>"
+            }
+          },
+          "293cbbe4-205d-4492-b90a-84097fcd9f34": {
+            "type": "add_text",
+            "settings": {
+              "title": "I've received a statement, but I've not yet received my goods.",
+              "subtitle": "<p>In the event that your goods have not been received please call [Tools4trade] to check on your order and delivery status. You can also contact Klarna’s Customer Service so that we can postpone the due date on your payment or put the order on hold in the Klarna app while you wait for the goods to arrive.<\/p>"
+            }
+          },
+          "e718e21d-8165-4fa5-b883-59c95feac3c2": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have cancelled my order. How long will it take until I receive my refund?",
+              "subtitle": "<p>As soon as the store has registered your cancellation or your return, the refund will be processed within 5-7 business days.<\/p>"
+            }
+          },
+          "2a16792b-0f8c-4d00-9017-60f3083846cc": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have asked for a refund. How will I be refunded?",
+              "subtitle": "<p>Refunds shall be issued back to the debit or credit card which was originally entered at checkout.<\/p>"
+            }
+          },
+          "b5ef59ad-fd3d-45d5-8b74-126a00269885": {
+            "type": "add_text",
+            "settings": {
+              "title": "I haven’t received an email with my statement\/payment information.",
+              "subtitle": "<p>You can log in the Klarna app or at www.klarna.com\/uk, where you will find all of your orders and payment schedule information.<\/p>"
+            }
+          },
+          "d42a58a9-5277-4a86-961a-965347e9f12b": {
+            "type": "add_text",
+            "settings": {
+              "title": "I still have questions regarding payment, how can I get in touch?",
+              "subtitle": "<p>Visit Klarna app or Klarna’s Customer Service page for a full list of FAQ’s, live chat and telephone options.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "751884f3-bd35-4518-9b4c-fd43bfcb6370",
+          "b0fe8527-148d-41ba-83da-d3664928d6db",
+          "b190e3cd-fc35-4f83-83be-345f96153ea1",
+          "cbd379cf-4f92-416c-be7b-e8c167c4a3eb",
+          "c209a0c9-dbfc-4a1b-af79-f55030102295",
+          "ffb9ea76-6aa5-42f5-8961-ad31cc410057",
+          "68978d94-c4a5-42af-b8aa-8151f0e22655",
+          "1517c516-0b22-433c-8463-1e5ae8150303",
+          "d75829db-c249-4ac4-a9a0-1972d80ac4e9",
+          "21696a71-72d6-4a91-ac8a-d4d996ef97ec",
+          "8e8d771a-9c0d-4b32-9aec-3453527fea82",
+          "e046a8a8-86f9-4bb8-a67d-2717a5cbd251",
+          "4ae80eb9-6f4d-4dc0-992c-d5189a9aafc9",
+          "65601fd2-47d0-407e-aca1-28bf03029acb",
+          "293cbbe4-205d-4492-b90a-84097fcd9f34",
+          "e718e21d-8165-4fa5-b883-59c95feac3c2",
+          "2a16792b-0f8c-4d00-9017-60f3083846cc",
+          "b5ef59ad-fd3d-45d5-8b74-126a00269885",
+          "d42a58a9-5277-4a86-961a-965347e9f12b"
+        ],
+        "settings": {
+        }
+      },
+      "Klarna-faqs-accordion-tab-3": {
+        "type": "Klarna-faqs-accordion-tab-3",
+        "blocks": {
+          "143ea647-39aa-4e7f-905e-70e7c0bce985": {
+            "type": "add_text",
+            "settings": {
+              "title": "How does Financing work?",
+              "subtitle": "<p>Spread the cost of your purchase into equal monthly payments with 14.9% interest for 12-36 months. Financing is a promotional plan on the Klarna Account.<\/p>"
+            }
+          },
+          "152a14aa-c357-4835-8c06-aade34ce1eb5": {
+            "type": "add_text",
+            "settings": {
+              "title": "How does Financing work?",
+              "subtitle": "<p>Spread the cost of your purchase into equal monthly payments with 14.9% interest for 12-36 months. Financing is a promotional plan on the Klarna Account.<\/p>"
+            }
+          },
+          "ba7c5e03-93e4-4bef-a96b-cb0370c02495": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have been asked to go to the Klarna site. Is this correct?",
+              "subtitle": "<p>If you have chosen to pay with Financing by Klarna, Klarna will send you an email with further details on how to pay.<\/p>"
+            }
+          },
+          "fe91de71-c8e5-426f-8329-7ec047be0501": {
+            "type": "add_text",
+            "settings": {
+              "title": "Can I pay less than the amount owed each month?",
+              "subtitle": "<p>You can at any time choose to pay your minimum payment instead of your interest-saver payment. Your monthly minimum payment is the amount to be paid to avoid incurring late fees on your Klarna Account. Should you choose to pay your minimum payment instead of your interest-saver payment this will mean you will lose your promotional plan offer and the remaining balance will start to incur interest at 18.9% APR (variable).<\/p>"
+            }
+          },
+          "ae5e876c-083b-4339-93ae-614ebcdc27bb": {
+            "type": "add_text",
+            "settings": {
+              "title": "Do I need to be 18?",
+              "subtitle": "<p>Financing is only available to people aged 18 or over and is an online exclusive payment method.<\/p>"
+            }
+          },
+          "3c5271ba-b5ea-46bf-b001-eaa2a6299692": {
+            "type": "add_text",
+            "settings": {
+              "title": "How do I manage my Klarna Account?",
+              "subtitle": "<p>Log in to the Klarna App or Klarna.com\/uk at any time day or night, to review your purchases and settle your monthly statement. If you need further assistance, you can contact Klarna’s Customer Service team.<\/p>"
+            }
+          },
+          "baee7c47-e66b-4a34-85e1-b082428d1d21": {
+            "type": "add_text",
+            "settings": {
+              "title": "How can I increase my chances of being accepted for Financing?",
+              "subtitle": "<p>Klarna is unique and offers Pay later based on a number of factors such as the order value, previous order history and item availability. If you are 18 or over, you can improve your chances of being offered Pay later by ensuring you provide your full name and accurate address details and shipping to your registered billing address. All orders are assessed individually. Just because you have had Pay later before does not mean it will be offered for every order and in turn, as it is denied does not mean it will be denied for all future orders.<\/p>"
+            }
+          },
+          "d54efd61-7878-49a7-a7ca-abd073cf0f2b": {
+            "type": "add_text",
+            "settings": {
+              "title": "How is my statement sent?",
+              "subtitle": "<p>If you chose to use Financing, we will send your monthly statement notification via email with instructions on how to make a payment and an overview of your Klarna Account. Once you have been landed on your Klarna Account overview page, simply select ‘Make a payment’ and enter the amount you wish to pay towards your balance. You can always monitor the active statements in Klarna app at your convenience.<\/p>"
+            }
+          },
+          "ee670550-822d-4a81-8b64-8e2d40ef8275": {
+            "type": "add_text",
+            "settings": {
+              "title": "What do I need to provide when I make a purchase?",
+              "subtitle": "<p>If you want to make a purchase with a Klarna Account you need to provide your mobile phone number and your email address as well as name, billing address and your date of birth. Your mobile number is required in case we need to reach you. All statements will be sent to your email address. It's very important that you give us the correct details, as otherwise you will not receive monthly statements and so be liable for late payment fees.<\/p>"
+            }
+          },
+          "038b346e-0b01-490e-9a54-a5914fdf2a30": {
+            "type": "add_text",
+            "settings": {
+              "title": "Is my payment information safe?",
+              "subtitle": "<p>Payment information is processed securely by Klarna. No payment information is transferred to us or held by us. All transactions take place via connections secured with the latest industry standard security protocols.<\/p>"
+            }
+          },
+          "33bf6b68-2423-434c-8db5-e8cd7961745f": {
+            "type": "add_text",
+            "settings": {
+              "title": "How do I make a payment?",
+              "subtitle": "<p>First, log in the Klarna app or in www.klarna.com\/uk and visit your Klarna Account overview page. Then, simply select ‘Make a payment’ and enter the amount you wish to pay towards your balance. Should you have any questions or concerns when making a payment you can contact Klarna’s Customer Service.<\/p>"
+            }
+          },
+          "c5000428-85e0-4870-a558-8a599f42a489": {
+            "type": "add_text",
+            "settings": {
+              "title": "I haven't received an email with my statement.",
+              "subtitle": "<p>Please log in the Klarna app to view the statements or contact Klarna’s Customer Service via live chat or phone.<\/p>"
+            }
+          },
+          "fe4db45a-7ae5-43c3-abc3-3a55e32b4f06": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have cancelled my order. How long will it take until I receive my refund?",
+              "subtitle": "<p>As soon as the store has registered your cancellation or your return, the refund will be processed within 5 business days.<\/p>"
+            }
+          },
+          "f0c0962f-5483-483b-929d-a6b1fc1fa7dd": {
+            "type": "add_text",
+            "settings": {
+              "title": "What happens if I cancel or return my order?",
+              "subtitle": "<p>As soon as [Tools4trade] have accepted your cancellation\/return, then Klarna will make any necessary adjustments to your balance and provide further help if needed.<\/p>"
+            }
+          },
+          "939cdcd7-b872-43ea-9e9e-8f09e3b69b39": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have cancelled my order. How long will it take until I receive my refund?",
+              "subtitle": "<p>As soon as the store has registered your cancellation or your return, we will credit the balance back to your Klarna Account within the next 5 business days.<\/p>"
+            }
+          },
+          "b3c77d39-41da-4952-9c83-446a3c5388de": {
+            "type": "add_text",
+            "settings": {
+              "title": "I have asked for a refund. How will I be refunded?",
+              "subtitle": "<p>If you have paid for your order with a card, the refund will be made back to your Klarna Account balance. If the Account ends up in a credit balance, this can be used towards future purchases or you can request it to be paid back by contacting Customer Service.<\/p>"
+            }
+          },
+          "b27f9421-ca1d-45cb-9f5b-905f62ad46e2": {
+            "type": "add_text",
+            "settings": {
+              "title": "I've received my monthly statement and a payment is due, but I've not yet received my goods.",
+              "subtitle": "<p>You should of course not pay your statement until you've received your goods. In this case, we would ask that you contact the store and get an update on your order. You should also contact our Customer Service so that we can postpone the due date on your payment. or put the order on hold in the Klarna app while you wait for the goods to arrive.<\/p>"
+            }
+          },
+          "e2ddae2c-f180-4703-8631-0d615f449b7d": {
+            "type": "add_text",
+            "settings": {
+              "title": "I still have questions regarding payment.",
+              "subtitle": "<p>Visit Klarna app Klarna’s Customer Service page for a full list of FAQ’s, live chat and telephone options.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "143ea647-39aa-4e7f-905e-70e7c0bce985",
+          "152a14aa-c357-4835-8c06-aade34ce1eb5",
+          "ba7c5e03-93e4-4bef-a96b-cb0370c02495",
+          "fe91de71-c8e5-426f-8329-7ec047be0501",
+          "ae5e876c-083b-4339-93ae-614ebcdc27bb",
+          "3c5271ba-b5ea-46bf-b001-eaa2a6299692",
+          "baee7c47-e66b-4a34-85e1-b082428d1d21",
+          "d54efd61-7878-49a7-a7ca-abd073cf0f2b",
+          "ee670550-822d-4a81-8b64-8e2d40ef8275",
+          "038b346e-0b01-490e-9a54-a5914fdf2a30",
+          "33bf6b68-2423-434c-8db5-e8cd7961745f",
+          "c5000428-85e0-4870-a558-8a599f42a489",
+          "fe4db45a-7ae5-43c3-abc3-3a55e32b4f06",
+          "f0c0962f-5483-483b-929d-a6b1fc1fa7dd",
+          "939cdcd7-b872-43ea-9e9e-8f09e3b69b39",
+          "b3c77d39-41da-4952-9c83-446a3c5388de",
+          "b27f9421-ca1d-45cb-9f5b-905f62ad46e2",
+          "e2ddae2c-f180-4703-8631-0d615f449b7d"
+        ],
+        "settings": {
         }
       }
     },

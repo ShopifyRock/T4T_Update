@@ -1,0 +1,234 @@
+{% if section.settings.imagetop != blank %}
+  <div class="finance-banner">
+    <img class="faq_banner" alt="{{ section.settings.imagetop.alt }}" src="{{ section.settings.imagetop | img_url: 'master' }}">
+  </div>
+{% endif %}
+{% if section.blocks.size > 0 %}
+  <div class="accordion-page-main">
+    {% for block in section.blocks %}
+      {% if block.settings.title != blank or block.settings.subtitle != blank %}
+        <div class="accordion-page-list">
+          {% if block.settings.title != blank %}
+            <div class="accordion-page-title">{{ block.settings.title }}</div>
+          {% endif %}
+          {% if block.settings.subtitle != blank %}
+            <div class="accordion-page-desc">{{ block.settings.subtitle }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+<div class="feature_section">
+  {% if section.settings.boxheading != blank %}
+    <h1><strong>{{ section.settings.boxheading }}</strong></h1>
+  {% endif %}
+  
+  <div class="FeatureCards">
+    
+     <div class="FeatureCard">
+        <div class="FeatureCard__Card">
+           <div class="FeatureCard__Header">
+             {% if section.settings.imageicons1 != blank %} 
+                <div class="FeatureCard__Icon">
+                   <img class="ImageLoader ImageLoader--loaded ImageLoader--fill-height" alt="Three Easy Payments Icon" src="{{ section.settings.imageicons1 | img_url: 'master' }}">
+                </div>
+             {% endif %}
+             {% if section.settings.titletext1 != blank or section.settings.titlesubtext1 != blank %}
+                <div class="FeatureCard__Headers">
+                  {% if section.settings.titletext1 != blank %}
+                     <p class="Paragraph Paragraph--regular Paragraph--bold Paragraph--left Paragraph--color-black FeatureCard__Title">{{ section.settings.titletext1 }}</p>
+                  {% endif %}
+                  {% if section.settings.titlesubtext1 != blank %}
+                     {{ section.settings.titlesubtext1 }}
+                  {% endif %}
+                </div>
+             {% endif %}
+           </div>
+          {% if section.settings.box1html != blank %} 
+             {{ section.settings.box1html }}
+          {% endif %}
+        </div>
+     </div>
+    
+     <div class="FeatureCard">
+        <div class="FeatureCard__Card spread-cost">
+           <div class="FeatureCard__Header">
+             {% if section.settings.imageicons2 != blank %} 
+                <div class="FeatureCard__Icon">
+                   <img class="ImageLoader ImageLoader--loaded ImageLoader--fill-height" alt="Spread the Cost Up to 3 Years Icon" src="{{ section.settings.imageicons2 | img_url: 'master' }}">
+                </div>
+             {% endif %}
+             {% if section.settings.titletext2 != blank or section.settings.titlesubtext2 != blank %}
+                <div class="FeatureCard__Headers">
+                  {% if section.settings.titletext2 != blank %}
+                     <p class="Paragraph Paragraph--regular Paragraph--bold Paragraph--left Paragraph--color-black FeatureCard__Title">{{ section.settings.titletext2 }}</p>
+                  {% endif %}
+                  {% if section.settings.titlesubtext2 != blank %}
+                     {{ section.settings.titlesubtext2 }}
+                  {% endif %}
+                </div>
+             {% endif %}
+           </div>
+          {% if section.settings.box1htm2 != blank %} 
+             {{ section.settings.box1htm2 }}
+          {% endif %}
+        </div>
+       {% if section.settings.innerbox1htm2 != blank %} 
+          <div class="FeatureCard__Description text-center">
+             {{ section.settings.innerbox1htm2 }}
+          </div>
+       {% endif %}
+     </div>
+    
+     <div class="FeatureCard">
+        <div class="FeatureCard__Card finance-calculator">
+           <div class="FeatureCard__Header">
+             {% if section.settings.imageicons3 != blank %} 
+                <div class="FeatureCard__Icon">
+                   <img class="ImageLoader ImageLoader--loaded ImageLoader--fill-height" alt="Spread the Cost Up to 3 Years Icon" src="{{ section.settings.imageicons3 | img_url: 'master' }}">
+                </div>
+             {% endif %}
+             {% if section.settings.titletext3 != blank or section.settings.titlesubtext3 != blank %}
+                <div class="FeatureCard__Headers">
+                  {% if section.settings.titletext3 != blank %} 
+                     <p class="Paragraph Paragraph--regular Paragraph--bold Paragraph--left Paragraph--color-black FeatureCard__Title">{{ section.settings.titletext3 }}</p>
+                  {% endif %}
+                  {% if section.settings.titlesubtext3 != blank %} 
+                     {{ section.settings.titlesubtext3 }}
+                  {% endif %}
+                </div>
+             {% endif %}
+           </div>
+		
+          {% if section.settings.box1htm3 != blank %}
+          	{{ section.settings.box1htm3 }}
+          {% endif %}
+        </div>
+     </div>
+    
+  </div>  
+</div>
+
+{% schema %}
+  {
+    "name": "Payments Options New 2",
+	"class": "Payments-Options-New-2",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "imagetop",
+        "label": "Klarna Top Banner Image"
+      },
+	  {
+        "type": "text",
+        "id": "boxheading",
+        "label": "Add Boxs Heading",
+        "default": "Two new ways to pay"
+      },
+	  {
+        "type": "header",
+        "content": "Information Box-1"
+      },
+	  {
+        "type": "image_picker",
+        "id": "imageicons1",
+        "label": "Add Icon Image Box-1"
+      },
+	  {
+        "type": "text",
+        "id": "titletext1",
+        "label": "Add Heading Box-1",
+        "default": "Heading"
+      },
+	  {
+        "type": "html",
+        "id": "titlesubtext1",
+        "label": "Add Sub Heading Box-1",
+        "default": "Sub Heading"
+      },
+	  {
+        "type": "html",
+        "id": "box1html",
+        "label": "Add HTML Box-1"
+      },
+	  {
+        "type": "header",
+        "content": "Information Box-2"
+      },
+	  {
+        "type": "image_picker",
+        "id": "imageicons2",
+        "label": "Add Icon Image Box-2"
+      },
+	  {
+        "type": "text",
+        "id": "titletext2",
+        "label": "Add Heading Box-2",
+        "default": "Heading"
+      },
+	  {
+        "type": "html",
+        "id": "titlesubtext2",
+        "label": "Add Sub Heading Box-2",
+        "default": "Sub Heading"
+      },
+	  {
+        "type": "html",
+        "id": "box1htm2",
+        "label": "Add HTML Box-2"
+      },
+	  {
+        "type": "html",
+        "id": "innerbox1htm2",
+        "label": "Add Inner HTML Box-2"
+      },
+	  {
+        "type": "header",
+        "content": "Information Box-3"
+      },
+	  {
+        "type": "image_picker",
+        "id": "imageicons3",
+        "label": "Add Icon Image Box-3"
+      },
+	  {
+        "type": "text",
+        "id": "titletext3",
+        "label": "Add Heading Box-3",
+        "default": "Heading"
+      },
+	  {
+        "type": "html",
+        "id": "titlesubtext3",
+        "label": "Add Sub Heading Box-3",
+        "default": "Sub Heading"
+      },
+	  {
+        "type": "html",
+        "id": "box1htm3",
+        "label": "Add HTML Box-3"
+      }
+	],
+	"blocks": [
+      {
+        "type": "add_text",
+        "name": "Add Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Add Heading",
+			"default": "Heading"
+          },
+		  {
+            "type": "html",
+            "id": "subtitle",
+            "label": "Add Description",
+			"default": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

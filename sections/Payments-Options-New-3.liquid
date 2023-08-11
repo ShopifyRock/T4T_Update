@@ -1,0 +1,19 @@
+{% if section.settings.imagebottom != blank %}
+  <div class="finance-banner">
+    <img class="faq_banner" alt="{{ section.settings.imagebottom.alt }}" src="{{ section.settings.imagebottom | img_url: 'master' }}">
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Payments Options New 3",
+	"class": "Payments-Options-New-3",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "imagebottom",
+        "label": "Klarna Bottom Banner Image"
+      }
+	]
+  }
+{% endschema %}
