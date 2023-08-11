@@ -1,0 +1,28 @@
+<div class="container privacy_polisy_main custom-page-section-main common-pages-new privacy-policy-main">
+    <div class="grid">
+      <div class="grid__item">
+        {% if section.settings.image != blank %}
+            <div class="privacy_polisy_image_main custom-page-image">
+                <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+            </div>
+        {% endif %}
+        {% if page.content != blank %}
+          <div class="rte common-pages-inner-new custom-page-section privacy_polisy_inner_text_new">
+            {{ page.content }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% schema %}
+  {
+    "name": "Privacy Policy",
+    "settings": [
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Normal Image"
+      }
+	]
+  }
+{% endschema %}

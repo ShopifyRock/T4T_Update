@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "Warranty-Tabs": {
+      "type": "Warranty-Tabs",
+      "blocks": {
+        "91f23243-3597-42a3-ac18-b78ee6a3c180": {
+          "type": "contact_information",
+          "settings": {
+            "tabimage": "shopify:\/\/shop_images\/makita_master_c8a54792-546b-4c08-a133-4bf9ad5ea2e3.jpg",
+            "texttab": "<h3><center>Makita<\/center><\/h3>\n<h3>Quick Guide<\/h3>\n<div>\n<p>Your Makita product is covered by a 12 month Warranty or more if you opted for the extended warranty. Make sure you register your product. <\/p>\n<p>When calling Makita, they will ask you to take the faulty item to your nearest Makita Authorised Service agent (ASA).  If you are unable find an agent close to where you live they will arrange to have your item collected by courier. <\/p>\n<p>There are Makita service centres at following locations:<\/p>\n<ul>\n  <li>Milton Keynes<\/li>\n  <li> London <\/li>\n  <li> Glasgow <\/li>\n<\/ul>\nIn order to arrange visit Makita Factory Service Centres (FSC), <b>you must first book the repair and get an RMA<\/b>\n<p>Note: you will need your Proof of Purchase invoice.<\/p>\n<\/div>\n<h3>Service contact and warranty return information<\/h3>\n<div>\n<p>Contact number :<a href=\"tel:01908\"> 01908 211678<\/a><\/p>\n<p><a href=\"https:\/\/www.makitauk.com\/returns-form\">Warranty return information<\/a><\/p>\n<p><a href=\"https:\/\/www.makitauk.com\/3-year-warranty\">Makitia User Manuals<\/a><\/p>\n<\/div>"
+          }
+        },
+        "615427da-1c08-45dc-b3cf-1e7404e29c1a": {
+          "type": "contact_information",
+          "settings": {
+            "tabimage": "shopify:\/\/shop_images\/dewalt_master_58cfe859-31a4-4b4f-8ea1-fe674e7fb52f.jpg",
+            "texttab": "<h3><center>DeWalt<\/center><\/h3>\n<h3>Quick Guide<\/h3>\n<div>\n<p>Dewalt products have a 12 months warranty. Warranty is covered anywhere in Europe with your original proof of purchase. Extended 3 year warranty is available.The product needs to be registered by the original DEWALT within 4 Weeks of Purchase. <a href=\"www.DEWALT.eu\/3\"> Click here to register.<\/a><\/p>\n<p>For more details please visit DeWalt for latest updated warranty information<\/p>\n<p>DeWalt Service Centre will advise how to get your issue rectified quickly. Normally you will be asked to take the faulty item to your nearest DeWalt Agent. Click on link below. If you live more than 10 miles away from an DeWalt agent they will arrange to collect your faulty item by courier. <\/p>\n<\/div>\n<h3>Service contact and warranty return information<\/h3>\n<div>\n<p> DeWalt contact number:<a href=\"tel:01753%20567055\"> 01753 567055<\/a>\n\n\n <\/p>\n<p><a href=\"https:\/\/www.dewalt.co.uk\/services\/garantie-et-service\">Warranty<\/a><\/p>\n<p><a href=\"http:\/\/service.dewalt.co.uk\/DEWALT\/GB\/en-GB\/AgentLocator\/SearchAgentLocators\">Service agent locator<\/a><\/p>\n<\/div>"
+          }
+        },
+        "a5c70f64-ba66-498b-8d25-82930dd5738c": {
+          "type": "contact_information",
+          "settings": {
+            "tabimage": "shopify:\/\/shop_images\/bosch_master_efd264a9-9e61-4469-b73f-e8d6e5815afc.jpg",
+            "texttab": "<h3><center> Bosch<\/center><\/h3>\n<h3>Quick Guide<\/h3>\n<div>\n<p> Bosch provides a 1 year warranty and 3 years if you register your tools individually within four weeks of purchase using the PRO360 service portal.<\/p>\n<p> Bosch will pick your product for free and return after repair. Please ensure you have your proof of purchase.<\/p>\n<\/div>\n<h3>Service contact and warranty return information<\/h3>\n<div>\n \n<p>Bosch SERVICE HOTLINE: <a href=\"tel:0344%20736%200109\">0344 736 0109<\/a><\/p>\n<p><a href=\"https:\/\/www.bosch-professional.com\/gb\/en\/service\/guarantee\/information\/information_garantie.html\">Further Warranty Information <\/a><\/p>\n<p>Online Repair Enquiry: Use this \n<a href=\"https:\/\/www.bosch-professional.com\/gb\/en\/repair-form\/professional\/\"> form <\/a>  to arrange a collection.<\/p>\n<\/div>"
+          }
+        },
+        "856a8b47-a33c-4e68-a5da-67f40822a0d3": {
+          "type": "contact_information",
+          "settings": {
+            "tabimage": "shopify:\/\/shop_images\/milwaukee_master_d475af03-0dc2-4270-9287-c6f363c16007.jpg",
+            "texttab": "<h3><center>Milwaukee<\/center><\/h3>\n<h3>Quick Guide<\/h3>\n<div>\n<p>For Warranty Repair please contact Milwaukee Service<\/p>\n<p>With Milwaukee Service you have access to a professional end to end repair service where you can track your tool from start to finish. <\/p>\n<p>Giving you peace of mind and full confidence that your tools will be back in working condition in no time.<\/p>\n<\/div>\n<h3>Service contact and warranty return information<\/h3>\n<div>\n<p>Milwaukee Service Hotline <a href=\"tel:01628\"> 01628 894400<\/a><\/p>\n<p><a href=\"https:\/\/uk.milwaukeetool.eu\/service\/\">Milwaukee Service<\/a><\/p>\n<\/div>"
+          }
+        },
+        "e5d6ad16-40d9-4f4e-ae6b-0ae2f58e8641": {
+          "type": "contact_information",
+          "settings": {
+            "tabimage": "shopify:\/\/shop_images\/Sealey.jpg",
+            "texttab": "<h3><center> Sealey <\/center><\/h3>\n<h3>Quick Guide<\/h3>\n<div>\n<p>All Sealey products are covered by a minimum of 1-year parts and labour guarantee.<\/p>\n<p>Extended guarantees are also available free of charge on many products subject to the purchase being registered.<\/p>\n<\/div>\n<h3>Service contact and warranty return information<\/h3>\n<div>\n<p>Sealey Service hotline: <a href=\"tel:01284\"> 01284 757500<\/a><\/p>\n<p><a href=\"www.sealey.co.uk\/warranty\">Further Warranty information<\/a><\/p>\n<\/div>"
+          }
+        },
+        "e08feefa-1ad1-4c74-9597-0a044ad2fb4d": {
+          "type": "contact_information",
+          "settings": {
+            "tabimage": "shopify:\/\/shop_images\/hikoki.jpg",
+            "texttab": "<h3><center> HiKoki<\/center><\/h3>\n<h3>Quick Guide<\/h3>\n<div>\n<p>Register your product and create a login for warranty repair directly with HiKoki.<\/p>\n<p>Hikoki have up to 5 years warranty on some products, please visit Hikoki for further information.<\/p>\n<\/div>\n<h3>Service contact and warranty return information<\/h3>\n<div>\n<p>Hikoki Service hotline:  <a href=\"tel:01908\"> 01908 354733<\/a><\/p>\n<p><a href=\"https:\/\/www.hikoki-powertools.co.uk\/contact\">Contact Hikoki<\/a><\/p>\n<p><a href=\"mailto:Service@hikoki-powertools.co.uk\">Email: Service@hikoki-powertools.co.uk<\/a><\/p>\n<\/div>"
+          }
+        },
+        "2247134f-7038-42d5-83e5-d5fe06e932ca": {
+          "type": "contact_information",
+          "settings": {
+            "tabimage": "shopify:\/\/shop_images\/metabo.jpg",
+            "texttab": "<h3><center>Metabo<\/center><\/h3>\n<h3>Quick Guide<\/h3>\n<div>\n<p>DECLARATION OF WARRANTY<br>\nMANUFACTURER'S DECLARATION OF WARRANTY\n<\/p>\n<p>Notwithstanding statutory requirements, Metabo provides warranty in accordance with the legislation of the customer's own country of residence, but in all cases for a minimum of 1 year, commencing from the date on which the tool\/machine is sold to the end user.<\/p>\n<p>The warranty covers defects in material and\/or workmanship only.<\/p>\n<p>When making a claim under the warranty, the original proof of purchase bearing the date of purchase must be submitted. The repairs under warranty may only be carried out by Metabo's own service stations, or authorised Metabo warranty service agents.<\/p>\n<p>Excluded from the warranty are:<br>\n<\/p>\n<ul>\n  <li>Incorrect use, overloading of the machine (example: use of jigsaw in pallet construction), or fitting non-approved accessories<\/li>\n  <li>Use of force, damage caused by external influences or foreign bodies such as sand or stones<\/li>\n  <li>damage caused by non-observance of the instructions for use such as connection to an unsuitable mains supply or voltage or non-compliance with the installation instructions<\/li>\n<li>normal wear\n<\/li>\n<\/ul>\n<p>The warranty also does not cover tools\/machines, which have been partially or completely dismantled.<\/p>\n<p><b>Please always refer to Latest Warranty information on Manufacturers web site for up to date details.<\/b><\/p>\n<\/div>\n<h3>Service contact and warranty return information<\/h3>\n<div>\n<p>Service hotline: <a href=\"tel:02380\"> 02380 732000<\/a> <\/p>\n<p><a href=\"https:\/\/portal.metabo-service.com\/en-GB\/warranty-and-service-conditions\/\">Website<\/a><\/p>\n<\/div>"
+          }
+        },
+        "611fae8f-58ab-478f-bbc7-c89d0835af14": {
+          "type": "contact_information",
+          "settings": {
+            "tabimage": "shopify:\/\/shop_images\/festool.jpg",
+            "texttab": "<h3><center>Festool<\/center><\/h3>\n<h3>Quick Guide<\/h3>\n<div>\n<p>Warranty all-inclusive.<br>\nEnjoy comprehensive services with our all-inclusive warranty. By registering your new Festool tool online within 30 days of purchase, it will be fully covered for the first three years. And you can concentrate on what’s important: Your work.\n<\/p>\n<ul>\n<li>Warranty all-inclusive is valid for all Festool tools registered within 30 days of purchase. The Festool warranty terms and conditions shall apply and are available <a href=\"https:\/\/www.festool.co.uk\/service\/warranty-terms-and-conditions\"> here.<\/a>\n<\/li>\n<li> \"Full repair, free of charge\" also applies to battery packs and chargers, but not to other consumables and accessories, or to tools that have been dismantled, or to damage caused by improper use, the use of non-original spare parts, or in the event of continuous use resulting in extensive wear<\/li>\n<\/ul>\n<\/div>\n<h3>Service contact and warranty return information<\/h3>\n<div>\n<p>Service hotline: <a href=\"tel:01284\"> 01284 760791<\/a><\/p>\n<p><a href=\"https:\/\/www.festool.co.uk\/service\/warranty-terms-and-conditions\">Warranty <\/a><\/p>\n<\/div>"
+          }
+        },
+        "f029ec5a-8182-4627-98d6-a74accd57af7": {
+          "type": "contact_information",
+          "settings": {
+            "tabimage": "shopify:\/\/shop_images\/excel_master_35fe6f17-da02-4ec3-80de-1815a869b840.jpg",
+            "texttab": "<h3><center> Excel <\/center><\/h3>\n<h3>Quick Guide<\/h3>\n<div>\n<p>All products are well manufactured and fully tested before leaving the factory. For any unforeseen reason the product develops an issue the product is covered by 12 months warranty from the date of purchase.<\/p>\n<p>Please contact our technical support team by sending an email to <a href=\"support@tools4trade.co.uk\">support@tools4trade.co.uk<\/a> or chat online on Tools4Trade.co.uk<\/p>\n<p>Excel tools will replace all defective parts free of charge, or at our discretion, replace the unit free of charge.<\/p>\n\n<\/div>\n<h3>Service contact and warranty return information<\/h3>\n<div>\n<p>Service hotline: <a href=\"tel:01908\"> 01908 969966<\/a><\/p>\n<\/div>"
+          }
+        }
+      },
+      "block_order": [
+        "91f23243-3597-42a3-ac18-b78ee6a3c180",
+        "615427da-1c08-45dc-b3cf-1e7404e29c1a",
+        "a5c70f64-ba66-498b-8d25-82930dd5738c",
+        "856a8b47-a33c-4e68-a5da-67f40822a0d3",
+        "e5d6ad16-40d9-4f4e-ae6b-0ae2f58e8641",
+        "e08feefa-1ad1-4c74-9597-0a044ad2fb4d",
+        "2247134f-7038-42d5-83e5-d5fe06e932ca",
+        "611fae8f-58ab-478f-bbc7-c89d0835af14",
+        "f029ec5a-8182-4627-98d6-a74accd57af7"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "Warranty-Tabs"
+  ]
+}

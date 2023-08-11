@@ -1,0 +1,30 @@
+<div class="container custom-page-section-main delivery_main common-pages-new">
+    <div class="grid">
+        <div class="grid__item">
+            {% if section.settings.image != blank %}
+                <div class="delivery_image_main custom-page-image">
+                    <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+                </div>
+            {% endif %}
+            {% if page.content != blank or page.title != blank %}
+                <div class="rte delivery_inner_text_new custom-page-section common-pages-inner-new">
+                    {% if page.content != blank %}
+                        {{ page.content }}
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% schema %}
+    {
+        "name": "Delivery New",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Normal Image"
+            }
+	    ]
+    }
+{% endschema %}

@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "Klarna-Ts-Cs-Privacy-faqs-New": {
+      "type": "Klarna-Ts-Cs-Privacy-faqs-New",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/desktop_ver.jpg"
+      }
+    }
+  },
+  "order": [
+    "Klarna-Ts-Cs-Privacy-faqs-New"
+  ]
+}

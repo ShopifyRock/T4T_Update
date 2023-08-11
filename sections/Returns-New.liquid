@@ -1,0 +1,29 @@
+<div class="container custom-page-section-main returns_main common-pages-new">
+    <div class="grid">
+        <div class="grid__item">
+            {% if section.settings.image != blank %}
+                <div class="returns_image_main custom-page-image">
+                    <img class="faq_banner" src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+                </div>
+            {% endif %}
+            {% if page.content != blank %}
+                <div class="rte returns_inner_text_new custom-page-section common-pages-inner-new">
+                    {{ page.content }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Returns",
+    "settings": [
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Normal Image"
+      }
+	]
+  }
+{% endschema %}
+  

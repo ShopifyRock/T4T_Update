@@ -1,0 +1,18 @@
+{% if section.settings.image != blank %}
+  <div class="Klarna_image_main">
+    <img class="faq_banner" src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Klarna FAQs New",
+    "settings": [
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Normal Image"
+      }
+	]
+  }
+{% endschema %}

@@ -1,0 +1,59 @@
+<div class="page-width careers_main common-pages-new">
+    <div class="grid">
+        <div class="grid__item">
+            {% if section.settings.image != blank %}
+                <div class="careers_image_main">
+                    <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+                </div>
+            {% endif %}
+            <div class="rte common-pages-inner-new careers_inner_text_new ">
+            {% if page.content != blank %}
+                {{ page.content }}
+            {% endif %}
+            {% if section.blocks.size > 0 %}
+                <div class="career_inner_img_main">
+                    {% for block in section.blocks %}
+                        {% if block.settings.image != blank %}
+                            <div class="career_inner_img_list">
+                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" />
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Careers New",
+    "settings": [
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Normal Image"
+      }
+	],
+	"blocks": [
+      {
+        "type": "add_image",
+        "name": "Add Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Normal Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+    {
+      "name": "Careers New",
+      "category": "Custom"
+    }
+  ]
+  }
+{% endschema %}
+  

@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "WEEE-New": {
+      "type": "WEEE-New",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/weee-desktop.jpg"
+      }
+    }
+  },
+  "order": [
+    "WEEE-New"
+  ]
+}

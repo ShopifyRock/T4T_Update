@@ -1,0 +1,47 @@
+{% if section.blocks.size > 0 %}
+  <div class="rte">
+    <div class="accordion-page-main">
+      {% for block in section.blocks %}
+        {% if block.settings.title != blank %}
+          <div class="accordion-page-list">
+            {% if block.settings.title != blank %}
+              <div class="accordion-page-title">{{ block.settings.title }}</div>
+            {% endif %}
+            {% if block.settings.subtitle != blank %}
+              <div class="accordion-page-desc">{{ block.settings.subtitle }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Payment Option Faqs Tab-2",
+    "settings": [
+
+	],
+	"blocks": [
+      {
+        "type": "add_text",
+        "name": "Add Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Add Heading",
+			"default": "Heading"
+          },
+		  {
+            "type": "html",
+            "id": "subtitle",
+            "label": "Add Description",
+			"default": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

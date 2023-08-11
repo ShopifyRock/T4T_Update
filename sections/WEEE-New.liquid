@@ -1,0 +1,28 @@
+<div class="page-width weee_main common-pages-new container">
+    <div class="grid">
+        <div class="grid__item">
+            {% if section.settings.image != blank %}
+                <div class="weee_image_main">
+                    <img class="faq_banner" src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+                </div>
+            {% endif %}
+            {% if page.content != blank %}
+                <div class="rte weee_inner_text_new common-pages-inner-new">
+                    {{ page.content }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "WEEE New",
+    "settings": [
+	  {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Normal Image"
+      }
+	]
+  }
+{% endschema %}

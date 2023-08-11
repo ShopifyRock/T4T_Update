@@ -27,7 +27,8 @@
     {% comment %} font awesome end {% endcomment %}
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.2/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
-    
+
+       
     {{ 'theme.css' | asset_url | | stylesheet_tag: preload: true }}
     
     {% comment %} CSS LIBRARIES END {% endcomment %}
@@ -96,6 +97,7 @@
         <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
     {%- endif -%} 
     <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
+    <script src="{{ 'vendor.js' | asset_url }}"  defer="defer"></script>  
     <script src="{{ 'theme.js' | asset_url }}"  defer="defer"></script>  
     {% if template == 'product' %} 
     <script src="{{ 'pdp.js' | asset_url }}" rel="preload" as="script" defer="defer"></script>  
@@ -109,6 +111,7 @@
 
 </head>
 <body class="template-{{ request.page_type | handle }} {{ collection.handle }}">
+   
     {% render 'cart-popup' %}
     {% comment %} Header start {% endcomment %}
         {% section 'header.liquid' %}
@@ -130,6 +133,8 @@
 
 
     {% comment %} Extra JavaScript {% endcomment %}
+
+    <a id="button-top"></a>
         <script type="text/javascript">
             document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
             
@@ -154,6 +159,25 @@
                 
             });
         </script>  
+
+        <script>
+            var btn = $('#button-top');
+        
+            $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+            });
+            
+            btn.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, '300');
+            });
+        
+        </script>
+
     {% comment %} Extra JavaScript {% endcomment %}
 
 </body>

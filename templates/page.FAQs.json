@@ -1,0 +1,145 @@
+{
+  "sections": {
+    "main": {
+      "type": "faqs-New",
+      "blocks": {
+        "db827419-fba7-4e8e-93af-a9523d55dd5e": {
+          "type": "add_text",
+          "settings": {
+            "title": "Do you provide a VAT invoice?",
+            "subtitle": "<p>Yes, we send a full VAT invoice with every order. This will be inside the box or beneath the carriers label in a plastic envelope.<\/p>"
+          }
+        },
+        "37b5b162-f004-487d-a5c3-233d1679507b": {
+          "type": "add_text",
+          "settings": {
+            "title": "How do I know that the item I'm ordering is in stock?",
+            "subtitle": "<p>Tools4Trade only offer you a product if it is in stock in our warehouse so you can be sure that when you add it to your basket and place your order you're going to receive it.<\/p>"
+          }
+        },
+        "03a41bf1-dc26-4614-a7eb-5078b7b07237": {
+          "type": "add_text",
+          "settings": {
+            "title": "What is Tools4Trade's return policy?",
+            "subtitle": "<p><strong>Unwanted Goods :<\/strong><\/p><p>Should your purchases be unsuitable and you wish to return them to us for a credit or to exchange then the following conditions will apply :<\/p>\n\t<ul>\n\t<li>Goods must be returned within 5 working days of receipt of the goods.<\/li>\n\t<li>Our customer service department must be contacted before any return is made to obtain the necessary returns reference.<\/li>\n\t<li>All items should be returned in their original packaging and a saleable condition to obtain a full refund. We reserve the right to charge for repackaging where applicable.<\/li>\n\t<li>Carriage charges for unwanted returns will be at your expense, but we can arrange collection for £14.99.<\/li>\n\t<li>Transport packaging should be sufficient for the method of carriage. We cannot accept any responsibility for damage caused by your carrier.<\/li>\n\t<li>We cannot accept the return of any item that has been ordered especially for you, for example, spare parts etc.<\/li>\n\t<li>Your return should be accompanied by a proof of purchase, your name, address and mobile number, account number and order reference number (most of this information should be detailed on your invoice). To help us, to help you, we would appreciate you enclosing details of why you wish to return the product.<\/li>\n\t<\/ul>\n\t<div><\/div>\n\t<strong>Shortages :<\/strong>\n\t<p>Should any consignment be sent to you incomplete please contact our customer service department within 24 hours, who will be pleased to investigate this for you and to arrange for the completion of your order. Please be aware that back-ordered items that are \"to follow\" do not constitute shortages.<\/p>\n\t<strong>Damaged Goods :<\/strong>\n\t<p>Should you receive any parcel from us that contains damaged goods this should be notified to customer services who will arrange for collection and replacement, within the 24 hours period. If any damaged items have been used they will be deemed acceptable by you and will not be considered for replacement, only repair. For the avoidance of doubt, nothing in this policy shall affect or modify your STATUTORY RIGHTS. <\/p><strong>Faulty Products :<\/strong>\n\t<p>All products are supplied with manufacturer’s warranty, it does not cover general wear and tear or damage. This excludes products or parts of products that are consumables or that wear down such as drill bits.<\/p>\n\t<p><strong>If a customer receives any faulty item then he\/she must inform us within 7 working days. Our customer support team will arrange collection and sent to manufacture.<\/strong><\/p>\n\t<p><strong>After 7 working days, it will be customer responsibility to send the item back to us by using traceable courier service. We cannot accept any responsibility for damage or lost return caused by your carrier. After 7 working days, all faulty items either can be repaired or replaced, depends on manufacture's faulty products policies. Collection service can be arranged on customer's personal request but, the customer has to pay £15.00 collection charges. Return delivery will be free of charge after fixing or replacing any faulty item.<\/strong><\/p>"
+          }
+        },
+        "d3f13f26-ae87-4e4d-8d8a-ec7d2e31dd80": {
+          "type": "add_text",
+          "settings": {
+            "title": "How can I contact you?",
+            "subtitle": "<p>Our Telephone number is 0845 3381876 or 01908 969966. Please dial +44 1908 969966 from outside the UK or feel free to write us at <a href=\"mailto:sales@tools4trade.co.uk\" target=\"_blank\">sales@tools4trade.co.uk<\/a><\/p>"
+          }
+        },
+        "99b539ef-b9f4-47bf-875f-b9baef4f3081": {
+          "type": "add_text",
+          "settings": {
+            "title": "Can I request a weekend delivery?",
+            "subtitle": "<p>Yes, we can deliver on Saturdays (UK only) which will incur extra postage charges. You will be offered delivery upgrade options at checkout. This should also include Sunday deliveries as we do these too with DPD.<\/p>"
+          }
+        },
+        "edac0edc-71c3-41d4-8e96-d24337496347": {
+          "type": "add_text",
+          "settings": {
+            "title": "I have a complaint\/suggestion, what should I do?",
+            "subtitle": "<p>If you have any complaints\/suggestions feel free to write us at <a href=\"mailto:support@tools4trade.co.uk\" target=\"_blank\">support@tools4trade.co.uk<\/a><\/p>"
+          }
+        },
+        "e7aa3cd9-5997-45e6-9c90-1a5cf1a24e0f": {
+          "type": "add_text",
+          "settings": {
+            "title": "How do I search for the product I need?",
+            "subtitle": "<p>There are many ways to find the products you’re looking for:<\/p>\n\t<p>You can use the search bar at top of the page to search for the product you looking for by entering the manufacture code or product name.<\/p>\n\t<p>Or you can get to your product through the top navigation panel.<\/p>"
+          }
+        },
+        "1ef2c9d8-14c6-4e82-b48b-297cf769fd43": {
+          "type": "add_text",
+          "settings": {
+            "title": "How can I place an order after I've found my product?",
+            "subtitle": "<p>Click \"Add to cart\" on product details page and you will be taken to the checkout page here you have to fill out all your details like billing and shipping info, your preferred shipping method and that's it your order will be placed and you'll get the confirmation message.<\/p>"
+          }
+        },
+        "1b85ec45-4daf-4132-9da3-cc4f87bb226f": {
+          "type": "add_text",
+          "settings": {
+            "title": "The picture on the website was slightly different from what I received, why is that?",
+            "subtitle": "<p>All our images are either manufacturer’s stock images. Our images are for illustration purposes only and you should read product descriptions for full details of what you will receive.<\/p>"
+          }
+        },
+        "164d5895-1268-4be6-83f4-3d3695d53178": {
+          "type": "add_text",
+          "settings": {
+            "title": "Are the products brand new?",
+            "subtitle": "<p>Yes, at Tools4Trade all the product we offer to our customers are brand new and it all comes in their original packaging.<\/p>"
+          }
+        },
+        "e4a9c707-20f8-4c54-b13a-acfe01302c8c": {
+          "type": "add_text",
+          "settings": {
+            "title": "I can't login to my account, what should I do?",
+            "subtitle": "<p>On the login page click forgotten password. Enter your email address and we will send you a Link to reset your password. Once this has been entered, you'll be able to access your account.<\/p>"
+          }
+        },
+        "6fbe0b22-57e0-4006-a191-bcd02d6f8220": {
+          "type": "add_text",
+          "settings": {
+            "title": "Can I have my delivery sent to a different address?",
+            "subtitle": "<p>Yes, there is an opportunity for you to enter the delivery address details on the address page of the Checkout.<\/p>"
+          }
+        },
+        "c95d32e5-b3cb-4685-b88a-908898ccfc7f": {
+          "type": "add_text",
+          "settings": {
+            "title": "What happens if I'm not home and delivery is made?",
+            "subtitle": "<p>If you are not home you will be left a card by the carrier which will have instructions on how to receive the parcel as all the parcels have to be signed for also, DPD will send you several options before your delivery is to be made such as delivery to a neighbor, delivery another day, delivery to your Nearest DPD pick up shop etc so you can choose one of these options if you are going to be out on the day of delivery.<\/p>"
+          }
+        },
+        "0972e378-bf17-4b15-ab47-70796f22132c": {
+          "type": "add_text",
+          "settings": {
+            "title": "My goods are delivered damaged what should I do?",
+            "subtitle": "<p>Should you receive any parcel from us that contains damaged goods this should be notified to customer services who will arrange for collection and replacement, within the 24 hours period. If any damaged items have been used they will be deemed acceptable by you and will not be considered for replacement, only repair. For the avoidance of doubt, nothing in this policy shall affect or modify your STATUTORY RIGHTS.<\/p>"
+          }
+        },
+        "7c5497d2-f707-4ef8-8eb6-4b2a354aa370": {
+          "type": "add_text",
+          "settings": {
+            "title": "I've been delivered incorrect voltage what should I do?",
+            "subtitle": "<p>We at Tools4Trade try our very best to serve you right, but if this mistake has happened this should be notified to customer services who will arrange for collection and replacement, within the 24 hours period.<\/p><p>If this is a customer error we can do a swap-it service\/reverse collection for you, however, this will cost £15.00 for carriage fees, You can call our Offices and pay this carriage fee by card and we will arrange with you a suitable time\/place that is convenient for you.<\/p>"
+          }
+        },
+        "2d340e5d-5772-4d6d-91a3-3a4bc04f9c20": {
+          "type": "add_text",
+          "settings": {
+            "title": "Can I track my order online?",
+            "subtitle": "<p>Yes, we have an online tracking facility available via most of our delivery partner's websites for orders. You will be provided with a tracking number and instructions by e-mail once your order has been confirmed and dispatched from our side.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "db827419-fba7-4e8e-93af-a9523d55dd5e",
+        "37b5b162-f004-487d-a5c3-233d1679507b",
+        "03a41bf1-dc26-4614-a7eb-5078b7b07237",
+        "d3f13f26-ae87-4e4d-8d8a-ec7d2e31dd80",
+        "99b539ef-b9f4-47bf-875f-b9baef4f3081",
+        "edac0edc-71c3-41d4-8e96-d24337496347",
+        "e7aa3cd9-5997-45e6-9c90-1a5cf1a24e0f",
+        "1ef2c9d8-14c6-4e82-b48b-297cf769fd43",
+        "1b85ec45-4daf-4132-9da3-cc4f87bb226f",
+        "164d5895-1268-4be6-83f4-3d3695d53178",
+        "e4a9c707-20f8-4c54-b13a-acfe01302c8c",
+        "6fbe0b22-57e0-4006-a191-bcd02d6f8220",
+        "c95d32e5-b3cb-4685-b88a-908898ccfc7f",
+        "0972e378-bf17-4b15-ab47-70796f22132c",
+        "7c5497d2-f707-4ef8-8eb6-4b2a354aa370",
+        "2d340e5d-5772-4d6d-91a3-3a4bc04f9c20"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/FAQ_s-Page-design.png"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
