@@ -97,8 +97,10 @@
         <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
     {%- endif -%} 
     <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
+    {% if template != 'index' %}
     <script src="{{ 'vendor.js' | asset_url }}"  defer="defer"></script>  
     <script src="{{ 'theme.js' | asset_url }}"  defer="defer"></script>  
+    {% endif %}
     {% if template == 'product' %} 
     <script src="{{ 'pdp.js' | asset_url }}" rel="preload" as="script" defer="defer"></script>  
     {% endif %}
