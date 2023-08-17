@@ -53,7 +53,7 @@
   <div class="price__pricing-group">
     <div class="price__regular">
       <dt>
-        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.regular_price' | t }}</span>
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       </dt>
       <dd>
         <div class="new-price">
@@ -76,11 +76,6 @@
       </dd>
     </div>
     <div class="price__sale">
-      {% comment %}
-      <dt>
-        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.regular_price' | t }}</span>
-      </dt>
-      {% endcomment %}
       <dd>
         <div class="old-price">
         <span class="price price-item price-item--regular" data-regular-price>
@@ -100,11 +95,6 @@
           %}
             <div class="discount-price mobile-discount-price">{{ discount }}% OFF</div>
           {% endif %}
-        {% comment %}
-          <dt>
-            <span class="visually-hidden visually-hidden--inline">{{ 'products.product.sale_price' | t }}</span>
-          </dt>
-        {% endcomment %}
         <dd>
           <div class="new-price">
           <span class="price price-item price-item--sale" data-sale-price>
@@ -200,11 +190,11 @@
   </div>
   <div class="price__unit">
     <dt>
-      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.unit_price_label' | t }}</span>
+      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.unit_price_label' | t }}</span>
     </dt>
     <dd class="price-unit-price">
       {%- capture unit_price_separator -%}
-        <span aria-hidden="true">/</span><span class="visually-hidden">{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;</span>
+        <span aria-hidden="true">/</span><span class="visually-hidden">{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
       {%- endcapture -%}
       {%- capture unit_price_base_unit -%}
         <span data-unit-price-base-unit>

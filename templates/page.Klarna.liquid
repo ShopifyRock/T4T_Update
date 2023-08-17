@@ -1,0 +1,122 @@
+<style type="text/css">
+  
+    ul.tabs {
+      border-top: 2px solid #999;
+      border-right: 1px solid #dedfde;
+      border-bottom: 1px solid #dedfde;
+      border-left: 1px solid #dedfde;
+      background-color: #F7F7F7;
+      text-align:center;
+    }
+    ul.tabs li {
+      display: inline-block;
+      float: none;
+      margin-bottom: 0;
+      padding: 0;
+      margin:0 -2px;
+      width: auto;
+    }
+    ul.tabs li a {
+      padding: 13px 15px !important;
+      border-radius: 0;
+      font-size: 16px;
+      color: #666;
+      margin-right: 0px;
+      line-height: 1.42857143;
+      border: 1px solid transparent;
+      display: block;
+      margin-bottom: -2px;
+      margin-top:-2px;
+      font-family: "DIN Next Slab", serif;
+      font-weight: 600;
+      border-top: 2px solid #999;
+      border-bottom:0px !important;
+    }
+    ul.tabs li a.active {
+      color: #555;
+      cursor: default;
+      background-color: #fff;
+      border-color: #ddd; 
+     border-top-color:#e2373a; 
+      border-bottom:0px;
+    }
+    
+    ul.tabs:before, ul.tabs:after {
+      content: " ";
+      display: block;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+    }
+    ul.tabs:after {
+      clear: both;
+    }
+    .tab-content{ 
+      padding: 15px;
+      border-top: none;
+      border-right: 1px solid #dedfde;
+      border-bottom: 1px solid #dedfde;
+      border-left: 1px solid #dedfde;
+    }
+      
+    </style>
+    
+    <div class="page-width Payment_Options_main common-pages-new">
+      <div class="grid">
+        <div class="grid__item">
+          
+          <div class="rte common-pages-inner-new Payment_Options_inner_text_new ">
+            {% comment %}
+              {% section 'Payments-Options-New-1' %}
+            {% endcomment %}
+            
+            <div class="klarna_banner_new">
+            {% section 'Payments-Options-New-2' %}
+            </div>
+              
+            {% if settings.mainheading != blank %}
+              <div class="section-header text-center payment_option_new_title">
+                <h1>{{ settings.mainheading }}</h1>
+              </div>
+            {% endif %}
+            {% if settings.paymenttabheading1 != blank or settings.paymenttabheading2 != blank or settings.paymenttabheading3 != blank %}
+              <div class="tabs_full_block_new payment_option_tabs_new">
+                <ul class="tabs">
+                  {% if settings.paymenttabheading1 != blank %}
+                    <li><a href="#tabfaq-1">{{ settings.paymenttabheading1 }}</a></li>
+                  {% endif %}
+                  {% if settings.paymenttabheading2 != blank %}
+                    <li><a href="#tabfaq-2">{{ settings.paymenttabheading2 }}</a></li>
+                  {% endif %}
+                  {% if settings.paymenttabheading3 != blank %}
+                    <li><a href="#tabfaq-3">{{ settings.paymenttabheading3 }}</a></li>
+                  {% endif %}
+                </ul>
+                <div class="tab-content">
+                  {% if settings.paymenttabheading1 != blank %}
+                    <div id="tabfaq-1">
+                      {% section 'Payments-Options-accordion-tab-1' %}
+                    </div>
+                  {% endif %}
+                  {% if settings.paymenttabheading2 != blank %}
+                    <div id="tabfaq-2">
+                      {% section 'Payments-Options-accordion-tab-2' %}
+                    </div>
+                  {% endif %}
+                  {% if settings.paymenttabheading3 != blank %}
+                    <div id="tabfaq-3">
+                      {% section 'Payments-Options-accordion-tab-3' %}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+            
+            {% section 'Payments-Options-New-3' %}
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>  

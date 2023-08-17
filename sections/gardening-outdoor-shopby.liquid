@@ -1,0 +1,71 @@
+<section class="shopby-section">
+    {% if section.settings.heading != blank %}
+      <div class="main-page-title">
+          <div class="page-width">
+              <h3>{{ section.settings.heading }} <span>{{ section.settings.heading2 }}</span></h3>
+          </div>
+      </div>
+      {% endif %}
+      <div class="shopby-section-inner">
+          <div class="categories"> 
+            {% for block in section.blocks %}
+              {% if block.settings.button_link != blank %}
+                {% if block.settings.banner_image != blank %}
+              <div class="category">
+                  <a href="{{ block.settings.button_link }}" title="category">
+                      <img src="{{ block.settings.banner_image | img_url: 'original' }}"  />
+                  </a>
+              </div>
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+          </div>
+      </div>
+  </section>
+  {% schema %}
+    {
+      "name": "Gardening Outdoor shopby",
+      "settings": [
+        {
+          "type": "html",
+          "id": "heading",
+          "label": "Heading in Red Color"
+        },
+        {
+          "type": "html",
+          "id": "heading2",
+          "label": "Heading in White Color"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "deals_day",
+          "name": "Deals Of the Day",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "banner_image",
+              "label": "Banner Image"
+            },
+            {
+              "type": "url",
+              "id": "button_link",
+              "label": "Shop Button Link"
+            }
+          ]
+        }
+      ],
+      "presets":[
+         {
+            "name":"Gardening Outdoor shopby",
+            "category":"Custom"
+         }
+      ]
+    }
+  {% endschema %}
+  
+  {% stylesheet %}
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}

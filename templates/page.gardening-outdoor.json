@@ -1,0 +1,201 @@
+{
+  "sections": {
+    "gardening-outdoor": {
+      "type": "gardening-outdoor",
+      "settings": {
+      }
+    },
+    "a488f045-6f45-47bf-a9b6-847a4b72d3df": {
+      "type": "gardening-outdoor-main-banner",
+      "settings": {
+        "desk_image": "shopify:\/\/shop_images\/Image20230511180224.jpg",
+        "mob_image": "shopify:\/\/shop_images\/Image20230511180409.jpg",
+        "banner_link": "#"
+      }
+    },
+    "c47e56ff-3fe0-4722-8e05-46af5b5a13b3": {
+      "type": "gardening-outdoor-brand",
+      "blocks": {
+        "1817a4c3-9a1d-41d3-970c-b4a16e5e9c7e": {
+          "type": "deals_day",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/Makita_Gardening.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Makita"
+          }
+        },
+        "cda07ae1-62cb-4497-927c-ac930da1f9d2": {
+          "type": "deals_day",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/Dewalt_Gardening.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Dewalt"
+          }
+        },
+        "dabe89d8-c4f3-4412-aced-dbba93e83de1": {
+          "type": "deals_day",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/Milwaukee_Gardening.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Milwaukee"
+          }
+        },
+        "12617994-99e6-4827-9484-3c7580998b2c": {
+          "type": "deals_day",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/Hyundai_Gardening.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Hyundai"
+          }
+        },
+        "14fae1bc-b385-4179-9a38-fa50cfe74bbf": {
+          "type": "deals_day",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/Sealey_Gardening.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Sealey"
+          }
+        },
+        "62326420-59c7-48a9-bb47-1302da607841": {
+          "type": "deals_day",
+          "settings": {
+            "brand_image": "shopify:\/\/shop_images\/Excel_Gardening.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Excel"
+          }
+        }
+      },
+      "block_order": [
+        "1817a4c3-9a1d-41d3-970c-b4a16e5e9c7e",
+        "cda07ae1-62cb-4497-927c-ac930da1f9d2",
+        "dabe89d8-c4f3-4412-aced-dbba93e83de1",
+        "12617994-99e6-4827-9484-3c7580998b2c",
+        "14fae1bc-b385-4179-9a38-fa50cfe74bbf",
+        "62326420-59c7-48a9-bb47-1302da607841"
+      ],
+      "settings": {
+        "heading": "SHOP BY",
+        "heading2": "BRANDS"
+      }
+    },
+    "92e7e92c-bd1f-4347-959d-800826fb6c88": {
+      "type": "gardening-outdoor-product",
+      "blocks": {
+        "1d7ec0de-8325-4264-8968-c6fff00fb2c3": {
+          "type": "deals_day",
+          "settings": {
+            "product_image1": "shopify:\/\/shop_images\/LawnMowers_0610dfec-ab3f-4e9c-a317-21a63c5291d8.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/lawn-mowers-accessories"
+          }
+        },
+        "1f70c3d7-9527-489e-ade3-97c43261dc0d": {
+          "type": "deals_day",
+          "settings": {
+            "product_image1": "shopify:\/\/shop_images\/new-new-new.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/hedge-trimmers-accessories"
+          }
+        },
+        "8e7a295c-f148-43e9-863c-24d05d4e49d9": {
+          "type": "deals_day",
+          "settings": {
+            "product_image1": "shopify:\/\/shop_images\/Gardenmultitools_eb5aeaed-16ed-4039-91a6-7aa6e47173f7.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/garden-multi-tools"
+          }
+        },
+        "0b446c92-d10e-4fba-976b-7cf2c2cbefa0": {
+          "type": "deals_day",
+          "settings": {
+            "product_image1": "shopify:\/\/shop_images\/Grassshears_ae8bedeb-cb42-43b6-b5da-3d38b4eb3670.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/grass-shears"
+          }
+        },
+        "e423596a-e3d3-4052-a25d-df642c0ea640": {
+          "type": "deals_day",
+          "settings": {
+            "product_image1": "shopify:\/\/shop_images\/GrassTrimmers_2c6a6203-0c73-4f36-aaad-773a69b71a9d.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/grass-trimmers-accessories"
+          }
+        },
+        "3466b658-ac01-4fe1-9ab0-4536b9069738": {
+          "type": "deals_day",
+          "settings": {
+            "product_image1": "shopify:\/\/shop_images\/Chainsaws_1aee6140-17b5-4ea9-aeac-5c0f8bddbcc7.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/chainsaws-accessories"
+          }
+        },
+        "8f9ddb69-ed84-4f9c-a871-4d5075511081": {
+          "type": "deals_day",
+          "settings": {
+            "product_image1": "shopify:\/\/shop_images\/Vacuums_Blowers_3a4eeb78-1312-4fa6-b40f-e8582a8aa16b.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/garden-vacuums-blowers"
+          }
+        },
+        "177bbac6-caa2-402d-ac9b-dcbe6b8e4e6f": {
+          "type": "deals_day",
+          "settings": {
+            "product_image1": "shopify:\/\/shop_images\/wheelbarrows_9b8e57cf-51c8-40a5-b9ac-c68ad8a9a590.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/wheelbarrows-accessories"
+          }
+        },
+        "c812baa8-35ab-4e4e-9bfe-b91c827912de": {
+          "type": "deals_day",
+          "settings": {
+            "product_image1": "shopify:\/\/shop_images\/Pressurewashers_97c00a4c-e243-47e3-8f08-eac3860d1b82.png",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/pressure-washers"
+          }
+        }
+      },
+      "block_order": [
+        "1d7ec0de-8325-4264-8968-c6fff00fb2c3",
+        "1f70c3d7-9527-489e-ade3-97c43261dc0d",
+        "8e7a295c-f148-43e9-863c-24d05d4e49d9",
+        "0b446c92-d10e-4fba-976b-7cf2c2cbefa0",
+        "e423596a-e3d3-4052-a25d-df642c0ea640",
+        "3466b658-ac01-4fe1-9ab0-4536b9069738",
+        "8f9ddb69-ed84-4f9c-a871-4d5075511081",
+        "177bbac6-caa2-402d-ac9b-dcbe6b8e4e6f",
+        "c812baa8-35ab-4e4e-9bfe-b91c827912de"
+      ],
+      "settings": {
+        "heading": "OUR RANGE OF",
+        "heading2": "GARDENING &amp; OUTDOOR"
+      }
+    },
+    "739e54d2-68d5-46b5-ae50-c5060778581b": {
+      "type": "gardening-outdoor-shopby",
+      "blocks": {
+        "433fdd9c-ca67-481b-ac8f-04fb56103e70": {
+          "type": "deals_day",
+          "settings": {
+            "banner_image": "shopify:\/\/shop_images\/Cordless_Range.jpg",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/garden-cordless-range"
+          }
+        },
+        "572db815-26ab-4bf6-9e79-57dacf33444c": {
+          "type": "deals_day",
+          "settings": {
+            "banner_image": "shopify:\/\/shop_images\/Corded_Range1.jpg",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/garden-corded-range"
+          }
+        },
+        "2a21e026-9871-4ab5-a5e9-d5b7611acf47": {
+          "type": "deals_day",
+          "settings": {
+            "banner_image": "shopify:\/\/shop_images\/Petrol_Range.jpg",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/garden-petrol-range"
+          }
+        }
+      },
+      "block_order": [
+        "433fdd9c-ca67-481b-ac8f-04fb56103e70",
+        "572db815-26ab-4bf6-9e79-57dacf33444c",
+        "2a21e026-9871-4ab5-a5e9-d5b7611acf47"
+      ],
+      "settings": {
+        "heading": "Shop by",
+        "heading2": "FUEL TYPE"
+      }
+    }
+  },
+  "order": [
+    "gardening-outdoor",
+    "a488f045-6f45-47bf-a9b6-847a4b72d3df",
+    "c47e56ff-3fe0-4722-8e05-46af5b5a13b3",
+    "92e7e92c-bd1f-4347-959d-800826fb6c88",
+    "739e54d2-68d5-46b5-ae50-c5060778581b"
+  ]
+}

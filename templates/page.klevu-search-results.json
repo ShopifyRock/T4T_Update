@@ -1,0 +1,13 @@
+{
+    "sections": {
+      "klevu-search-result": {
+        "type": "klevu-search-result",
+        "settings": {
+            
+        }
+      }
+    },
+    "order": [
+      "klevu-search-result"
+    ]
+  }

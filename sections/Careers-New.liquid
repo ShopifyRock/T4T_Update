@@ -3,7 +3,7 @@
         <div class="grid__item">
             {% if section.settings.image != blank %}
                 <div class="careers_image_main">
-                    <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+                    <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" loading="lazy"/>
                 </div>
             {% endif %}
             <div class="rte common-pages-inner-new careers_inner_text_new ">
@@ -15,7 +15,7 @@
                     {% for block in section.blocks %}
                         {% if block.settings.image != blank %}
                             <div class="career_inner_img_list">
-                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" />
+                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" loading="lazy"/>
                             </div>
                         {% endif %}
                     {% endfor %}
