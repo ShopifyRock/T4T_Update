@@ -3,7 +3,7 @@
         <div class="contact-page-section">
             {% if section.settings.image != blank %}
                 <div class="contact_image_main">
-                    <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" />
+                    <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}" loading="lazy" />
                 </div>
             {% endif %}
             {% if page.content != blank %}
@@ -18,18 +18,18 @@
                     <div class="quick-action-links">
                         <div class="quick-link email">
                             <a href="mailto:sales@tools4trade.co.uk">
-                                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/mail_90a52dbc-1c41-47eb-a50c-0bea561fe196.png?v=1681897911" width="27" height="27" alt="Email" />sales@tools4trade.co.uk
+                                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/mail_90a52dbc-1c41-47eb-a50c-0bea561fe196.png?v=1681897911" loading="lazy" width="27" height="27" alt="Email" />sales@tools4trade.co.uk
                             </a>
                         </div>
                         <div class="quick-link number">
                             <a href="tel:01908969966">
-                                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/mobile.png?v=1681897911" alt="mobile" width="27" height="27" />
+                                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/mobile.png?v=1681897911" alt="mobile" width="27" height="27" loading="lazy" />
                                 01908 969966
                             </a>
                         </div>
                         <div class="quick-link whatsapp">
                             <a href="https://api.whatsapp.com/send/?phone=447426727794&text&type=phone_number&app_absent=0" target="_blank">
-                                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/whatsapp.png?v=1682670771" alt="Whatsapp" height="24" width="24" />Chat With Us
+                                <img src="https://cdn.shopify.com/s/files/1/0508/5220/0645/files/whatsapp.png?v=1682670771" alt="Whatsapp" height="24" width="24" loading="lazy" />Chat With Us
                             </a>
                         </div>
                     </div>

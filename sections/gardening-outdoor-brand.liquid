@@ -1,0 +1,73 @@
+<section class="brand-section">
+    {% if section.settings.heading != blank %}
+      <div class="main-page-title">
+          <div class="page-width">
+              <h3>{{ section.settings.heading }} <span>{{ section.settings.heading2 }}</span></h3>
+          </div>
+      </div>
+      {% endif %}
+      <div class="brand-section-inner">
+          <div class="page-width">
+              <div class="image-grids">
+                {% for block in section.blocks %}
+                  {% if block.settings.button_link != blank %}
+                    {% if block.settings.brand_image != blank %}
+                  <div class="image-grid">
+                      <a href="{{ block.settings.button_link }}" title="imageGrid">
+                          <img src="{{ block.settings.brand_image | img_url: 'original' }}" />
+                      </a>
+                  </div>
+                    {% endif %}
+                    {% endif %}
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+  </section>
+  {% schema %}
+    {
+      "name": "Gardening Outdoor Brand",
+      "settings": [
+        {
+          "type": "html",
+          "id": "heading",
+          "label": "Heading in White Color"
+        },
+        {
+          "type": "html",
+          "id": "heading2",
+          "label": "Heading in Green Color"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "deals_day",
+          "name": "Brand List",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "brand_image",
+              "label": "Brand Image"
+            },
+            {
+              "type": "url",
+              "id": "button_link",
+              "label": "Brand Collection Link"
+            }
+          ]
+        }
+      ],
+      "presets":[
+         {
+            "name":"Gardening Outdoor Brand",
+            "category":"Custom"
+         }
+      ]
+    }
+  {% endschema %}
+  
+  {% stylesheet %}
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}

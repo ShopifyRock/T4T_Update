@@ -1,0 +1,118 @@
+<style type="text/css">
+    @font-face {
+        font-family: "Helvetica";
+    /*     src: url("https://cdn.shopify.com/s/files/1/0508/5220/0645/files/Helvetica-BoldOblique.ttf?v=1677743422") format("truetype"); */
+        src: url ("https://cdn.shopify.com/s/files/1/0508/5220/0645/files/helvetica-compressed-5871d14b6903a.otf?v=1677759893") format("opentype");
+    }
+    section.main-page-banner img {
+        vertical-align: middle;
+    }
+      /*custom page css @vipul*/
+      .template-page .main-content {
+        padding-top: 0;
+        padding-bottom: 0px;
+    }
+    section.main-page-banner {
+        clear: both;
+        display: block;
+    }
+    section.brand-section {
+        clear: both;
+    }
+    .main-page-title {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      background: #292929;
+      text-align: center;
+    }
+    .main-page-title h3 {
+        font-size: 45px;
+        line-height: 32px;
+        color: #fff;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-style: italic;
+        margin: 20px 0;
+        font-family: Helvetica;
+        letter-spacing: -1.5px;
+        text-shadow: 1px 2px #000;
+    }
+    .main-page-title h3 span {
+      color: #5da342;
+    }
+    body .image-grids {
+        margin: 40px 0;
+        gap: 40px;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    body.template-page {
+        background: #f7f7f7;
+    }
+    section.shopby-section .categories {
+        gap: 5px;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #fff;
+       padding-bottom: 40px;
+    }
+    .view-all a {
+        font-style: italic;
+        font-weight: 900;
+    }
+      
+    @media only screen and (max-width: 992px) {
+      .main-page-title h3 {
+          font-size: 32px;
+          line-height: 32px;
+      }
+      body .image-grids {
+          gap: 20px;
+      }
+    }
+    
+    @media only screen and (max-width: 767px){
+      .main-page-title h3 {
+          font-size: 24px;
+          line-height: 26px;
+          margin: 10px 0;
+      }
+      body .image-grids {
+          gap: 15px;
+          grid-template-columns: repeat(2, 1fr);
+          margin: 20px 0;
+      }
+      section.shopby-section .categories {
+          grid-template-columns: repeat(1, 1fr);
+      }
+    }  
+      .view-all {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        text-align: center;
+        margin: 0px 0 25px;
+    }
+      .view-all a {
+        background: #292929;
+        padding: 20px 20px;
+        border: 5px solid #fff;
+        display: inline-block;
+        border-radius: 9px;
+        vertical-align: middle;
+        font-family: Helvetica;
+        color: #fff;
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: -1px;
+    }
+      .view-all a span {
+        color: #5da342;
+    }
+        .view-all a:hover{
+          color: #fff;
+        }
+    </style>

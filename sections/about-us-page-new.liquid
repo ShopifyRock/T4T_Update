@@ -1,59 +1,58 @@
 <div class="page-width">
-    <div class="about_us_page_main_top_new">
-      {% if section.blocks.size > 0 %}
-        {% for block in section.blocks %}
-          <div class="about_us_page_inner_new">
-            {% if block.settings.title != blank %}
-              <div class="about_us_page_heading_new">
-                {{ block.settings.title }}
-              </div>
-            {% endif %}
-            {% if block.settings.alltext != blank %}
-              <div class="about_us_page_texts_new">
-                {{ block.settings.alltext }}
-              </div>
-            {% endif %}
-            {% if block.settings.image != blank %}
-              <div class="about_us_page_images_new">
-                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" />
-              </div>
-            {% endif %}
-          </div>
-        {% endfor %}
-      {% endif %}
-    </div>
+  <div class="about_us_page_main_top_new">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        <div class="about_us_page_inner_new">
+          {% if block.settings.title != blank %}
+            <div class="about_us_page_heading_new">
+              {{ block.settings.title }}
+            </div>
+          {% endif %}
+          {% if block.settings.alltext != blank %}
+            <div class="about_us_page_texts_new">
+              {{ block.settings.alltext }}
+            </div>
+          {% endif %}
+          {% if block.settings.image != blank %}
+            <div class="about_us_page_images_new">
+              <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" />
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
   </div>
-  {% schema %}
+</div>
+
+{% schema %}
+{
+  "name": "About Us Page New",
+  "class": "about_us_page_new",
+  "settings": [],
+  "blocks": [
     {
-      "name": "About Us Page New",
-      "class": "about_us_page_new",
+      "type": "about_us_information",
+      "name": "About Us Information",
       "settings": [
-  
-      ],
-      "blocks": [
         {
-          "type": "about_us_information",
-          "name": "About Us Information",
-          "settings": [
-            {
-              "type": "text",
-              "id": "title",
-              "label": "Add Heading Text",
-              "default": "Heading"
-            },
-            {
-              "type": "html",
-              "id": "alltext",
-              "label": "Add Information Text",
-              "default": "<p>Tools4trade was found in 2004, we have trade counter in <strong><i>Hanwell London</i></strong> and our head office and distribution centre in <strong><i>Milton Keynes</i></strong>.</p>"
-            },
-            {
-              "type": "image_picker",
-              "id": "image",
-              "label": "Add Information Image"
-            }
-          ]
+          "type": "text",
+          "id": "title",
+          "label": "Add Heading Text",
+          "default": "Heading"
+        },
+        {
+          "type": "html",
+          "id": "alltext",
+          "label": "Add Information Text",
+          "default": "<p>Tools4trade was found in 2004, we have trade counter in <strong><i>Hanwell London</i></strong> and our head office and distribution centre in <strong><i>Milton Keynes</i></strong>.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Information Image"
         }
       ]
     }
-  {% endschema %}
+  ]
+}
+{% endschema %}

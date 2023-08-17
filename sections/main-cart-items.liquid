@@ -50,7 +50,7 @@
                                                 {%- assign property_size = item.properties | size -%}
 
                                                 <ul class="product-details{% if item.product.has_only_default_variant and property_size == 0 %} hide{% endif %}"
-                                                    data-cart-item-details aria-label="{{ 'cart.label.product_details' | t }}">
+                                                    data-cart-item-details aria-label="{{ 'sections.cart.product_details' | t }}">
                                                     {%- for option in variant_options -%}
                                                     <li
                                                         class="product-details__item product-details__item--variant-option{% if item.product.has_only_default_variant %} hide{% endif %}"
@@ -162,13 +162,13 @@
                                                 <div {% unless hasDiscount %}class="hide"{% endunless -%}
                                                     data-cart-item-discounted-price-group>
                                                     <dt>
-                                                        <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                                                        <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                                                     </dt>
                                                     <dd>
                                                         <span data-cart-item-original-price>{{ item.original_price | money }}</span>
                                                     </dd>
                                                     <dt>
-                                                        <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
+                                                        <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
                                                     </dt>
                                                     <dd>
                                                         <span class="order-discount" data-cart-item-final-price>
@@ -180,7 +180,7 @@
                                                 <div {% if hasDiscount %}class="hide"{% endif -%}
                                                     data-cart-item-regular-price-group>
                                                     <dt>
-                                                        <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                                                        <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                                                     </dt>
 
                                                     <dd data-cart-item-regular-price>
@@ -195,14 +195,14 @@
                                                     data-unit-price-group>
                                                     <dt>
                                                         <span class="visually-hidden visually-hidden--inline">
-                                                            {{- 'products.product.unit_price_label' | t -}}
+                                                            {{- 'products.product.price.unit_price' | t -}}
                                                         </span>
                                                     </dt>
                                                     <dd>
                                                         <span class="price-unit-price">
                                                             {%- capture unit_price_separator -%}
                                                             <span aria-hidden="true">/</span>
-                                                            <span class="visually-hidden">{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;</span>
+                                                            <span class="visually-hidden">{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                                                             {%- endcapture -%}
                                                             {%- capture unit_price_base_unit -%}
                                                             {%- if item.unit_price_measurement.reference_value != 1 -%}
@@ -252,7 +252,7 @@
                                         </div>
                                         <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--mobile hide"
                                             role="alert" data-cart-quantity-error-message-wrapper>
-                                            <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                                            <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
                                             {% include 'icon-error' %}
                                             <span class="cart__qty-error-message" data-cart-quantity-error-message></span>
                                         </div>
@@ -272,7 +272,7 @@
                                         </div>
                                         <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--desktop hide"
                                             role="alert" data-cart-quantity-error-message-wrapper>
-                                            <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                                            <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
                                             {% include 'icon-error' %}
                                             <span class="cart__qty-error-message" data-cart-quantity-error-message></span>
                                         </div>
@@ -281,13 +281,13 @@
                                         <dl {% unless item.original_line_price != item.final_line_price %}class="hide"{% endunless %}
                                             data-cart-item-discounted-price-group>
                                             <dt>
-                                                <span class="visually-hidden">{{ 'cart.label.regular_total' | t }}</span>
+                                                <span class="visually-hidden">{{ 'sections.cart.regular_total' | t }}</span>
                                             </dt>
                                             <dd>
                                                 <s data-cart-item-original-price>{{ item.original_line_price | money }}</s>
                                             </dd>
                                             <dt>
-                                                <span class="visually-hidden">{{ 'cart.label.discounted_total' | t }}</span>
+                                                <span class="visually-hidden">{{ 'sections.cart.discounted_total' | t }}</span>
                                             </dt>
                                             <dd>
                                                 <span class="order-discount" data-cart-item-final-price>
@@ -300,7 +300,7 @@
                                         </div>
                                     </div>
                                     <p class="cart__remove">
-                                        <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="text-link" aria-label="{{ 'cart.label.remove' | t: product: item.title }}" title="Remove" data-cart-remove>
+                                        <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="text-link" aria-label="{{ 'sections.cart.remove' | t: product: item.title }}" title="Remove" data-cart-remove>
                                             <img alt="Delete" width="16" height="21" src="https://cdn.shopify.com/s/files/1/0672/7686/5833/files/delete-icon.png?v=1677222952">
                                         </a>
                                     </p>
@@ -376,7 +376,7 @@
                                     </div>
 
                                     <div class="cart__error-message-wrapper hide" role="alert" data-cart-error-message-wrapper>
-                                        <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                                        <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
                                         {% include 'icon-error' %}
                                         <span class="cart__error-message" data-cart-error-message></span>
                                     </div>

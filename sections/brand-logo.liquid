@@ -28,11 +28,11 @@
               >
             {% else %}
               {% if collection.image != blank %}
-                <img src="{{ collection.image | img_url: '50x' }}" alt="{{ collection.image.alt }}" class="lazyload">
+                <img src="{{ collection.image | img_url: '50x' }}" alt="{{ collection.image.alt }}" class="lazyload" loading="lazy">
               {% endif %}
             {% endif %}
             <h3>
-              <a href="{{ block.settings.collection.url }}" title="{{  block.settings.col_title }}">
+              <a href="{{ block.settings.collection.url }}" title="{{ block.settings.col_title }}">
                 {% if block.settings.col_title != blank %}
                   {{ block.settings.col_title }}
                 {% else %}
@@ -41,7 +41,7 @@
               </a>
             </h3>
 <!--             <p>{{ collection.products_count }} items</p> -->
-            <a class="box-link" href="{{ block.settings.collection.url }}" title="{{  block.settings.col_title }}" >&nbsp;</a>
+            <a class="box-link" href="{{ block.settings.collection.url }}" title="{{ block.settings.col_title }}" >&nbsp;</a>
           </div>
         </div>
       {% endfor %}
