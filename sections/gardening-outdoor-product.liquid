@@ -1,71 +1,71 @@
 <section class="product-section">
-    {% if section.settings.heading != blank %}
-      <div class="main-page-title">
-          <div class="page-width">
-              <h3>{{ section.settings.heading }} <span>{{ section.settings.heading2 }}</span></h3>
-          </div>
+  {% if section.settings.heading != blank %}
+    <div class="main-page-title">
+      <div class="page-width">
+        <h3>{{ section.settings.heading }} <span>{{ section.settings.heading2 }}</span></h3>
       </div>
-      {% endif %}
-      <div class="product-section-inner">
-          <div class="page-width">
-                  <div class="image-grids">
-            {% for block in section.blocks %}
-              {% if block.settings.button_link != blank %}
-              {% if block.settings.product_image1 != blank %}
-                      <div class="image-grid">
-                          <a href="{{ block.settings.button_link }}" title="imageGrid">
-                              <img src="{{ block.settings.product_image1 | img_url: 'original' }}"  />
-                          </a>
-                      </div>
-              {% endif %}
-              {% endif %}
-            {% endfor %}
-                  </div>
-            <div class="view-all"><a href="https://tools4trade.co.uk/collections/gardening-outdoor?pf_st_stock_filter=true" >SHOP ALL <span>DEALS</span></a></div>
-          </div>
+    </div>
+  {% endif %}
+  <div class="product-section-inner">
+    <div class="page-width">
+      <div class="image-grids">
+        {% for block in section.blocks %}
+          {% if block.settings.button_link != blank %}
+            {% if block.settings.product_image1 != blank %}
+              <div class="image-grid">
+                <a href="{{ block.settings.button_link }}" title="imageGrid">
+                  <img src="{{ block.settings.product_image1 | img_url: 'original' }}"  />
+                </a>
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
       </div>
-  </section>
-  {% schema %}
-    {
-      "name": "Gardening Outdoor Product",
-      "settings": [
+      <div class="view-all"><a href="https://tools4trade.co.uk/collections/gardening-outdoor?pf_st_stock_filter=true" >SHOP ALL <span>DEALS</span></a></div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Gardening Outdoor Product",
+    "settings": [
+      {
+        "type": "html",
+        "id": "heading",
+        "label": "Heading in White Color"
+      },
+      {
+        "type": "html",
+        "id": "heading2",
+        "label": "Heading in Green Color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "deals_day",
+        "name": "Deals Of the Day",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "product_image1",
+            "label": "Product Image"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Shop Button Link"
+          }
+        ]
+      }
+    ],
+    "presets":[
         {
-          "type": "html",
-          "id": "heading",
-          "label": "Heading in White Color"
-        },
-        {
-          "type": "html",
-          "id": "heading2",
-          "label": "Heading in Green Color"
+          "name":"Gardening Outdoor Product",
+          "category":"Custom"
         }
-      ],
-      "blocks": [
-        {
-          "type": "deals_day",
-          "name": "Deals Of the Day",
-          "settings": [
-            {
-              "type": "image_picker",
-              "id": "product_image1",
-              "label": "Product Image"
-            },
-            {
-              "type": "url",
-              "id": "button_link",
-              "label": "Shop Button Link"
-            }
-          ]
-        }
-      ],
-      "presets":[
-         {
-            "name":"Gardening Outdoor Product",
-            "category":"Custom"
-         }
-      ]
-    }
-  {% endschema %}
+    ]
+  }
+{% endschema %}
   
   {% stylesheet %}
   {% endstylesheet %}

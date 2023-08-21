@@ -3442,6 +3442,59 @@ body.template-index .breadcrumb_text_new {
     margin-bottom: 10px;
 }
 
+
+.filter-form .price-range-slider {
+    display: inline-block;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.filter-form .price-range-slider #slider-range {
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    border-top: 2px solid #3D4246;
+    background: transparent;
+}
+
+.filter-form .price-range-slider #slider-range .ui-slider-range {
+    height: 0;
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+}
+
+.filter-form .price-range-slider .ui-slider-handle {
+    width: 18px;
+    border-radius: 100%;
+    background: #fff;
+    height: 18px;
+    border-color: #3D4246;
+    top: -10px;
+}
+
+.filter-form .price-range-slider #stepsCount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-form .price-range-slider #stepsCount .step {
+    position: relative;
+    font-size: 12px;
+}
+
+.filter-form .price-range-slider #stepsCount .step:before {
+    content: "";
+    width: 1px;
+    height: 10px;
+    background: #3D4246;
+    display: inline-block;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /* Collection filter style end  */
 
 
@@ -10609,6 +10662,12 @@ h4.red-text.margin-L20::after {
     .klarna-faqs-new-title .h1, 
     .klarna-faqs-new-title h1 {
         font-size: 20px;
+    }
+
+    .filter-form .price-range-slider {
+        padding-top: 0;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
 }
