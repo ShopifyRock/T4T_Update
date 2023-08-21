@@ -10,71 +10,34 @@
       <ul class="nav nav-tabs product-category-tabs" id="top-seller-category-tabs" role="menu" aria-label="My Account">
         {% if section.settings.tab_title_1 != blank %}
           <li class="nav-item" role="none">
-            <a
-              role="menuitem" 
-              class="nav-link active"
-              id="cordless-tools"
-              data-toggle="tab"
-              href="#cordlesstools"
-              aria-controls="cordless-tools"
-              tabindex="0"
-            >
+            <a role="menuitem" class="nav-link active" id="cordless-tools" data-toggle="tab" href="#cordlesstools" aria-controls="cordless-tools" tabindex="0" >
               {{- section.settings.tab_title_1 -}}
             </a>
           </li>
         {% endif %}
         {% if section.settings.tab_title_2 != blank %}
           <li class="nav-item" role="none">
-            <a
-              role="menuitem" 
-              class="nav-link"
-              id="hand-tools"
-              data-toggle="tab"
-              href="#handtools"
-              aria-controls="hand-tools"
-              tabindex="0"
-            >
+            <a role="menuitem" class="nav-link" id="hand-tools" data-toggle="tab" href="#handtools" aria-controls="hand-tools" tabindex="0">
               {{- section.settings.tab_title_2 -}}
             </a>
           </li>
         {% endif %}
         {% if section.settings.tab_title_3 != blank %}
           <li class="nav-item" role="none">
-            <a
-              role="menuitem" 
-              class="nav-link"
-              id="air-tools"
-              data-toggle="tab"
-              href="#airtools"
-              aria-controls="air-tools"
-              tabindex="0"
-            >
+            <a role="menuitem" class="nav-link" id="air-tools" data-toggle="tab" href="#airtools" aria-controls="air-tools" tabindex="0" >
               {{- section.settings.tab_title_3 -}}
             </a>
           </li>
         {% endif %}
         {% if section.settings.tab_title_4 != blank %}
           <li class="nav-item" role="none">
-            <a
-              role="menuitem" 
-              class="nav-link"
-              id="all-products"
-              data-toggle="tab"
-              href="#allproducts"
-              aria-controls="all-products"
-              tabindex="0"
-            >
+            <a role="menuitem" class="nav-link" id="all-products" data-toggle="tab" href="#allproducts" aria-controls="all-products" tabindex="0" >
               {{- section.settings.tab_title_4 -}}
             </a>
           </li>
         {% endif %}
         <li class="nav-item" role="none">
-            <a
-            role="menuitem"
-            tabindex="0"
-            class="nav-link"
-            href="https://tools4trade.co.uk/collections/new-arrivals"
-            >
+            <a role="menuitem" tabindex="0" class="nav-link" href="https://tools4trade.co.uk/collections/new-arrivals" >
              See All Products
             </a>
           </li>
@@ -86,19 +49,16 @@
           {% render 'top-best-sellers-tab1' %}
         </div>
       </div>
-
       <div class="tab-pane fade" id="handtools" role="tabpanel" aria-labelledby="hand-tools">
         <div class="top-best-selling-carousel products-carousel products-items-grid">
           {% render 'top-best-sellers-tab2' %}
         </div>
       </div>
-
       <div class="tab-pane fade" id="airtools" role="tabpanel" aria-labelledby="air-tools">
         <div class="top-best-selling-carousel products-carousel products-items-grid">
           {% render 'top-best-sellers-tab3' %}
         </div>
       </div>
-
       <div class="tab-pane fade" id="allproducts" role="tabpanel" aria-labelledby="all-products">
         <div class="top-best-selling-carousel products-carousel products-items-grid">
           {% render 'top-best-sellers-tab4' %}
@@ -111,52 +71,51 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script>
-  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
     $('.top-best-selling-carousel').slick('setPosition');
-  });
-    $('.top-best-selling-carousel').slick({
+});
+$('.top-best-selling-carousel').slick({
     dots: true,
-    arrows:false,
+    arrows: false,
     infinite: false,
     speed: 2000,
     slidesToShow: 6,
     slidesToScroll: 6,
-    responsive: [
-        {
-        breakpoint: 1400,
-        settings: {
-            slidesToShow: 5,
-            slidesToScroll: 5,
-          speed: 800	        
-        }
+    responsive: [{
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                speed: 800
+            }
         },
         {
-        breakpoint: 1200,
-        settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
-          speed: 800	        
-        }
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                speed: 800
+            }
         },
         {
-        breakpoint: 992,
-        settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-          speed: 800
-        }
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                speed: 800
+            }
         },
         {
-        breakpoint: 600,
-        settings: {
-            slidesToShow: 2,
-            rows:2,
-            slidesToScroll: 2,
-          speed: 800
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                rows: 2,
+                slidesToScroll: 2,
+                speed: 800
+            }
         }
-        }		    
     ]
-    });
+});
 </script>
 
 {% schema %}

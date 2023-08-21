@@ -1,70 +1,69 @@
 <div class="container">
-
-    <div class="m-button-container d-none m-block">
-      <ul>
-          <li><a href="/account" title="My Orders">
-              <img src="https://cdn.shopify.com/s/files/1/0704/4464/6709/files/online-order.svg?v=1673337549" alt="">
-              My Orders</a>
-          </li>
-          <li><a href="/pages/wishlist" title="Shopping Wishlist"><img src="https://cdn.shopify.com/s/files/1/0704/4464/6709/files/wishlist.svg?v=1673337549" alt="">
-              Shopping Wishlist</a>
-          </li>
-          <li><a href="/account/addresses" title="My Address"><img src="https://cdn.shopify.com/s/files/1/0704/4464/6709/files/address.svg?v=1673337549" alt="">
-              My Address</a>
-          </li>
-          <li><a href="/account/logout" title="Logout"><img src="https://cdn.shopify.com/s/files/1/0704/4464/6709/files/logout.svg?v=1673337549" alt="">
-              Logout</a>
-          </li>
-      </ul>
-    </div>
-  
-    <div class="section-header">
-      <h1>{{ 'customer.account.title' | t }}</h1>
-      {{ 'customer.log_out' | t | customer_logout_link }}
-    </div>
-  
-    <div class="myaccount">
-      <div class="myaccount__order-history">
-        <h2>{{ 'customer.orders.title' | t }}</h2>
-  
-        {% paginate customer.orders by 20 %}
-          {% if customer.orders.size != 0 %}
-  
-            <table class="responsive-table">
-              <thead>
+  <div class="m-button-container d-none m-block">
+    <ul>
+      <li>
+        <a href="/account" title="My Orders">
+          <img src="https://cdn.shopify.com/s/files/1/0704/4464/6709/files/online-order.svg?v=1673337549" alt=""> My Orders 
+        </a>
+      </li>
+      <li>
+        <a href="/pages/wishlist" title="Shopping Wishlist"><img src="https://cdn.shopify.com/s/files/1/0704/4464/6709/files/wishlist.svg?v=1673337549" alt="">
+          Shopping Wishlist
+        </a>
+      </li>
+      <li>
+        <a href="/account/addresses" title="My Address"><img src="https://cdn.shopify.com/s/files/1/0704/4464/6709/files/address.svg?v=1673337549" alt="">
+          My Address
+        </a>
+      </li>
+      <li>
+        <a href="/account/logout" title="Logout"><img src="https://cdn.shopify.com/s/files/1/0704/4464/6709/files/logout.svg?v=1673337549" alt="">
+          Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="section-header">
+    <h1>{{ 'customer.account.title' | t }}</h1>
+    {{ 'customer.log_out' | t | customer_logout_link }}
+  </div>
+  <div class="myaccount">
+    <div class="myaccount__order-history">
+      <h2>{{ 'customer.orders.title' | t }}</h2>
+      {% paginate customer.orders by 20 %}
+        {% if customer.orders.size != 0 %}
+          <table class="responsive-table">
+            <thead>
+              <tr>
+                <th scope="col">{{ 'customer.orders.order_number' | t }}</th>
+                <th scope="col">{{ 'customer.orders.date' | t }}</th>
+                <th scope="col">{{ 'customer.orders.payment_status' | t }}</th>
+                <th scope="col">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                <th scope="col">{{ 'customer.orders.total' | t }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in customer.orders %}
                 <tr>
-                  <th scope="col">{{ 'customer.orders.order_number' | t }}</th>
-                  <th scope="col">{{ 'customer.orders.date' | t }}</th>
-                  <th scope="col">{{ 'customer.orders.payment_status' | t }}</th>
-                  <th scope="col">{{ 'customer.orders.fulfillment_status' | t }}</th>
-                  <th scope="col">{{ 'customer.orders.total' | t }}</th>
+                  <th data-label="{{ 'customer.orders.order_number' | t }}" scope="row">
+                    <a href="{{ order.customer_url }}" class="btn btn--secondary btn--small" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.name }}</a>
+                  </th>
+                  <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
+                  <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                  <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                  <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {% for order in customer.orders %}
-                  <tr>
-                    <th data-label="{{ 'customer.orders.order_number' | t }}" scope="row">
-                      <a href="{{ order.customer_url }}" class="btn btn--secondary btn--small" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.name }}</a>
-                    </th>
-                    <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
-                    <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
-                    <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
-                    <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
-                  </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-  
-          {% else %}
-  
-            <p>{{ 'customer.orders.none' | t }}</p>
-  
-          {% endif %}
-          {%- if paginate.pages > 1 -%}
-            {% include 'pagination', paginate: paginate %}
-          {%- endif -%}
-        {% endpaginate %}
-      </div>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% else %}
+          <p>{{ 'customer.orders.none' | t }}</p>
+        {% endif %}
+        {%- if paginate.pages > 1 -%}
+          {% include 'pagination', paginate: paginate %}
+        {%- endif -%}
+      {% endpaginate %}
     </div>
   </div>
+</div>
   

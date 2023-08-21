@@ -1,20 +1,15 @@
 <section class="main-page-banner">
 	<div class="page-banner-inner">
 		<div class="banner-image">
-          {% if section.settings.banner_link != blank %}
-            {% if section.settings.desk_image != blank %}
-    			<picture>
-    				<source 
-    			      media="(min-width: 768px)"
-    			      srcset="{{ section.settings.desk_image | image_url }}">
-    			   <source 
-    			      media="(max-width: 767px)"
-    			      srcset="{{ section.settings.mob_image | image_url }}">
-    			   <img src="{{ section.settings.desk_image | image_url }}" 
-    			   alt="main banner">
-    			</picture>
-            {% endif %}
-          {% endif %}
+      {% if section.settings.banner_link != blank %}
+        {% if section.settings.desk_image != blank %}
+          <picture>
+            <source media="(min-width: 768px)" srcset="{{ section.settings.desk_image | image_url }}">
+            <source media="(max-width: 767px)" srcset="{{ section.settings.mob_image | image_url }}">
+            <img src="{{ section.settings.desk_image | image_url }}" alt="main banner">
+          </picture>
+        {% endif %}
+      {% endif %}
 		</div>
 	</div>
 </section>

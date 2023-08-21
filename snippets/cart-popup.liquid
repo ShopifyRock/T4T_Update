@@ -1,5 +1,4 @@
-<div class="cart-popup-wrapper cart-popup-wrapper--hidden" role="dialog" aria-modal="true"
-    aria-labelledby="CartPopupHeading" data-cart-popup-wrapper>
+<div class="cart-popup-wrapper cart-popup-wrapper--hidden" role="dialog" aria-modal="true" aria-labelledby="CartPopupHeading" data-cart-popup-wrapper>
     <div class="cart-popup" data-cart-popup tabindex="-1">
         <div class="cart-popup__header">
             <h2 id="CartPopupHeading" class="cart-popup__heading">Just added to your cart</h2>
@@ -24,35 +23,31 @@
                 </div>
             </div>
         </div>
-
         <a href="{{ routes.cart_url }}" title="View cart" class="cart-popup__cta-link btn btn--secondary-accent">
             View cart (<span data-cart-popup-cart-quantity></span>)
         </a>
-
         <div class="cart-popup__dismiss">
-            <button class="vipul-button text-link text-link--accent" title="Continue shopping"
-                aria-label="Continue shopping" data-cart-popup-dismiss>
+            <button class="vipul-button text-link text-link--accent" title="Continue shopping" aria-label="Continue shopping" data-cart-popup-dismiss>
                 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 18" width="11" height="18">
-                    <title>Path 6</title>
-                    <style>
-                        .s0 {
-                            fill: #232f3e
-                        }
-                    </style>
-                    <path id="Path 6" class="s0"
-                        d="m0.3 9.7l8 8q0.3 0.2 0.7 0.3 0.4-0.1 0.7-0.3l0.6-0.6c0.3-0.4 0.3-1 0-1.4l-6.8-6.7 6.8-6.7q0.2-0.3 0.2-0.7 0-0.4-0.2-0.7l-0.6-0.6q-0.3-0.3-0.7-0.3-0.4 0-0.7 0.3l-8 8q-0.3 0.3-0.3 0.7 0 0.4 0.3 0.7z" />
+                    <title>Path 6</title>  
+                    <path id="Path 6" class="s0" d="m0.3 9.7l8 8q0.3 0.2 0.7 0.3 0.4-0.1 0.7-0.3l0.6-0.6c0.3-0.4 0.3-1 0-1.4l-6.8-6.7 6.8-6.7q0.2-0.3 0.2-0.7 0-0.4-0.2-0.7l-0.6-0.6q-0.3-0.3-0.7-0.3-0.4 0-0.7 0.3l-8 8q-0.3 0.3-0.3 0.7 0 0.4 0.3 0.7z" />
                 </svg>
                 Continue shopping
             </button>
         </div>
     </div>
 </div>
+<style>
+    .s0 {
+        fill: #232f3e
+    }
+</style>
 <script>
-    $(document).ready(function () {
-        $(".vipul-button").click(function () {
-            var vipul = document.referrer;
-            console.log("back-url", vipul);
-            window.location.href = vipul;
-        });
+$(document).ready(function () {
+    $(".vipul-button").click(function () {
+        var vipul = document.referrer;
+        console.log("back-url", vipul);
+        window.location.href = vipul;
     });
+});
 </script>

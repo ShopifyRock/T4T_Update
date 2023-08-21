@@ -23,90 +23,84 @@
   {% if section.settings.boxheading != blank %}
     <h1><strong>{{ section.settings.boxheading }}</strong></h1>
   {% endif %}
-  
-  <div class="FeatureCards">
-    
-     <div class="FeatureCard">
-        <div class="FeatureCard__Card">
-           <div class="FeatureCard__Header">
-             {% if section.settings.imageicons1 != blank %} 
-                <div class="FeatureCard__Icon">
-                   <img class="ImageLoader ImageLoader--loaded ImageLoader--fill-height" alt="Three Easy Payments Icon" src="{{ section.settings.imageicons1 | img_url: 'master' }}">
-                </div>
-             {% endif %}
-             {% if section.settings.titletext1 != blank or section.settings.titlesubtext1 != blank %}
-                <div class="FeatureCard__Headers">
-                  {% if section.settings.titletext1 != blank %}
-                     <p class="Paragraph Paragraph--regular Paragraph--bold Paragraph--left Paragraph--color-black FeatureCard__Title">{{ section.settings.titletext1 }}</p>
-                  {% endif %}
-                  {% if section.settings.titlesubtext1 != blank %}
-                     {{ section.settings.titlesubtext1 }}
-                  {% endif %}
-                </div>
-             {% endif %}
-           </div>
-          {% if section.settings.box1html != blank %} 
-             {{ section.settings.box1html }}
+  <div class="FeatureCards">  
+    <div class="FeatureCard">
+      <div class="FeatureCard__Card">
+        <div class="FeatureCard__Header">
+          {% if section.settings.imageicons1 != blank %} 
+            <div class="FeatureCard__Icon">
+              <img class="ImageLoader ImageLoader--loaded ImageLoader--fill-height" alt="Three Easy Payments Icon" src="{{ section.settings.imageicons1 | img_url: 'master' }}">
+            </div>
+          {% endif %}
+          {% if section.settings.titletext1 != blank or section.settings.titlesubtext1 != blank %}
+            <div class="FeatureCard__Headers">
+              {% if section.settings.titletext1 != blank %}
+                <p class="Paragraph Paragraph--regular Paragraph--bold Paragraph--left Paragraph--color-black FeatureCard__Title">{{ section.settings.titletext1 }}</p>
+              {% endif %}
+              {% if section.settings.titlesubtext1 != blank %}
+                {{ section.settings.titlesubtext1 }}
+              {% endif %}
+            </div>
           {% endif %}
         </div>
-     </div>
-    
-     <div class="FeatureCard">
+        {% if section.settings.box1html != blank %} 
+          {{ section.settings.box1html }}
+        {% endif %}
+      </div>
+      </div>
+      <div class="FeatureCard">
         <div class="FeatureCard__Card spread-cost">
-           <div class="FeatureCard__Header">
-             {% if section.settings.imageicons2 != blank %} 
-                <div class="FeatureCard__Icon">
-                   <img class="ImageLoader ImageLoader--loaded ImageLoader--fill-height" alt="Spread the Cost Up to 3 Years Icon" src="{{ section.settings.imageicons2 | img_url: 'master' }}">
-                </div>
-             {% endif %}
-             {% if section.settings.titletext2 != blank or section.settings.titlesubtext2 != blank %}
-                <div class="FeatureCard__Headers">
-                  {% if section.settings.titletext2 != blank %}
-                     <p class="Paragraph Paragraph--regular Paragraph--bold Paragraph--left Paragraph--color-black FeatureCard__Title">{{ section.settings.titletext2 }}</p>
-                  {% endif %}
-                  {% if section.settings.titlesubtext2 != blank %}
-                     {{ section.settings.titlesubtext2 }}
-                  {% endif %}
-                </div>
-             {% endif %}
-           </div>
+          <div class="FeatureCard__Header">
+            {% if section.settings.imageicons2 != blank %} 
+              <div class="FeatureCard__Icon">
+                <img class="ImageLoader ImageLoader--loaded ImageLoader--fill-height" alt="Spread the Cost Up to 3 Years Icon" src="{{ section.settings.imageicons2 | img_url: 'master' }}">
+              </div>
+            {% endif %}
+            {% if section.settings.titletext2 != blank or section.settings.titlesubtext2 != blank %}
+              <div class="FeatureCard__Headers">
+                {% if section.settings.titletext2 != blank %}
+                  <p class="Paragraph Paragraph--regular Paragraph--bold Paragraph--left Paragraph--color-black FeatureCard__Title">{{ section.settings.titletext2 }}</p>
+                {% endif %}
+                {% if section.settings.titlesubtext2 != blank %}
+                  {{ section.settings.titlesubtext2 }}
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
           {% if section.settings.box1htm2 != blank %} 
              {{ section.settings.box1htm2 }}
           {% endif %}
         </div>
-       {% if section.settings.innerbox1htm2 != blank %} 
+        {% if section.settings.innerbox1htm2 != blank %} 
           <div class="FeatureCard__Description text-center">
-             {{ section.settings.innerbox1htm2 }}
+            {{ section.settings.innerbox1htm2 }}
           </div>
-       {% endif %}
-     </div>
-    
-     <div class="FeatureCard">
+        {% endif %}
+      </div>
+      <div class="FeatureCard">
         <div class="FeatureCard__Card finance-calculator">
-           <div class="FeatureCard__Header">
-             {% if section.settings.imageicons3 != blank %} 
-                <div class="FeatureCard__Icon">
-                   <img class="ImageLoader ImageLoader--loaded ImageLoader--fill-height" alt="Spread the Cost Up to 3 Years Icon" src="{{ section.settings.imageicons3 | img_url: 'master' }}">
-                </div>
-             {% endif %}
-             {% if section.settings.titletext3 != blank or section.settings.titlesubtext3 != blank %}
-                <div class="FeatureCard__Headers">
-                  {% if section.settings.titletext3 != blank %} 
-                     <p class="Paragraph Paragraph--regular Paragraph--bold Paragraph--left Paragraph--color-black FeatureCard__Title">{{ section.settings.titletext3 }}</p>
-                  {% endif %}
-                  {% if section.settings.titlesubtext3 != blank %} 
-                     {{ section.settings.titlesubtext3 }}
-                  {% endif %}
-                </div>
-             {% endif %}
-           </div>
-		
+          <div class="FeatureCard__Header">
+            {% if section.settings.imageicons3 != blank %} 
+              <div class="FeatureCard__Icon">
+                <img class="ImageLoader ImageLoader--loaded ImageLoader--fill-height" alt="Spread the Cost Up to 3 Years Icon" src="{{ section.settings.imageicons3 | img_url: 'master' }}">
+              </div>
+            {% endif %}
+            {% if section.settings.titletext3 != blank or section.settings.titlesubtext3 != blank %}
+              <div class="FeatureCard__Headers">
+                {% if section.settings.titletext3 != blank %} 
+                  <p class="Paragraph Paragraph--regular Paragraph--bold Paragraph--left Paragraph--color-black FeatureCard__Title">{{ section.settings.titletext3 }}</p>
+                {% endif %}
+                {% if section.settings.titlesubtext3 != blank %} 
+                    {{ section.settings.titlesubtext3 }}
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
           {% if section.settings.box1htm3 != blank %}
           	{{ section.settings.box1htm3 }}
           {% endif %}
         </div>
      </div>
-    
   </div>  
 </div>
 

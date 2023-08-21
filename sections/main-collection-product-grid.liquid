@@ -54,9 +54,7 @@
             <form class="filter-form " id="collection-sidebar-filter">
                 
                 <div class="active-filters selected-filters-options">
-                    {%- unless results.filters == empty -%}
                     <span>REFINE BY</span>
-                    {% endunless %}
                     {%- for filter in collection.filters -%}
                     {%- if filter.type == 'price_range' -%}
                     {%- if filter.min_value.value != null or filter.max_value.value != null -%}
@@ -393,7 +391,7 @@
   
   {% comment %} Range slider pn price filter {% endcomment %}
   <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script>
     const money_format = '{{ shop.money_format }}';
