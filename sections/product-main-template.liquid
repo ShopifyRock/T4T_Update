@@ -316,6 +316,13 @@
         <div id="w3-product-accessories" data-product-handle="{{ product.handle }}">
           <div id="w3-money-format" style="display:none;">{{ shop.money_format }}</div>
         </div>
+        <button type="submit" class="buyitwith custom-add-to-cart" style="display:none;">
+        {% if product.available %}
+        Add To Cart
+        {% else %}
+        sold out
+        {% endif %}
+        </button>
       </aside>
     </div>
   </section>

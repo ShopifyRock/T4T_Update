@@ -3,26 +3,26 @@
     "63039a88-b01c-4faa-9e82-740f7550b233": {
       "type": "main-slideshow",
       "blocks": {
-        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image-1": {
+        "ee67ebfd-ad0f-45df-a443-f1e837f22564": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/desk-banner-final.png",
+            "image": "shopify:\/\/shop_images\/milwlki.png",
             "alignment": "center center",
             "slide_title": "",
             "subheading": "",
             "button_label": "",
-            "button_link": "shopify:\/\/collections\/dewalt"
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee-deals"
           }
         },
-        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image_mob-1": {
+        "b2dca6b1-a45d-49c6-802c-c0e562c2b229": {
           "type": "image_mob",
           "settings": {
-            "imagemob": "shopify:\/\/shop_images\/Image20230707160134.jpg",
+            "imagemob": "shopify:\/\/shop_images\/milwlki-mobile.png",
             "alignment2": "center center",
             "slide_title2": "",
             "subheading2": "",
             "button_label2": "",
-            "button_link2": "shopify:\/\/collections\/dewalt"
+            "button_link2": "https:\/\/tools4trade.co.uk\/collections\/milwaukee-deals"
           }
         },
         "2603ebaf-c857-44f2-8134-757690b3aace": {
@@ -47,6 +47,28 @@
             "button_link2": "shopify:\/\/collections\/buy-2-get-1-free"
           }
         },
+        "6316e157-2615-4269-bcc0-48223d107e19": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desktop_1464_x_576_Garden.jpg",
+            "alignment": "center center",
+            "slide_title": "",
+            "subheading": "",
+            "button_label": "",
+            "button_link": "https:\/\/tools4trade.co.uk\/pages\/gardening-outdoor"
+          }
+        },
+        "78d7abd7-417d-4d6f-b03a-4283d5216a7f": {
+          "type": "image_mob",
+          "settings": {
+            "imagemob": "shopify:\/\/shop_images\/Banner_800_x_710_Gardening.jpg",
+            "alignment2": "center center",
+            "slide_title2": "",
+            "subheading2": "",
+            "button_label2": "",
+            "button_link2": "https:\/\/tools4trade.co.uk\/pages\/gardening-outdoor"
+          }
+        },
         "727fa0ad-2197-4e9d-8171-dcf41193b3fb": {
           "type": "image",
           "settings": {
@@ -68,15 +90,89 @@
             "button_label2": "",
             "button_link2": "https:\/\/tools4trade.co.uk\/collections\/extended-range-products"
           }
+        },
+        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desktop_Festool_1464_x_576_4b9d3b4d-da30-4002-a80b-e978d1f1153a.jpg",
+            "alignment": "center center",
+            "slide_title": "",
+            "subheading": "",
+            "button_label": "",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/new-arrivals?pf_v_brand=Festool"
+          }
+        },
+        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image_mob-1": {
+          "type": "image_mob",
+          "settings": {
+            "imagemob": "shopify:\/\/shop_images\/Banner_Festool_800_x_710_8386fe85-9412-406e-907f-8600edf813a2.jpg",
+            "alignment2": "center center",
+            "slide_title2": "",
+            "subheading2": "",
+            "button_label2": "",
+            "button_link2": "https:\/\/tools4trade.co.uk\/collections\/new-arrivals?pf_v_brand=Festool"
+          }
+        },
+        "f9106130-09a5-4072-8d7e-8bcde80afb7a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desktop_1464_x_576_Klarna.jpg",
+            "alignment": "center center",
+            "slide_title": "",
+            "subheading": "",
+            "button_label": "",
+            "button_link": "https:\/\/tools4trade.co.uk\/pages\/klarna"
+          }
+        },
+        "4b288916-fecd-4ac4-afbb-97c60f0698c2": {
+          "type": "image_mob",
+          "settings": {
+            "imagemob": "shopify:\/\/shop_images\/Banner_800_x_710_Klarna.jpg",
+            "alignment2": "center center",
+            "slide_title2": "",
+            "subheading2": "",
+            "button_label2": "",
+            "button_link2": "https:\/\/tools4trade.co.uk\/pages\/klarna"
+          }
+        },
+        "23838dfd-d5e3-4330-b83b-b44f3f757cbc": {
+          "type": "image_mob",
+          "settings": {
+            "imagemob": "shopify:\/\/shop_images\/Banner_800_x_710_Milwaukee_Kit.jpg",
+            "alignment2": "center center",
+            "slide_title2": "",
+            "subheading2": "",
+            "button_label2": "",
+            "button_link2": "https:\/\/tools4trade.co.uk\/collections\/tool-kits-cordless?pf_v_brand=Milwaukee&pf_st_stock_filter=true"
+          }
+        },
+        "57d6c47e-c429-492a-bdd8-d7baa3f48d84": {
+          "type": "image_mob",
+          "settings": {
+            "imagemob": "shopify:\/\/shop_images\/222_305fa370-3b10-4613-aad7-85aadea473d7.jpg",
+            "alignment2": "center center",
+            "slide_title2": "",
+            "subheading2": "",
+            "button_label2": "",
+            "button_link2": "https:\/\/tools4trade.co.uk\/collections\/body-only-tools?pf_st_stock_filter=true"
+          }
         }
       },
       "block_order": [
-        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image-1",
-        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image_mob-1",
+        "ee67ebfd-ad0f-45df-a443-f1e837f22564",
+        "b2dca6b1-a45d-49c6-802c-c0e562c2b229",
         "2603ebaf-c857-44f2-8134-757690b3aace",
         "db2cee0c-7086-49d1-ad97-1b233647dd33",
+        "6316e157-2615-4269-bcc0-48223d107e19",
+        "78d7abd7-417d-4d6f-b03a-4283d5216a7f",
         "727fa0ad-2197-4e9d-8171-dcf41193b3fb",
-        "17cbf062-d610-48fd-be04-c65a606bdf02"
+        "17cbf062-d610-48fd-be04-c65a606bdf02",
+        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image-1",
+        "template--16103321108677__63039a88-b01c-4faa-9e82-740f7550b233-image_mob-1",
+        "f9106130-09a5-4072-8d7e-8bcde80afb7a",
+        "4b288916-fecd-4ac4-afbb-97c60f0698c2",
+        "23838dfd-d5e3-4330-b83b-b44f3f757cbc",
+        "57d6c47e-c429-492a-bdd8-d7baa3f48d84"
       ],
       "settings": {
         "desk_img1": "shopify:\/\/shop_images\/Desktop_1464_x_576_Milwaukee_Kit.jpg",
@@ -181,7 +277,7 @@
         "35750e5e-048e-4a27-ae1a-592533841c81": {
           "type": "select",
           "settings": {
-            "product": "excel-600-x-600mm-heavy-duty-multi-purpose-platform-work-bench-folding-hop-up-pack-of-2"
+            "product": "excel-16-electric-chainsaw-wood-cutter-240v-2400w"
           }
         },
         "6fca0ff5-817b-44aa-b6d8-1196398e04c0": {
@@ -193,13 +289,13 @@
         "3730a0bc-c3dd-48fb-85a4-be2cf7237cb0": {
           "type": "select",
           "settings": {
-            "product": "milwaukee-m18-fn16ga-0-18v-brushless-finishing-angled-nail-gun-16ga-with-2-x-2-0ah-batteries-charger"
+            "product": "dewalt-dcf887nt-18v-brushless-impact-driver-with-tstak-carry-case"
           }
         },
         "22dc73c6-6d0d-401a-9beb-f614614f57dd": {
           "type": "select",
           "settings": {
-            "product": "dewalt-dcs356p1-18v-xr-brushless-oscillating-multi-tool-with-1-x-5-0ah-battery-charger-case"
+            "product": "milwaukee-m18-fn16ga-0-18v-brushless-finishing-angled-nail-gun-16ga-with-2-x-2-0ah-batteries-charger-in-bag"
           }
         },
         "bd0e2a1f-5c6d-4961-a847-4c043eefbe61": {
@@ -229,19 +325,19 @@
         "c9827d05-cb3b-4507-8bea-6e2bdd082333": {
           "type": "select",
           "settings": {
-            "product": "makita-dhr242z-18v-sds-brushless-24mm-rotary-hammer-drill-body-with-dust-extraction-system"
+            "product": "dewalt-dcs356p1-18v-xr-cordless-brushless-oscillating-multi-tool-with-1-x-5-0ah-battery-charger-case"
           }
         },
         "0aa98bb6-6a56-4ed2-9778-01b4e2ccb6af": {
           "type": "select",
           "settings": {
-            "product": "dewalt-d26411-240v-heat-gun-1800w-with-dual-air-flow"
+            "product": "makita-dhr242z-18v-sds-brushless-24mm-rotary-hammer-drill-body-with-dust-extraction-system"
           }
         },
         "9d7298f1-7b53-4c74-83be-dc3601dc854c": {
           "type": "select",
           "settings": {
-            "product": "ecomotive-professional-turbo-cleaner-restore-250ml-aerosol"
+            "product": "dewalt-d26411-240v-heat-gun-1800w-with-dual-air-flow"
           }
         }
       },
@@ -260,7 +356,7 @@
         "9d7298f1-7b53-4c74-83be-dc3601dc854c"
       ],
       "settings": {
-        "col_main_ttl": "Top deals of the day",
+        "col_main_ttl": "Top Deals Of The Month",
         "button_text": "Order Now",
         "enable_timer": true,
         "timer_heading": "Hurry Up! Offer ends in:",
@@ -281,10 +377,10 @@
       "type": "index-offers",
       "settings": {
         "offer_img1": "shopify:\/\/shop_images\/Image20230517111836.jpg",
-        "content1": "Big Sale <span>Up To -30%<\/span><strong>Contractor Tools<\/strong>",
+        "content1": "",
         "offer_img1_link1": "https:\/\/tools4trade.co.uk\/collections\/excel-18v-cordless-power-tools?pf_st_stock_filter=true",
         "offer_img2": "shopify:\/\/shop_images\/offer-banner-2.jpg",
-        "content2": "Big Sale <span>Up To -30%<\/span><strong>Drilling Machin<\/strong>",
+        "content2": "",
         "offer_img1_link2": "https:\/\/tools4trade.co.uk\/collections\/ladders?pf_st_stock_filter=true"
       }
     },

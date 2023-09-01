@@ -20,42 +20,42 @@
           "type": "deals_day",
           "settings": {
             "brand_image": "shopify:\/\/shop_images\/Makita_Gardening.png",
-            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Makita"
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?filter.p.vendor=Makita"
           }
         },
         "cda07ae1-62cb-4497-927c-ac930da1f9d2": {
           "type": "deals_day",
           "settings": {
             "brand_image": "shopify:\/\/shop_images\/Dewalt_Gardening.png",
-            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Dewalt"
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?filter.p.vendor=Dewalt"
           }
         },
         "dabe89d8-c4f3-4412-aced-dbba93e83de1": {
           "type": "deals_day",
           "settings": {
             "brand_image": "shopify:\/\/shop_images\/Milwaukee_Gardening.png",
-            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Milwaukee"
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?filter.p.vendor=Milwaukee"
           }
         },
         "12617994-99e6-4827-9484-3c7580998b2c": {
           "type": "deals_day",
           "settings": {
             "brand_image": "shopify:\/\/shop_images\/Hyundai_Gardening.png",
-            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Hyundai"
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?filter.p.vendor=Hyundai"
           }
         },
         "14fae1bc-b385-4179-9a38-fa50cfe74bbf": {
           "type": "deals_day",
           "settings": {
             "brand_image": "shopify:\/\/shop_images\/Sealey_Gardening.png",
-            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Sealey"
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?filter.p.vendor=Sealey"
           }
         },
         "62326420-59c7-48a9-bb47-1302da607841": {
           "type": "deals_day",
           "settings": {
             "brand_image": "shopify:\/\/shop_images\/Excel_Gardening.png",
-            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?pf_st_stock_filter=true&pf_v_brand=Excel"
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/gardening-outdoor?filter.p.vendor=Excel"
           }
         }
       },

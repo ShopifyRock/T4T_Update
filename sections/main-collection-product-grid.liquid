@@ -97,16 +97,15 @@
                 </div>
 
                 {%- for filter in collection.filters -%}
-                <details class="filter-group" open>
+                <details class="filter-group {% if filter.label == "Size" %}{% if collection.metafields.custom.size.value == false %} Hide {% else %} Show {% endif %}{% elsif filter.label == "Brand" %}{% if collection.metafields.custom.brand.value == false %} Hide {% else %} Show {% endif %}{% endif %}" open>
                     <summary class="filter-group-summary">
                         <div class="filter-option-title">
-                            <span>{{ filter.label }}</span>
+                            <span>{{ filter.label }} </span>
                             {%- if filter.active_values.size > 0 -%}
                             <span>({{ filter.active_values.size }})</span>
                             {%- endif -%}
                         </div>
                     </summary>
-
                     <div class="filter-group-display">
                         {%- case filter.type -%}
                         {%- when 'boolean', 'list' -%}
@@ -351,6 +350,38 @@
         {% endpaginate %}
     </section>
 </div>
+{% if collection.handle == 'warehouse-deals' %}
+<div class="collection_template_below_detail_main_new">
+    <div class="collection_template_below_detail_inner_new">
+        <div class="collection_template_below_detail_halfwidth_new">
+            <div class="collection_template_below_detail_halfwidth_boxs_new">
+                <div class="collection_template_below_detail_halfwidth_titleboxs_new">
+                    <h3>Frequently Asked Questions</h3>
+                </div>
+                <div class="collection_template_below_detail_halfwidth_infoboxs_new">
+                    <p>Tools4Trade Warehouse offers great deals on quality used, pre-owned, or open box products. With all the benefits of Tools4Trade fulfilment, customer service, and returns rights, we provide discounts on used items for customer favourites: such as Mitresaws, Combidrill, Impactdriver, Sabresaws, Circularsaws, jigsaws, accessories and much more. For each used product we sell, we thoroughly test the condition of the item and provide detailed descriptions to make it easier for you to make a decision.</p>
+                </div>
+            </div>
+            <div class="collection_template_below_detail_halfwidth_boxs_new">
+                <div class="collection_template_below_detail_halfwidth_titleboxs_new">
+                    <h3>How can I return my product if I am not satisfied?</h3>
+                </div>
+                <div class="collection_template_below_detail_halfwidth_infoboxs_new">
+                    <p>If you are unsatisfied with the product for any reason, you can return the item in accordance with <a href="/policies/refund-policy" target="_blank" title="Refund Policy" rel="noopener" aria-describedby="a11y-new-window-message">Tools4Trade Returns Policy.</a> Since each item at Tools4Trade Warehouse is unique due to its nature, we unfortunately will be unable to replace any item with its exact same condition, but we might have a similar item in stock, so dont't forget to check!</p>
+                </div>
+            </div>
+        </div>
+        <div class="collection_template_below_detail_fullwidth_new">
+            <div class="collection_template_below_detail_fullwidth_titlebox_new">
+                <h3>What about my warranty rights?</h3>
+            </div>
+            <div class="collection_template_below_detail_fullwidth_infobox_new">
+                <p>Tools4Trade Warehouse items are covered under statutory legal warranty. If your item becomes defective after the Tools4Trade return period, Tools4Trade will repair any defective item, and if a repair is not possible, we will refund the purchase price in accordance with Tools4Trade Returns Policy. Some products sold directly by Tools4Trade Warehouse may be eligible for warranty repair and if so, can be repaired by an authorised service engineer.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
 {% comment %} COLLECTION CODE END {% endcomment %}
 <script>
     document.addEventListener("DOMContentLoaded", function() {
