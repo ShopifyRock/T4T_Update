@@ -7,7 +7,7 @@
         "titleaddress1": "Address:",
         "infoaddress1": "Tools4trade | 6 Fitzhamon Court | Wolverton, Milton Keynes | MK12 6LB",
         "titleoffice1": "Office Opening Times:",
-        "infooffice1": "<span>Mon-Fri<\/span> 7:30AM - 6PM<br> <span>Saturday<\/span> 9AM - 5PM<br> <span>Sunday<\/span> 10AM - 4PM",
+        "infooffice1": "<span>Mon-Fri<\/span> 9AM - 6PM<br> <span>Saturday<\/span> 9AM - 2PM<br> <span>Sunday<\/span> <div class=\"red\">Closed<\/div>",
         "titlephone1": "Phone:",
         "infophone1": "01908 969966",
         "titlefax1": "",

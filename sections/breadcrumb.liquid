@@ -20,18 +20,18 @@
                         {% if collection.url %}
                             <li class="item current">
                                 <i class="fa-solid fa-chevron-right"></i>
-                                <a class="active" href="{{ collection.link }}" aria-current="page">{{ collection.title }}</a>
+                                <a class="active" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
                             </li>
                         {% elsif previous_page_name != '' and request.url contains 'products' %}
                             <li class="item current">
                                 <i class="fa-solid fa-chevron-right"></i>
-                                <a class="active" href="{{ request.headers.referer }}" aria-current="page">{{ previous_page_name }}</a>
+                                <a class="active" href="{{ request.headers.referer }} d" aria-current="page">{{ previous_page_name }}</a>
                             </li>
                         {% endif %}
                     {% elsif template contains 'collection' and collection.handle %}
                         <li class="item current">
                             <i class="fa-solid fa-chevron-right"></i>
-                            <a class="active" href="{{ collection.link }}" aria-current="page">{{ collection.title }}</a>
+                            <a class="active" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
                         </li>
                     {% elsif template contains 'account' %}
                         <li class="item current">

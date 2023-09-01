@@ -3,6 +3,33 @@
     "banner": {
       "type": "main-collection-banner",
       "blocks": {
+        "d40c884f-faab-4827-9366-91e3c5b388cf": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "clearance",
+            "banner_img": "shopify:\/\/shop_images\/category_Clearance_Salw.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/Image20230613134326.jpg",
+            "banner_img_link": ""
+          }
+        },
+        "95ff6f81-fea2-4aad-90bb-f397d191b25b": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "bosch-cordless-new-arrivals",
+            "banner_img": "shopify:\/\/shop_images\/Image20210722150606.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/Image20210722150606.jpg",
+            "banner_img_link": "https:\/\/www.bosch-professional.com\/gb\/en\/pro360\/"
+          }
+        },
+        "4c8e5206-7358-40f4-abf6-ee3bf7bf1a11": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "extended-range-products",
+            "banner_img": "shopify:\/\/shop_images\/extend-1.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/extend-2.jpg",
+            "banner_img_link": ""
+          }
+        },
         "bb0b6570-bc66-4436-94b6-7e43fe03dcc2": {
           "type": "banner_image",
           "settings": {
@@ -11,10 +38,135 @@
             "banner_img_mobile": "shopify:\/\/shop_images\/milwlki-cat-mobile.png",
             "banner_img_link": "shopify:\/\/collections\/milwaukee-deals"
           }
+        },
+        "612d073b-aecd-457f-989b-9c7827fdcdb3": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "warehouse-deals",
+            "banner_img": "shopify:\/\/shop_images\/Image20220721165325.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/Image20220721165332.jpg",
+            "banner_img_link": ""
+          }
+        },
+        "ac873712-6a54-4732-a8bb-2a71e9e6246d": {
+          "type": "all_custom_details",
+          "settings": {
+            "collection": "",
+            "backwithinfotext": "<p>At Tools4Trade, we believe in giving best value to our customers by realigning our customer returns and coming up with eco friendly solution which will help us by minimising electronic waste and you by getting most out of your money.<\/p>",
+            "backwithoutinfotext": "<p>We thoroughly inspect our returns and check the quality of each item to make sure if product can be repaired, retest and resell if necessary. Save up to 50% than normal selling price by buying these warehouse clearance products which can be used, open-box products or without box or refurbished products.<\/p>",
+            "categoriesmainheading": "Most Popular Categories",
+            "categoryheading_1": "Heading",
+            "categorylink_1": "\/",
+            "categoryheading_2": "Heading",
+            "categorylink_2": "\/",
+            "categoryheading_3": "Heading",
+            "categorylink_3": "\/",
+            "categoryheading_4": "Heading",
+            "categorylink_4": "\/",
+            "questiontext": "How we grade our warehouse returns products?",
+            "answerinfotext": "<p>Since each returns have various different reasons down to personal likes\/dislikes, quality issue, manufacturer’s fault or simply change of mind. Considering all these factors, we have classified the products returns for resell purpose as per below :<\/p>",
+            "iconheadingtext_1": "Heading",
+            "iconinfotext_1": "<p>Where item is new and unused however box is damaged or item is in good condition with some cosmetics wear however fully functional. The item may arrive with damaged packaging or be repackaged.<\/p>",
+            "iconheadingtext_2": "Heading",
+            "iconinfotext_2": "<p>Where item is new and unused however box is damaged or item is in good condition with some cosmetics wear however fully functional. The item may arrive with damaged packaging or be repackaged.<\/p>",
+            "iconheadingtext_3": "Heading",
+            "iconinfotext_3": "<p>Where item is new and unused however box is damaged or item is in good condition with some cosmetics wear however fully functional. The item may arrive with damaged packaging or be repackaged.<\/p>",
+            "iconheadingtext_4": "Heading",
+            "iconinfotext_4": "<p>Where item is new and unused however box is damaged or item is in good condition with some cosmetics wear however fully functional. The item may arrive with damaged packaging or be repackaged.<\/p>",
+            "gridmainheadingtext": "Browse Our Range",
+            "questiontext_1": "How we grade our warehouse returns products?",
+            "answerinfotext_1": "<p>Since each returns have various different reasons down to personal likes\/dislikes, quality issue, manufacturer’s fault or simply change of mind. Considering all these factors, we have classified the products returns for resell purpose as per below:<\/p>",
+            "questiontext_2": "How we grade our warehouse returns products?",
+            "answerinfotext_2": "<p>Since each returns have various different reasons down to personal likes\/dislikes, quality issue, manufacturer’s fault or simply change of mind. Considering all these factors, we have classified the products returns for resell purpose as per below:<\/p>",
+            "questiontext_3": "How we grade our warehouse returns products?",
+            "answerinfotext_3": "<p>Since each returns have various different reasons down to personal likes\/dislikes, quality issue, manufacturer’s fault or simply change of mind. Considering all these factors, we have classified the products returns for resell purpose as per below:<\/p>"
+          }
+        },
+        "5fb26c71-0e51-436a-a5ae-2bf669d6e049": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "new-arrivals",
+            "banner_img": "shopify:\/\/shop_images\/Image20230602114745.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/Banner_Festool_800_x_710.jpg",
+            "banner_img_link": ""
+          }
+        },
+        "e9569ec1-bb57-4ee2-a1f1-fe8417e5e752": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "hyundai",
+            "banner_img": "shopify:\/\/shop_images\/Image20230116115242.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/Image20230116115246.jpg",
+            "banner_img_link": ""
+          }
+        },
+        "5b458183-59b3-482a-894f-3bc5a5cabaea": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "gardening-outdoor",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": ""
+          }
+        },
+        "4cdc84b0-cb7e-4402-a0d9-3449b6b009af": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "buy-2-get-1-free",
+            "banner_img": "shopify:\/\/shop_images\/cat-desk.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/cat-mobile.png",
+            "banner_img_link": ""
+          }
+        },
+        "51e7dc3f-02a8-4df6-bf94-49348521453c": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "tool-kits-cordless",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_link": ""
+          }
+        },
+        "dce147c5-3447-497d-89d6-649e88b729aa": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "twin-packs-cordless",
+            "banner_img": "shopify:\/\/shop_images\/dewalt-main-categories.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/dewalt-main-categories-mobile.jpg",
+            "banner_img_link": ""
+          }
+        },
+        "09085a94-22f5-4a7d-88db-586a9a30a2f5": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "body-only-tools",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": ""
+          }
+        },
+        "cea25f17-8bc4-48c8-8513-656c7ac209a5": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "",
+            "banner_img_link": ""
+          }
         }
       },
       "block_order": [
-        "bb0b6570-bc66-4436-94b6-7e43fe03dcc2"
+        "d40c884f-faab-4827-9366-91e3c5b388cf",
+        "95ff6f81-fea2-4aad-90bb-f397d191b25b",
+        "4c8e5206-7358-40f4-abf6-ee3bf7bf1a11",
+        "bb0b6570-bc66-4436-94b6-7e43fe03dcc2",
+        "612d073b-aecd-457f-989b-9c7827fdcdb3",
+        "ac873712-6a54-4732-a8bb-2a71e9e6246d",
+        "5fb26c71-0e51-436a-a5ae-2bf669d6e049",
+        "e9569ec1-bb57-4ee2-a1f1-fe8417e5e752",
+        "5b458183-59b3-482a-894f-3bc5a5cabaea",
+        "4cdc84b0-cb7e-4402-a0d9-3449b6b009af",
+        "51e7dc3f-02a8-4df6-bf94-49348521453c",
+        "dce147c5-3447-497d-89d6-649e88b729aa",
+        "09085a94-22f5-4a7d-88db-586a9a30a2f5",
+        "cea25f17-8bc4-48c8-8513-656c7ac209a5"
       ],
       "settings": {
       }

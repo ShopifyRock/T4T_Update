@@ -21,6 +21,77 @@
                     </div>
                 {% endif %}
             {% endif %}
+        {% elsif block.type == 'all_custom_details' %}
+          {% if collection.handle =='warehouse-deals' %}
+            <div class="collection_template_above_detail_main_new">
+    <div class="collection_template_above_detail_inner_new">
+        <div class="collection_template_above_detail_backinfotext_new">
+            <p>At Tools4Trade, we believe in giving best value to our customers by realigning our customer returns and coming up with eco friendly solution which will help us by minimising electronic waste and you by getting most out of your money.</p>
+        </div>
+        <div class="collection_template_below_detail_onlyinfotext_new">
+            <p>We thoroughly inspect our returns and check the quality of each item to make sure if product can be repaired, retest and resell if necessary. Save up to 50% than normal selling price by buying these warehouse clearance products which are used, open-box, without box or refurbished products.</p>
+        </div>
+        <div class="collection_template_above_detail_questionanswer_new">
+            <div class="collection_template_above_detail_questiontext_new">
+                <h3>How we grade our warehouse returns products?</h3>
+            </div>
+            <div class="collection_template_above_detail_answerinfotext_new">
+                <p>Since each returns have various different reasons down to personal likes/dislikes, quality issue, manufacturer’s fault or simply change of mind. Considering all these factors, we have classified the products returns for resell purpose as per below:</p>
+            </div>
+        </div>
+        <div class="collection_template_above_detail_iconwithtext_main_new">
+            <div class="collection_template_above_detail_iconwithtext_allloop_new">
+                <div class="collection_template_above_detail_iconwithtext_allloop_boxs_new">
+                    <div class="collection_template_above_detail_iconwithtext_allloop_imageboxs_new">
+                        <img src="https://tools4trade.co.uk/cdn/shop/files/icon_1_180x.jpg">
+                    </div>
+                    <div class="collection_template_above_detail_iconwithtext_allloop_headingtextboxs_new">
+                        <h3>Damaged Box</h3>
+                    </div>
+                    <div class="collection_template_above_detail_iconwithtext_allloop_infotextboxs_new">
+                        <p>Where item is new and unused however box is damaged or item is in good condition with some cosmetics wear however fully functional. The item may arrive with damaged packaging or be repackaged.</p>
+                    </div>
+                </div>
+                <div class="collection_template_above_detail_iconwithtext_allloop_boxs_new">
+                    <div class="collection_template_above_detail_iconwithtext_allloop_imageboxs_new">
+                        <img src="https://tools4trade.co.uk/cdn/shop/files/icon_2_180x.jpg">
+                    </div>
+                    <div class="collection_template_above_detail_iconwithtext_allloop_headingtextboxs_new">
+                        <h3>Box Opened Never Used</h3>
+                    </div>
+                    <div class="collection_template_above_detail_iconwithtext_allloop_infotextboxs_new">
+                        <p>Where item is never used however original packaging may have been lost. The item may arrive with damaged packaging or be repackaged.</p>
+                    </div>
+                </div>
+                <div class="collection_template_above_detail_iconwithtext_allloop_boxs_new">
+                    <div class="collection_template_above_detail_iconwithtext_allloop_imageboxs_new">
+                        <img src="https://tools4trade.co.uk/cdn/shop/files/icon_3_180x.jpg">
+                    </div>
+                    <div class="collection_template_above_detail_iconwithtext_allloop_headingtextboxs_new">
+                        <h3>Used Like New</h3>
+                    </div>
+                    <div class="collection_template_above_detail_iconwithtext_allloop_infotextboxs_new">
+                        <p>Where item has been used but is in working condition and fully functional. The item may have scratches or body has lost its shine or can have cosmetics wear and tear however is fully functional. The item may arrive without original packaging but is safe to use.</p>
+                    </div>
+                </div>
+                <div class="collection_template_above_detail_iconwithtext_allloop_boxs_new">
+                    <div class="collection_template_above_detail_iconwithtext_allloop_imageboxs_new">
+                        <img src="https://tools4trade.co.uk/cdn/shop/files/icon_4_180x.jpg">
+                    </div>
+                    <div class="collection_template_above_detail_iconwithtext_allloop_headingtextboxs_new">
+                        <h3>Refurbished Grade “A”</h3>
+                    </div>
+                    <div class="collection_template_above_detail_iconwithtext_allloop_infotextboxs_new">
+                        <p>Where item was repaired by manufacturer or us and is been refurbished to use like new machine. The item may have scratches or body has lost its shine or can have cosmetics wear and tear however is fully functional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="collection_template_above_detail_collectionmainheading_new">Browse Our Range</div>
+    </div>
+</div>
+
+        {% endif %}
         {% endif %}
     {% endfor %}
 {% endif %}
@@ -54,7 +125,256 @@
                     "label": "Banner Image Link"
                 }
             ]
+        },
+        {
+      "type": "all_custom_details",
+      "name": "All Custom Details",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection Display"
+        },
+        {
+          "type": "header",
+          "content": "=== Main Grid Above Details ==="
+        },
+        {
+          "type": "richtext",
+          "id": "backwithinfotext",
+          "label": "Add Background With Information Text",
+          "default": "<p>At Tools4Trade, we believe in giving best value to our customers by realigning our customer returns and coming up with eco friendly solution which will help us by minimising electronic waste and you by getting most out of your money.</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "backwithoutinfotext",
+          "label": "Add Background Without Information Text",
+          "default": "<p>We thoroughly inspect our returns and check the quality of each item to make sure if product can be repaired, retest and resell if necessary. Save up to 50% than normal selling price by buying these warehouse clearance products which can be used, open-box products or without box or refurbished products.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Main Grid Custom Categories Details"
+        },
+        {
+          "type": "text",
+          "id": "categoriesmainheading",
+          "label": "Add Categories Main Heading Text",
+          "default": "Most Popular Categories"
+        },
+		{
+          "type": "image_picker",
+          "id": "categoryimage_1",
+          "label": "Add Category Image-1"
+        },
+        {
+          "type": "text",
+          "id": "categoryheading_1",
+          "label": "Add Category Heading Text-1",
+          "default": "Heading"
+        },
+        {
+          "type": "url",
+          "id": "categorylink_1",
+          "label": "Add Category Link-1",
+          "default": "/"
+        },
+		{
+          "type": "image_picker",
+          "id": "categoryimage_2",
+          "label": "Add Category Image-2"
+        },
+        {
+          "type": "text",
+          "id": "categoryheading_2",
+          "label": "Add Category Heading Text-2",
+          "default": "Heading"
+        },
+        {
+          "type": "url",
+          "id": "categorylink_2",
+          "label": "Add Category Link-2",
+          "default": "/"
+        },
+		{
+          "type": "image_picker",
+          "id": "categoryimage_3",
+          "label": "Add Category Image-3"
+        },
+        {
+          "type": "text",
+          "id": "categoryheading_3",
+          "label": "Add Category Heading Text-3",
+          "default": "Heading"
+        },
+        {
+          "type": "url",
+          "id": "categorylink_3",
+          "label": "Add Category Link-3",
+          "default": "/"
+        },
+		{
+          "type": "image_picker",
+          "id": "categoryimage_4",
+          "label": "Add Category Image-4"
+        },
+        {
+          "type": "text",
+          "id": "categoryheading_4",
+          "label": "Add Category Heading Text-4",
+          "default": "Heading"
+        },
+        {
+          "type": "url",
+          "id": "categorylink_4",
+          "label": "Add Category Link-4",
+          "default": "/"
+        },
+        {
+          "type": "header",
+          "content": "Main Grid Question & Answer Details"
+        },
+        {
+          "type": "text",
+          "id": "questiontext",
+          "label": "Add Question Text",
+          "default": "How we grade our warehouse returns products?"
+        },
+        {
+          "type": "richtext",
+          "id": "answerinfotext",
+          "label": "Add Answer Information Text",
+          "default": "<p>Since each returns have various different reasons down to personal likes/dislikes, quality issue, manufacturer’s fault or simply change of mind. Considering all these factors, we have classified the products returns for resell purpose as per below :</p>"
+        },
+        {
+          "type": "header",
+          "content": "Main Grid Icons Texts Columns Details"
+        },
+        {
+          "type": "image_picker",
+          "id": "iconimage_1",
+          "label": "Add Icon Image-1"
+        },
+        {
+          "type": "text",
+          "id": "iconheadingtext_1",
+          "label": "Add Icon Heading Text-1",
+          "default": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "iconinfotext_1",
+          "label": "Add Icon Information Text-1",
+          "default": "<p>Where item is new and unused however box is damaged or item is in good condition with some cosmetics wear however fully functional. The item may arrive with damaged packaging or be repackaged.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "iconimage_2",
+          "label": "Add Icon Image-2"
+        },
+        {
+          "type": "text",
+          "id": "iconheadingtext_2",
+          "label": "Add Icon Heading Text-2",
+          "default": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "iconinfotext_2",
+          "label": "Add Icon Information Text-2",
+          "default": "<p>Where item is new and unused however box is damaged or item is in good condition with some cosmetics wear however fully functional. The item may arrive with damaged packaging or be repackaged.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "iconimage_3",
+          "label": "Add Icon Image-3"
+        },
+        {
+          "type": "text",
+          "id": "iconheadingtext_3",
+          "label": "Add Icon Heading Text-3",
+          "default": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "iconinfotext_3",
+          "label": "Add Icon Information Text-3",
+          "default": "<p>Where item is new and unused however box is damaged or item is in good condition with some cosmetics wear however fully functional. The item may arrive with damaged packaging or be repackaged.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "iconimage_4",
+          "label": "Add Icon Image-4"
+        },
+        {
+          "type": "text",
+          "id": "iconheadingtext_4",
+          "label": "Add Icon Heading Text-4",
+          "default": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "iconinfotext_4",
+          "label": "Add Icon Information Text-4",
+          "default": "<p>Where item is new and unused however box is damaged or item is in good condition with some cosmetics wear however fully functional. The item may arrive with damaged packaging or be repackaged.</p>"
+        },
+        {
+          "type": "header",
+          "content": "=== Main Grid Middle Details ==="
+        },
+        {
+          "type": "text",
+          "id": "gridmainheadingtext",
+          "label": "Add Grid Main Heading Text",
+          "default": "Browse Our Range"
+        },
+        {
+          "type": "header",
+          "content": "=== Main Grid Below Details ==="
+        },
+        {
+          "type": "text",
+          "id": "questiontext_1",
+          "label": "Add Question Text-1",
+          "default": "How we grade our warehouse returns products?"
+        },
+        {
+          "type": "richtext",
+          "id": "answerinfotext_1",
+          "label": "Add Answer Information Text-1",
+          "default": "<p>Since each returns have various different reasons down to personal likes/dislikes, quality issue, manufacturer’s fault or simply change of mind. Considering all these factors, we have classified the products returns for resell purpose as per below:</p>"
+        },
+        {
+          "type": "text",
+          "id": "questiontext_2",
+          "label": "Add Question Text-2",
+          "default": "How we grade our warehouse returns products?"
+        },
+        {
+          "type": "richtext",
+          "id": "answerinfotext_2",
+          "label": "Add Answer Information Text-2",
+          "default": "<p>Since each returns have various different reasons down to personal likes/dislikes, quality issue, manufacturer’s fault or simply change of mind. Considering all these factors, we have classified the products returns for resell purpose as per below:</p>"
+        },
+        {
+          "type": "text",
+          "id": "questiontext_3",
+          "label": "Add Question Text-3",
+          "default": "How we grade our warehouse returns products?"
+        },
+        {
+          "type": "richtext",
+          "id": "answerinfotext_3",
+          "label": "Add Answer Information Text-3",
+          "default": "<p>Since each returns have various different reasons down to personal likes/dislikes, quality issue, manufacturer’s fault or simply change of mind. Considering all these factors, we have classified the products returns for resell purpose as per below:</p>"
         }
-    ]
+      ]
+    }
+    ],
+   "presets":[
+      {
+         "name":"Collection Banner",
+         "category":"Custom"
+      }
+   ]
 }
 {% endschema %}
