@@ -3,8 +3,31 @@
     "63039a88-b01c-4faa-9e82-740f7550b233": {
       "type": "main-slideshow",
       "blocks": {
+        "d909ab01-a5d0-432a-8b52-3ce11519bb41": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image20230829210249.jpg",
+            "alignment": "center center",
+            "slide_title": "",
+            "subheading": "",
+            "button_label": "",
+            "button_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
+          }
+        },
+        "b33c20e9-a002-4f96-9360-2591c9f19674": {
+          "type": "image_mob",
+          "settings": {
+            "imagemob": "shopify:\/\/shop_images\/Image20230829210736.jpg",
+            "alignment2": "center center",
+            "slide_title2": "",
+            "subheading2": "",
+            "button_label2": "",
+            "button_link2": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
+          }
+        },
         "ee67ebfd-ad0f-45df-a443-f1e837f22564": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/milwlki.png",
             "alignment": "center center",
@@ -16,6 +39,7 @@
         },
         "b2dca6b1-a45d-49c6-802c-c0e562c2b229": {
           "type": "image_mob",
+          "disabled": true,
           "settings": {
             "imagemob": "shopify:\/\/shop_images\/milwlki-mobile.png",
             "alignment2": "center center",
@@ -159,6 +183,8 @@
         }
       },
       "block_order": [
+        "d909ab01-a5d0-432a-8b52-3ce11519bb41",
+        "b33c20e9-a002-4f96-9360-2591c9f19674",
         "ee67ebfd-ad0f-45df-a443-f1e837f22564",
         "b2dca6b1-a45d-49c6-802c-c0e562c2b229",
         "2603ebaf-c857-44f2-8134-757690b3aace",

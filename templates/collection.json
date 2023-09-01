@@ -147,8 +147,82 @@
         "cea25f17-8bc4-48c8-8513-656c7ac209a5": {
           "type": "banner_image",
           "settings": {
-            "collection": "",
-            "banner_img_link": ""
+            "collection": "impact-drivers-cordless",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
+          }
+        },
+        "cbcd1a9f-16b4-4194-9318-f6101cf9a1d0": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "impact-wrenches-cordless",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
+          }
+        },
+        "4a75b614-37b9-4b1a-9a8d-4abd7ff4a153": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "combi-drills-cordless",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
+          }
+        },
+        "27aa8bc9-a51d-418c-9d59-55ad82f90791": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "cordless-multicutter",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
+          }
+        },
+        "575dd98b-12a5-46d4-81f5-f352b9018ce4": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "nailers-cordless",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
+          }
+        },
+        "6c429fc9-bb95-4920-979f-f626a0c2c967": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "milwaukee-12v",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
+          }
+        },
+        "23ed238b-5331-4922-b2c7-a69264561a3d": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "milwaukee-packout",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
+          }
+        },
+        "23eefeeb-dc31-429c-b88b-a9c87ebbe475": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "hand-tools",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
+          }
+        },
+        "95845cec-4bea-4c8a-9f3f-f63e618d7230": {
+          "type": "banner_image",
+          "settings": {
+            "collection": "accessories",
+            "banner_img": "shopify:\/\/shop_images\/cst-banner.jpg",
+            "banner_img_mobile": "shopify:\/\/shop_images\/mobile_banner_9eee2e06-c4b8-4a11-bdb0-b6bd9acf0442.jpg",
+            "banner_img_link": "https:\/\/tools4trade.co.uk\/collections\/milwaukee"
           }
         }
       },
@@ -166,7 +240,15 @@
         "51e7dc3f-02a8-4df6-bf94-49348521453c",
         "dce147c5-3447-497d-89d6-649e88b729aa",
         "09085a94-22f5-4a7d-88db-586a9a30a2f5",
-        "cea25f17-8bc4-48c8-8513-656c7ac209a5"
+        "cea25f17-8bc4-48c8-8513-656c7ac209a5",
+        "cbcd1a9f-16b4-4194-9318-f6101cf9a1d0",
+        "4a75b614-37b9-4b1a-9a8d-4abd7ff4a153",
+        "27aa8bc9-a51d-418c-9d59-55ad82f90791",
+        "575dd98b-12a5-46d4-81f5-f352b9018ce4",
+        "6c429fc9-bb95-4920-979f-f626a0c2c967",
+        "23ed238b-5331-4922-b2c7-a69264561a3d",
+        "23eefeeb-dc31-429c-b88b-a9c87ebbe475",
+        "95845cec-4bea-4c8a-9f3f-f63e618d7230"
       ],
       "settings": {
       }
